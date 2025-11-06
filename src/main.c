@@ -4,6 +4,7 @@
 #include <tools/powerSaver.h>
 #include <io/led/led.h>
 #include <motor/motor.h>
+#include <pathFollower/pathFollower.h>
 
 #include <avr/io.h>                 // AVR IO ports
 #include <avr/interrupt.h>          // AVR Interrupts

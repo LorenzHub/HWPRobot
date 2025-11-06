@@ -1,0 +1,7 @@
+# AVR Toolchain
+avr8-gnu-toolchain-*/
+
+# Build output
+Build/
+Debug/
+
