@@ -5,11 +5,14 @@ void stateMachine();
 
 typedef enum {
     IDLE,
+    Turn_On_Spot,
     Drive_Forward,
     Drive_Forward_5sec
 } state;
 
-static state currentState = IDLE;
+/* currentState is defined in statemachine.c to avoid multiple definitions
+ * when this header is included by multiple translation units. */
+extern state currentState;
 
 void setState(state newState);
 

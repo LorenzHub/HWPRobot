@@ -13,7 +13,7 @@
  *  Number of ADC channels to be sampled.
  *  Corresponds to number of entries in array ADC_channels[], see #ADC_CHANNEL_INIT
  */
-#define ADC_CHANNEL_COUNT 2
+#define ADC_CHANNEL_COUNT 5
 
 
 /**
@@ -28,10 +28,22 @@
  *
  *  See ADMUX register description for further details on input channel
  *  selection.
+ *  
+ *  Mapping for Infrared Sensors:
+ *  - Virtual Channel 0 → Physical Channel 0 (Pin ADC0) → Infrared Sensor 1
+ *  - Virtual Channel 1 → Physical Channel 1 (Pin ADC1) → Infrared Sensor 2
+ *  - Virtual Channel 2 → Physical Channel 2 (Pin ADC2) → Infrared Sensor 3
+ *  - Virtual Channel 3 → Physical Channel 3 (Pin ADC3) → Infrared Sensor 4
+ *  - Virtual Channel 4 → Physical Channel 4 (Pin ADC4) → Infrared Sensor 5
+ *  
+ *  Note: ADC4 (PF4) requires JTAG to be disabled. See ADC_init().
  */
 #define ADC_CHANNEL_INIT {   \
     ADC_channels[0].channel = 0; \
     ADC_channels[1].channel = 1; \
+    ADC_channels[2].channel = 2; \
+    ADC_channels[3].channel = 3; \
+    ADC_channels[4].channel = 4; \
 }
 
 

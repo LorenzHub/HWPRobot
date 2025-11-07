@@ -5,10 +5,12 @@
 #include <io/led/led.h>
 #include <motor/motor.h>
 #include <pathFollower/pathFollower.h>
+#include <tools/remoteDataProcessing/remoteDataProcessing.h>
 
 #include <avr/io.h>                 // AVR IO ports
 #include <avr/interrupt.h>          // AVR Interrupts
 #include <avr/pgmspace.h>           // AVR Program Space Utilities
+#include <util/delay.h>              // AVR delay functions
 #include <math.h>                   // Math functions and constants
 #include <inttypes.h>               // Integer type conversions for printf, scanf and alike
 #include <stdint.h>
@@ -68,6 +70,36 @@ static void commUserCommand(const uint8_t* packet, __attribute__((unused)) const
     case 3: // command ID 3: drive forwards for 5 seconds, then stop
         setState(Drive_Forward_5sec);
         break;
+    case 4: // command ID 4: plot infrared sensor values
+        {
+            // Clear previous script
+            remoteDataProcessing_clear();
+            
+            // Collect samples and send to HWPCS
+            for (uint8_t i = 0; i < 50; ++i) {
+                uint16_t ir1 = ADC_getFilteredValue(0);
+                uint16_t ir2 = ADC_getFilteredValue(1);
+                uint16_t ir3 = ADC_getFilteredValue(2);
+                uint16_t ir4 = ADC_getFilteredValue(3);
+                
+                remoteDataProcessing_command(false, "ir_data(%"PRIu8",:) = [%"PRIu16 ", %"PRIu16 ", %"PRIu16 ", %"PRIu16 "];", 
+                    i+1, ir1, ir2, ir3, ir4);
+                
+                // Small delay between samples
+                _delay_ms(50);
+            }
+
+            // Create plot script
+            remoteDataProcessing_command(false, "figure;");
+            remoteDataProcessing_command(false, "subplot(2,2,1); plot(ir_data(:,1)); title('Infrared Sensor 1'); ylabel('ADC Value'); grid on;");
+            remoteDataProcessing_command(false, "subplot(2,2,2); plot(ir_data(:,2)); title('Infrared Sensor 2'); ylabel('ADC Value'); grid on;");
+            remoteDataProcessing_command(false, "subplot(2,2,3); plot(ir_data(:,3)); title('Infrared Sensor 3'); ylabel('ADC Value'); grid on;");
+            remoteDataProcessing_command(false, "subplot(2,2,4); plot(ir_data(:,4)); title('Infrared Sensor 4'); ylabel('ADC Value'); grid on;");
+            
+            // Execute script
+            remoteDataProcessing_command(true, "disp('Infrared sensor data plotted');");
+        }
+        break;
     }
 }
 
@@ -106,7 +138,7 @@ static void init(void) {
 
 int main(void) {
     init();
-
+    
     communication_log_P(LEVEL_INFO, PSTR("Booted"));
 
     // do forever
@@ -130,7 +162,7 @@ int main(void) {
             telemetry.infrared2 = ADC_getFilteredValue(1); //where is this sensor mounted?
             telemetry.infrared3 = ADC_getFilteredValue(2); //where is this sensor mounted?
             telemetry.infrared4 = ADC_getFilteredValue(3); //where is this sensor mounted?
-            telemetry.infrared5 = 0;
+            telemetry.infrared5 = ADC_getFilteredValue(4); //where is this sensor mounted?
             telemetry.user1 = 20;
             telemetry.user2 = 42.42f;
             communication_writePacket(CH_OUT_TELEMETRY, (uint8_t*)&telemetry, sizeof(telemetry));

@@ -3,12 +3,20 @@
 #include <tools/timeTask/timeTask.h>
 
 
+
+/* Define the current state here (single-definition) */
+state currentState = IDLE;
+
 static timeTask_time_t start; 
 
 void stateMachine() {
     switch(currentState){
         case IDLE:
             Motor_stopAll();
+            break;
+        case Turn_On_Spot:
+            /* rotate in-place */
+            Motor_setPWM(3000, -3000);
             break;
         case Drive_Forward:
             //do something
