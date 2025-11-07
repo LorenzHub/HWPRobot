@@ -7,7 +7,8 @@ typedef enum {
     IDLE,
     Turn_On_Spot,
     Drive_Forward,
-    Drive_Forward_5sec
+    Drive_Forward_5sec,
+    Encoder_Calibration
 } state;
 
 /* currentState is defined in statemachine.c to avoid multiple definitions

@@ -24,6 +24,9 @@ void stateMachine() {
         case Drive_Forward_5sec:
             drive_Forward_5sec();
             break;
+        case Encoder_Calibration:
+            // This state is handled in main.c via TIMETASK
+            break;
     }
 }
 
