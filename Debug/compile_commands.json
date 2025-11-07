@@ -1,86 +1,72 @@
 [
 {
-  "directory": "/home/lorenz/Desktop/HWP/HWPRobot/Debug",
-  "command": "/usr/bin/avr-gcc -DF_CPU=8000000UL -I/home/lorenz/Desktop/HWP/HWPRobot/lib -I/home/lorenz/Desktop/HWP/HWPRobot/src -O2 -g2 -g -mmcu=atmega1280 -c -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -ffunction-sections -fdata-sections -Wall -Wextra -Wpedantic -std=gnu99 -o CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj -c /home/lorenz/Desktop/HWP/HWPRobot/lib/communication/communication.c",
-  "file": "/home/lorenz/Desktop/HWP/HWPRobot/lib/communication/communication.c",
-  "output": "CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj"
+  "directory": "/home/linuxmint/Schreibtisch/HWP/HWPRobot/Debug",
+  "command": "/bin/avr-gcc -DF_CPU=8000000UL -I/home/linuxmint/Schreibtisch/HWP/HWPRobot/lib -I/home/linuxmint/Schreibtisch/HWP/HWPRobot/src -O2 -g2 -g -mmcu=atmega1280 -c -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -ffunction-sections -fdata-sections -Wall -Wextra -Wpedantic -std=gnu99 -o CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj -c /home/linuxmint/Schreibtisch/HWP/HWPRobot/lib/communication/communication.c",
+  "file": "/home/linuxmint/Schreibtisch/HWP/HWPRobot/lib/communication/communication.c"
 },
 {
-  "directory": "/home/lorenz/Desktop/HWP/HWPRobot/Debug",
-  "command": "/usr/bin/avr-gcc -DF_CPU=8000000UL -I/home/lorenz/Desktop/HWP/HWPRobot/lib -I/home/lorenz/Desktop/HWP/HWPRobot/src -O2 -g2 -g -mmcu=atmega1280 -c -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -ffunction-sections -fdata-sections -Wall -Wextra -Wpedantic -std=gnu99 -o CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc.c.obj -c /home/lorenz/Desktop/HWP/HWPRobot/lib/io/adc/adc.c",
-  "file": "/home/lorenz/Desktop/HWP/HWPRobot/lib/io/adc/adc.c",
-  "output": "CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc.c.obj"
+  "directory": "/home/linuxmint/Schreibtisch/HWP/HWPRobot/Debug",
+  "command": "/bin/avr-gcc -DF_CPU=8000000UL -I/home/linuxmint/Schreibtisch/HWP/HWPRobot/lib -I/home/linuxmint/Schreibtisch/HWP/HWPRobot/src -O2 -g2 -g -mmcu=atmega1280 -c -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -ffunction-sections -fdata-sections -Wall -Wextra -Wpedantic -std=gnu99 -o CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc.c.obj -c /home/linuxmint/Schreibtisch/HWP/HWPRobot/lib/io/adc/adc.c",
+  "file": "/home/linuxmint/Schreibtisch/HWP/HWPRobot/lib/io/adc/adc.c"
 },
 {
-  "directory": "/home/lorenz/Desktop/HWP/HWPRobot/Debug",
-  "command": "/usr/bin/avr-gcc -DF_CPU=8000000UL -I/home/lorenz/Desktop/HWP/HWPRobot/lib -I/home/lorenz/Desktop/HWP/HWPRobot/src -O2 -g2 -g -mmcu=atmega1280 -x assembler-with-cpp -c -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -ffunction-sections -fdata-sections -Wall -Wextra -Wpedantic -std=gnu99 -o CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc_isr.S.obj -c /home/lorenz/Desktop/HWP/HWPRobot/lib/io/adc/adc_isr.S",
-  "file": "/home/lorenz/Desktop/HWP/HWPRobot/lib/io/adc/adc_isr.S",
-  "output": "CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc_isr.S.obj"
+  "directory": "/home/linuxmint/Schreibtisch/HWP/HWPRobot/Debug",
+  "command": "/bin/avr-gcc -DF_CPU=8000000UL -I/home/linuxmint/Schreibtisch/HWP/HWPRobot/lib -I/home/linuxmint/Schreibtisch/HWP/HWPRobot/src -O2 -g2 -g -mmcu=atmega1280 -x assembler-with-cpp -c -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -ffunction-sections -fdata-sections -Wall -Wextra -Wpedantic -std=gnu99 -o CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc_isr.S.obj -c /home/linuxmint/Schreibtisch/HWP/HWPRobot/lib/io/adc/adc_isr.S",
+  "file": "/home/linuxmint/Schreibtisch/HWP/HWPRobot/lib/io/adc/adc_isr.S"
 },
 {
-  "directory": "/home/lorenz/Desktop/HWP/HWPRobot/Debug",
-  "command": "/usr/bin/avr-gcc -DF_CPU=8000000UL -I/home/lorenz/Desktop/HWP/HWPRobot/lib -I/home/lorenz/Desktop/HWP/HWPRobot/src -O2 -g2 -g -mmcu=atmega1280 -c -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -ffunction-sections -fdata-sections -Wall -Wextra -Wpedantic -std=gnu99 -o CMakeFiles/HWPRobot.elf.dir/lib/io/i2c/i2c.c.obj -c /home/lorenz/Desktop/HWP/HWPRobot/lib/io/i2c/i2c.c",
-  "file": "/home/lorenz/Desktop/HWP/HWPRobot/lib/io/i2c/i2c.c",
-  "output": "CMakeFiles/HWPRobot.elf.dir/lib/io/i2c/i2c.c.obj"
+  "directory": "/home/linuxmint/Schreibtisch/HWP/HWPRobot/Debug",
+  "command": "/bin/avr-gcc -DF_CPU=8000000UL -I/home/linuxmint/Schreibtisch/HWP/HWPRobot/lib -I/home/linuxmint/Schreibtisch/HWP/HWPRobot/src -O2 -g2 -g -mmcu=atmega1280 -c -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -ffunction-sections -fdata-sections -Wall -Wextra -Wpedantic -std=gnu99 -o CMakeFiles/HWPRobot.elf.dir/lib/io/i2c/i2c.c.obj -c /home/linuxmint/Schreibtisch/HWP/HWPRobot/lib/io/i2c/i2c.c",
+  "file": "/home/linuxmint/Schreibtisch/HWP/HWPRobot/lib/io/i2c/i2c.c"
 },
 {
-  "directory": "/home/lorenz/Desktop/HWP/HWPRobot/Debug",
-  "command": "/usr/bin/avr-gcc -DF_CPU=8000000UL -I/home/lorenz/Desktop/HWP/HWPRobot/lib -I/home/lorenz/Desktop/HWP/HWPRobot/src -O2 -g2 -g -mmcu=atmega1280 -c -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -ffunction-sections -fdata-sections -Wall -Wextra -Wpedantic -std=gnu99 -o CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj -c /home/lorenz/Desktop/HWP/HWPRobot/lib/io/uart/uart.c",
-  "file": "/home/lorenz/Desktop/HWP/HWPRobot/lib/io/uart/uart.c",
-  "output": "CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj"
+  "directory": "/home/linuxmint/Schreibtisch/HWP/HWPRobot/Debug",
+  "command": "/bin/avr-gcc -DF_CPU=8000000UL -I/home/linuxmint/Schreibtisch/HWP/HWPRobot/lib -I/home/linuxmint/Schreibtisch/HWP/HWPRobot/src -O2 -g2 -g -mmcu=atmega1280 -c -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -ffunction-sections -fdata-sections -Wall -Wextra -Wpedantic -std=gnu99 -o CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj -c /home/linuxmint/Schreibtisch/HWP/HWPRobot/lib/io/uart/uart.c",
+  "file": "/home/linuxmint/Schreibtisch/HWP/HWPRobot/lib/io/uart/uart.c"
 },
 {
-  "directory": "/home/lorenz/Desktop/HWP/HWPRobot/Debug",
-  "command": "/usr/bin/avr-gcc -DF_CPU=8000000UL -I/home/lorenz/Desktop/HWP/HWPRobot/lib -I/home/lorenz/Desktop/HWP/HWPRobot/src -O2 -g2 -g -mmcu=atmega1280 -x assembler-with-cpp -c -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -ffunction-sections -fdata-sections -Wall -Wextra -Wpedantic -std=gnu99 -o CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart_isr.S.obj -c /home/lorenz/Desktop/HWP/HWPRobot/lib/io/uart/uart_isr.S",
-  "file": "/home/lorenz/Desktop/HWP/HWPRobot/lib/io/uart/uart_isr.S",
-  "output": "CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart_isr.S.obj"
+  "directory": "/home/linuxmint/Schreibtisch/HWP/HWPRobot/Debug",
+  "command": "/bin/avr-gcc -DF_CPU=8000000UL -I/home/linuxmint/Schreibtisch/HWP/HWPRobot/lib -I/home/linuxmint/Schreibtisch/HWP/HWPRobot/src -O2 -g2 -g -mmcu=atmega1280 -x assembler-with-cpp -c -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -ffunction-sections -fdata-sections -Wall -Wextra -Wpedantic -std=gnu99 -o CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart_isr.S.obj -c /home/linuxmint/Schreibtisch/HWP/HWPRobot/lib/io/uart/uart_isr.S",
+  "file": "/home/linuxmint/Schreibtisch/HWP/HWPRobot/lib/io/uart/uart_isr.S"
 },
 {
-  "directory": "/home/lorenz/Desktop/HWP/HWPRobot/Debug",
-  "command": "/usr/bin/avr-gcc -DF_CPU=8000000UL -I/home/lorenz/Desktop/HWP/HWPRobot/lib -I/home/lorenz/Desktop/HWP/HWPRobot/src -O2 -g2 -g -mmcu=atmega1280 -c -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -ffunction-sections -fdata-sections -Wall -Wextra -Wpedantic -std=gnu99 -o CMakeFiles/HWPRobot.elf.dir/lib/motor/motor.c.obj -c /home/lorenz/Desktop/HWP/HWPRobot/lib/motor/motor.c",
-  "file": "/home/lorenz/Desktop/HWP/HWPRobot/lib/motor/motor.c",
-  "output": "CMakeFiles/HWPRobot.elf.dir/lib/motor/motor.c.obj"
+  "directory": "/home/linuxmint/Schreibtisch/HWP/HWPRobot/Debug",
+  "command": "/bin/avr-gcc -DF_CPU=8000000UL -I/home/linuxmint/Schreibtisch/HWP/HWPRobot/lib -I/home/linuxmint/Schreibtisch/HWP/HWPRobot/src -O2 -g2 -g -mmcu=atmega1280 -c -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -ffunction-sections -fdata-sections -Wall -Wextra -Wpedantic -std=gnu99 -o CMakeFiles/HWPRobot.elf.dir/lib/motor/motor.c.obj -c /home/linuxmint/Schreibtisch/HWP/HWPRobot/lib/motor/motor.c",
+  "file": "/home/linuxmint/Schreibtisch/HWP/HWPRobot/lib/motor/motor.c"
 },
 {
-  "directory": "/home/lorenz/Desktop/HWP/HWPRobot/Debug",
-  "command": "/usr/bin/avr-gcc -DF_CPU=8000000UL -I/home/lorenz/Desktop/HWP/HWPRobot/lib -I/home/lorenz/Desktop/HWP/HWPRobot/src -O2 -g2 -g -mmcu=atmega1280 -c -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -ffunction-sections -fdata-sections -Wall -Wextra -Wpedantic -std=gnu99 -o CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj -c /home/lorenz/Desktop/HWP/HWPRobot/lib/pathFollower/pathFollower.c",
-  "file": "/home/lorenz/Desktop/HWP/HWPRobot/lib/pathFollower/pathFollower.c",
-  "output": "CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj"
+  "directory": "/home/linuxmint/Schreibtisch/HWP/HWPRobot/Debug",
+  "command": "/bin/avr-gcc -DF_CPU=8000000UL -I/home/linuxmint/Schreibtisch/HWP/HWPRobot/lib -I/home/linuxmint/Schreibtisch/HWP/HWPRobot/src -O2 -g2 -g -mmcu=atmega1280 -c -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -ffunction-sections -fdata-sections -Wall -Wextra -Wpedantic -std=gnu99 -o CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj -c /home/linuxmint/Schreibtisch/HWP/HWPRobot/lib/pathFollower/pathFollower.c",
+  "file": "/home/linuxmint/Schreibtisch/HWP/HWPRobot/lib/pathFollower/pathFollower.c"
 },
 {
-  "directory": "/home/lorenz/Desktop/HWP/HWPRobot/Debug",
-  "command": "/usr/bin/avr-gcc -DF_CPU=8000000UL -I/home/lorenz/Desktop/HWP/HWPRobot/lib -I/home/lorenz/Desktop/HWP/HWPRobot/src -O2 -g2 -g -mmcu=atmega1280 -c -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -ffunction-sections -fdata-sections -Wall -Wextra -Wpedantic -std=gnu99 -o CMakeFiles/HWPRobot.elf.dir/lib/tools/labyrinth/labyrinth.c.obj -c /home/lorenz/Desktop/HWP/HWPRobot/lib/tools/labyrinth/labyrinth.c",
-  "file": "/home/lorenz/Desktop/HWP/HWPRobot/lib/tools/labyrinth/labyrinth.c",
-  "output": "CMakeFiles/HWPRobot.elf.dir/lib/tools/labyrinth/labyrinth.c.obj"
+  "directory": "/home/linuxmint/Schreibtisch/HWP/HWPRobot/Debug",
+  "command": "/bin/avr-gcc -DF_CPU=8000000UL -I/home/linuxmint/Schreibtisch/HWP/HWPRobot/lib -I/home/linuxmint/Schreibtisch/HWP/HWPRobot/src -O2 -g2 -g -mmcu=atmega1280 -c -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -ffunction-sections -fdata-sections -Wall -Wextra -Wpedantic -std=gnu99 -o CMakeFiles/HWPRobot.elf.dir/lib/tools/labyrinth/labyrinth.c.obj -c /home/linuxmint/Schreibtisch/HWP/HWPRobot/lib/tools/labyrinth/labyrinth.c",
+  "file": "/home/linuxmint/Schreibtisch/HWP/HWPRobot/lib/tools/labyrinth/labyrinth.c"
 },
 {
-  "directory": "/home/lorenz/Desktop/HWP/HWPRobot/Debug",
-  "command": "/usr/bin/avr-gcc -DF_CPU=8000000UL -I/home/lorenz/Desktop/HWP/HWPRobot/lib -I/home/lorenz/Desktop/HWP/HWPRobot/src -O2 -g2 -g -mmcu=atmega1280 -c -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -ffunction-sections -fdata-sections -Wall -Wextra -Wpedantic -std=gnu99 -o CMakeFiles/HWPRobot.elf.dir/lib/tools/remoteDataProcessing/remoteDataProcessing.c.obj -c /home/lorenz/Desktop/HWP/HWPRobot/lib/tools/remoteDataProcessing/remoteDataProcessing.c",
-  "file": "/home/lorenz/Desktop/HWP/HWPRobot/lib/tools/remoteDataProcessing/remoteDataProcessing.c",
-  "output": "CMakeFiles/HWPRobot.elf.dir/lib/tools/remoteDataProcessing/remoteDataProcessing.c.obj"
+  "directory": "/home/linuxmint/Schreibtisch/HWP/HWPRobot/Debug",
+  "command": "/bin/avr-gcc -DF_CPU=8000000UL -I/home/linuxmint/Schreibtisch/HWP/HWPRobot/lib -I/home/linuxmint/Schreibtisch/HWP/HWPRobot/src -O2 -g2 -g -mmcu=atmega1280 -c -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -ffunction-sections -fdata-sections -Wall -Wextra -Wpedantic -std=gnu99 -o CMakeFiles/HWPRobot.elf.dir/lib/tools/remoteDataProcessing/remoteDataProcessing.c.obj -c /home/linuxmint/Schreibtisch/HWP/HWPRobot/lib/tools/remoteDataProcessing/remoteDataProcessing.c",
+  "file": "/home/linuxmint/Schreibtisch/HWP/HWPRobot/lib/tools/remoteDataProcessing/remoteDataProcessing.c"
 },
 {
-  "directory": "/home/lorenz/Desktop/HWP/HWPRobot/Debug",
-  "command": "/usr/bin/avr-gcc -DF_CPU=8000000UL -I/home/lorenz/Desktop/HWP/HWPRobot/lib -I/home/lorenz/Desktop/HWP/HWPRobot/src -O2 -g2 -g -mmcu=atmega1280 -c -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -ffunction-sections -fdata-sections -Wall -Wextra -Wpedantic -std=gnu99 -o CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask.c.obj -c /home/lorenz/Desktop/HWP/HWPRobot/lib/tools/timeTask/timeTask.c",
-  "file": "/home/lorenz/Desktop/HWP/HWPRobot/lib/tools/timeTask/timeTask.c",
-  "output": "CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask.c.obj"
+  "directory": "/home/linuxmint/Schreibtisch/HWP/HWPRobot/Debug",
+  "command": "/bin/avr-gcc -DF_CPU=8000000UL -I/home/linuxmint/Schreibtisch/HWP/HWPRobot/lib -I/home/linuxmint/Schreibtisch/HWP/HWPRobot/src -O2 -g2 -g -mmcu=atmega1280 -c -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -ffunction-sections -fdata-sections -Wall -Wextra -Wpedantic -std=gnu99 -o CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask.c.obj -c /home/linuxmint/Schreibtisch/HWP/HWPRobot/lib/tools/timeTask/timeTask.c",
+  "file": "/home/linuxmint/Schreibtisch/HWP/HWPRobot/lib/tools/timeTask/timeTask.c"
 },
 {
-  "directory": "/home/lorenz/Desktop/HWP/HWPRobot/Debug",
-  "command": "/usr/bin/avr-gcc -DF_CPU=8000000UL -I/home/lorenz/Desktop/HWP/HWPRobot/lib -I/home/lorenz/Desktop/HWP/HWPRobot/src -O2 -g2 -g -mmcu=atmega1280 -x assembler-with-cpp -c -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -ffunction-sections -fdata-sections -Wall -Wextra -Wpedantic -std=gnu99 -o CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask_isr.S.obj -c /home/lorenz/Desktop/HWP/HWPRobot/lib/tools/timeTask/timeTask_isr.S",
-  "file": "/home/lorenz/Desktop/HWP/HWPRobot/lib/tools/timeTask/timeTask_isr.S",
-  "output": "CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask_isr.S.obj"
+  "directory": "/home/linuxmint/Schreibtisch/HWP/HWPRobot/Debug",
+  "command": "/bin/avr-gcc -DF_CPU=8000000UL -I/home/linuxmint/Schreibtisch/HWP/HWPRobot/lib -I/home/linuxmint/Schreibtisch/HWP/HWPRobot/src -O2 -g2 -g -mmcu=atmega1280 -x assembler-with-cpp -c -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -ffunction-sections -fdata-sections -Wall -Wextra -Wpedantic -std=gnu99 -o CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask_isr.S.obj -c /home/linuxmint/Schreibtisch/HWP/HWPRobot/lib/tools/timeTask/timeTask_isr.S",
+  "file": "/home/linuxmint/Schreibtisch/HWP/HWPRobot/lib/tools/timeTask/timeTask_isr.S"
 },
 {
-  "directory": "/home/lorenz/Desktop/HWP/HWPRobot/Debug",
-  "command": "/usr/bin/avr-gcc -DF_CPU=8000000UL -I/home/lorenz/Desktop/HWP/HWPRobot/lib -I/home/lorenz/Desktop/HWP/HWPRobot/src -O2 -g2 -g -mmcu=atmega1280 -c -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -ffunction-sections -fdata-sections -Wall -Wextra -Wpedantic -std=gnu99 -o CMakeFiles/HWPRobot.elf.dir/src/badISR.c.obj -c /home/lorenz/Desktop/HWP/HWPRobot/src/badISR.c",
-  "file": "/home/lorenz/Desktop/HWP/HWPRobot/src/badISR.c",
-  "output": "CMakeFiles/HWPRobot.elf.dir/src/badISR.c.obj"
+  "directory": "/home/linuxmint/Schreibtisch/HWP/HWPRobot/Debug",
+  "command": "/bin/avr-gcc -DF_CPU=8000000UL -I/home/linuxmint/Schreibtisch/HWP/HWPRobot/lib -I/home/linuxmint/Schreibtisch/HWP/HWPRobot/src -O2 -g2 -g -mmcu=atmega1280 -c -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -ffunction-sections -fdata-sections -Wall -Wextra -Wpedantic -std=gnu99 -o CMakeFiles/HWPRobot.elf.dir/src/badISR.c.obj -c /home/linuxmint/Schreibtisch/HWP/HWPRobot/src/badISR.c",
+  "file": "/home/linuxmint/Schreibtisch/HWP/HWPRobot/src/badISR.c"
 },
 {
-  "directory": "/home/lorenz/Desktop/HWP/HWPRobot/Debug",
-  "command": "/usr/bin/avr-gcc -DF_CPU=8000000UL -I/home/lorenz/Desktop/HWP/HWPRobot/lib -I/home/lorenz/Desktop/HWP/HWPRobot/src -O2 -g2 -g -mmcu=atmega1280 -c -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -ffunction-sections -fdata-sections -Wall -Wextra -Wpedantic -std=gnu99 -o CMakeFiles/HWPRobot.elf.dir/src/main.c.obj -c /home/lorenz/Desktop/HWP/HWPRobot/src/main.c",
-  "file": "/home/lorenz/Desktop/HWP/HWPRobot/src/main.c",
-  "output": "CMakeFiles/HWPRobot.elf.dir/src/main.c.obj"
+  "directory": "/home/linuxmint/Schreibtisch/HWP/HWPRobot/Debug",
+  "command": "/bin/avr-gcc -DF_CPU=8000000UL -I/home/linuxmint/Schreibtisch/HWP/HWPRobot/lib -I/home/linuxmint/Schreibtisch/HWP/HWPRobot/src -O2 -g2 -g -mmcu=atmega1280 -c -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -ffunction-sections -fdata-sections -Wall -Wextra -Wpedantic -std=gnu99 -o CMakeFiles/HWPRobot.elf.dir/src/main.c.obj -c /home/linuxmint/Schreibtisch/HWP/HWPRobot/src/main.c",
+  "file": "/home/linuxmint/Schreibtisch/HWP/HWPRobot/src/main.c"
 }
 ]

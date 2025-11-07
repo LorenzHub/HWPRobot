@@ -136,7 +136,13 @@ add_avr_executable(HWPRobot
 		src/cfg/io/adc/adc_cfg.h
 		src/cfg/io/uart/uart_cfg.h
 		src/badISR.c
-		src/main.c)
+		src/main.c
+		src/statemachine.c
+		src/statemachine.h
+		src/bumper.h
+		src/bumper.c
+		src/encoder.h
+		src/encoder.c)
 
 ##########################################################################
 # include search paths
@@ -151,9 +157,7 @@ avr_target_include_directories(HWPRobot
 ##########################################################################
 avr_target_compile_definitions(HWPRobot
 	F_CPU=${MCU_SPEED}
-# Hack to satisfy Eclipse indexer so that it finds device-specific headers
-# included from avr/io.h
-#	__AVR_ATmega1280__
+	__AVR_ATmega1280__
 )
 
 ##########################################################################

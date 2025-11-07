@@ -1,112 +1,112 @@
 Archive member included to satisfy reference by file (symbol)
 
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(addsf3.o)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(addsf3.o)
                               CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj (__subsf3)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(addsf3x.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(addsf3.o) (__addsf3x)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(cmpsf2.o)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(addsf3x.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(addsf3.o) (__addsf3x)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(cmpsf2.o)
                               CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj (__ltsf2)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(cos.o)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(cos.o)
                               CMakeFiles/HWPRobot.elf.dir/src/main.c.obj (cos)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(divsf3.o)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(divsf3.o)
                               CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj (__divsf3)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(divsf3x.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(divsf3.o) (__divsf3x)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fixsfsi.o)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(divsf3x.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(divsf3.o) (__divsf3x)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fixsfsi.o)
                               CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj (__fixsfsi)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fixunssfsi.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fixsfsi.o) (__fixunssfsi)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(floatsisf.o)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fixunssfsi.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fixsfsi.o) (__fixunssfsi)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(floatsisf.o)
                               CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj (__floatsisf)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fma.o)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fma.o)
                               CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj (fma)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_cmp.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(cmpsf2.o) (__fp_cmp)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_inf.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(addsf3x.o) (__fp_inf)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_nan.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(addsf3x.o) (__fp_nan)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_pscA.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(addsf3x.o) (__fp_pscA)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_pscB.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(addsf3x.o) (__fp_pscB)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_rempio2.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(cos.o) (__fp_rempio2)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_round.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(addsf3.o) (__fp_round)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_sinus.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(cos.o) (__fp_sinus)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_split3.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(addsf3x.o) (__fp_split3)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_zero.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(addsf3x.o) (__fp_zero)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(gesf2.o)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_cmp.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(cmpsf2.o) (__fp_cmp)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_inf.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(addsf3x.o) (__fp_inf)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_nan.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(addsf3x.o) (__fp_nan)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_pscA.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(addsf3x.o) (__fp_pscA)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_pscB.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(addsf3x.o) (__fp_pscB)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_rempio2.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(cos.o) (__fp_rempio2)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_round.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(addsf3.o) (__fp_round)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_sinus.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(cos.o) (__fp_sinus)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_split3.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(addsf3x.o) (__fp_split3)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_zero.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(addsf3x.o) (__fp_zero)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(gesf2.o)
                               CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj (__gesf2)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(hypot.o)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(hypot.o)
                               CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj (hypot)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(ldexp.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(hypot.o) (ldexp)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(mulsf3.o)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(ldexp.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(hypot.o) (ldexp)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(mulsf3.o)
                               CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj (__mulsf3)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(mulsf3x.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fma.o) (__mulsf3x)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(sin.o)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(mulsf3x.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fma.o) (__mulsf3x)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(sin.o)
                               CMakeFiles/HWPRobot.elf.dir/src/main.c.obj (sin)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(sqrt.o)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(sqrt.o)
                               CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj (sqrt)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(square.o)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(square.o)
                               CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj (square)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_mpack.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(hypot.o) (__fp_mpack)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_norm2.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(sqrt.o) (__fp_norm2)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_powsodd.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_sinus.o) (__fp_powsodd)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_powser.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_powsodd.o) (__fp_powser)
-/usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_exit.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/crtatmega1280.o (exit)
-/usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_copy_data.o)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_mpack.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(hypot.o) (__fp_mpack)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_norm2.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(sqrt.o) (__fp_norm2)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_powsodd.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_sinus.o) (__fp_powsodd)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_powser.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_powsodd.o) (__fp_powser)
+/usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_exit.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtatmega1280.o (exit)
+/usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_copy_data.o)
                               CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj (__do_copy_data)
-/usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_clear_bss.o)
+/usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_clear_bss.o)
                               CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj (__do_clear_bss)
-/usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_muluhisi3.o)
+/usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_muluhisi3.o)
                               CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask.c.obj (__muluhisi3)
-/usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_umulhisi3.o)
-                              /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_muluhisi3.o) (__umulhisi3)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(malloc.o)
+/usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_umulhisi3.o)
+                              /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_muluhisi3.o) (__umulhisi3)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(malloc.o)
                               CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj (malloc)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(memcpy.o)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(memcpy.o)
                               CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj (memcpy)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vsnprintf.o)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(vsnprintf.o)
                               CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj (vsnprintf)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vsnprintf_p.o)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(vsnprintf_p.o)
                               CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj (vsnprintf_P)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vfprintf_std.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vsnprintf.o) (vfprintf)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(strnlen_P.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vfprintf_std.o) (strnlen_P)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(strnlen.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vfprintf_std.o) (strnlen)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(fputc.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vfprintf_std.o) (fputc)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(ultoa_invert.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vfprintf_std.o) (__ultoa_invert)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(vfprintf_std.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(vsnprintf.o) (vfprintf)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(strnlen_P.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(vfprintf_std.o) (strnlen_P)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(strnlen.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(vfprintf_std.o) (strnlen)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(fputc.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(vfprintf_std.o) (fputc)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(ultoa_invert.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(vfprintf_std.o) (__ultoa_invert)
 
 Allocating common symbols
 Common symbol       size              file
 
 uart1_RX_buf        0x80              CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj
-__brkval            0x2               /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(malloc.o)
+__brkval            0x2               /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(malloc.o)
 uart1_TX_buf        0x100             CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj
-__flp               0x2               /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(malloc.o)
+__flp               0x2               /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(malloc.o)
 ADC_currentChannel  0x2               CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc.c.obj
 ADC_channels        0x14              CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc.c.obj
 
 Discarded input sections
 
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/crtatmega1280.o
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/crtatmega1280.o
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtatmega1280.o
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtatmega1280.o
  .text          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
@@ -118,15 +118,15 @@ Discarded input sections
  .data          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc.c.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc.c.obj
  .text.ADC_init
-                0x0000000000000000       0x6e CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc.c.obj
+                0x0000000000000000       0xb2 CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc.c.obj
  .text.ADC_getFilteredValue
-                0x0000000000000000       0x36 CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc.c.obj
+                0x0000000000000000       0x2c CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc.c.obj
  .text.ADC_getLastValue
-                0x0000000000000000       0x30 CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc.c.obj
+                0x0000000000000000       0x40 CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc.c.obj
  .text.ADC_isUpToDate
-                0x0000000000000000       0x22 CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc.c.obj
+                0x0000000000000000       0x26 CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc.c.obj
  .text.ADC_setUpToDate
-                0x0000000000000000       0x20 CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc.c.obj
+                0x0000000000000000       0x24 CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc_isr.S.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc_isr.S.obj
  .text          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/io/i2c/i2c.c.obj
@@ -143,7 +143,7 @@ Discarded input sections
  .text.uart_getTXBufSpace1
                 0x0000000000000000        0xe CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj
  .text.uart_waitRXAvailable1
-                0x0000000000000000       0x3a CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj
+                0x0000000000000000       0x34 CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj
  .text.uart_isRXBufOverflow1
                 0x0000000000000000       0x12 CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart_isr.S.obj
@@ -162,26 +162,25 @@ Discarded input sections
  .text          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
- .stab          0x0000000000000000     0x12e4 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
-                                       0x168c (size before relaxing)
+ .stab          0x0000000000000000     0x13f8 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
+                                       0x17a0 (size before relaxing)
  .text.commPathFollowerParameters
                 0x0000000000000000       0x62 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
- .text.setPath.part.0
-                0x0000000000000000      0x17a CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
+ .text.setPath  0x0000000000000000      0x182 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
  .text.commPathFollower
-                0x0000000000000000      0x128 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
+                0x0000000000000000      0x12e CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
  .text.pathFollower_init
                 0x0000000000000000       0x14 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
  .text.pathFollower_setNewPath
-                0x0000000000000000       0x14 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
+                0x0000000000000000        0xc CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
  .text.pathFollower_clearPath
                 0x0000000000000000       0x46 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
  .text.pathFollower_command
                 0x0000000000000000       0x4c CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
- .rodata.pathFollower_update.str1.1
+ .rodata.str1.1
                 0x0000000000000000       0x20 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
  .text.pathFollower_update
-                0x0000000000000000     0x1056 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
+                0x0000000000000000     0x10cc CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
  .text.pathFollower_getStatus
                 0x0000000000000000        0x6 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
  .text.pathFollower_getExtStatus
@@ -198,25 +197,25 @@ Discarded input sections
                 0x0000000000000000        0xa CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
  .text.pathFollower_removeCallback
                 0x0000000000000000        0xa CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
- .progmem.data.__c.2403
+ .progmem.data.__c.2507
                 0x0000000000000000       0x2d CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
- .progmem.data.__c.2387
+ .progmem.data.__c.2491
                 0x0000000000000000       0x14 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
- .progmem.data.__c.2385
+ .progmem.data.__c.2489
                 0x0000000000000000       0x33 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
- .progmem.data.__c.2340
+ .progmem.data.__c.2444
                 0x0000000000000000       0x18 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
- .progmem.data.__c.2333
+ .progmem.data.__c.2437
                 0x0000000000000000        0xf CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
- .progmem.data.__c.2331
+ .progmem.data.__c.2435
                 0x0000000000000000       0x10 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
- .progmem.data.__c.2329
+ .progmem.data.__c.2433
                 0x0000000000000000       0x11 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
- .progmem.data.__c.2327
+ .progmem.data.__c.2431
                 0x0000000000000000       0x12 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
- .progmem.data.__c.2325
+ .progmem.data.__c.2429
                 0x0000000000000000       0x2b CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
- .progmem.data.__c.2323
+ .progmem.data.__c.2427
                 0x0000000000000000       0x33 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
  .bss.relL      0x0000000000000000        0x4 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
  .bss.nextSegLen
@@ -253,10 +252,10 @@ Discarded input sections
  .text          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/tools/labyrinth/labyrinth.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/tools/labyrinth/labyrinth.c.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/tools/labyrinth/labyrinth.c.obj
- .stab          0x0000000000000000      0x708 CMakeFiles/HWPRobot.elf.dir/lib/tools/labyrinth/labyrinth.c.obj
-                                        0xa38 (size before relaxing)
+ .stab          0x0000000000000000      0x84c CMakeFiles/HWPRobot.elf.dir/lib/tools/labyrinth/labyrinth.c.obj
+                                        0xb7c (size before relaxing)
  .text.labyrinth_getWallIndex.part.0
-                0x0000000000000000       0x48 CMakeFiles/HWPRobot.elf.dir/lib/tools/labyrinth/labyrinth.c.obj
+                0x0000000000000000       0x4a CMakeFiles/HWPRobot.elf.dir/lib/tools/labyrinth/labyrinth.c.obj
  .text.labyrinth_init
                 0x0000000000000000       0x1a CMakeFiles/HWPRobot.elf.dir/lib/tools/labyrinth/labyrinth.c.obj
  .text.labyrinth_getCellIndex
@@ -264,9 +263,9 @@ Discarded input sections
  .text.labyrinth_getWallIndex
                 0x0000000000000000       0x12 CMakeFiles/HWPRobot.elf.dir/lib/tools/labyrinth/labyrinth.c.obj
  .text.labyrinth_getWalls
-                0x0000000000000000       0xec CMakeFiles/HWPRobot.elf.dir/lib/tools/labyrinth/labyrinth.c.obj
+                0x0000000000000000       0xea CMakeFiles/HWPRobot.elf.dir/lib/tools/labyrinth/labyrinth.c.obj
  .text.labyrinth_setWalls
-                0x0000000000000000      0x11c CMakeFiles/HWPRobot.elf.dir/lib/tools/labyrinth/labyrinth.c.obj
+                0x0000000000000000      0x15e CMakeFiles/HWPRobot.elf.dir/lib/tools/labyrinth/labyrinth.c.obj
  .text.labyrinth_clearAllWalls
                 0x0000000000000000       0x10 CMakeFiles/HWPRobot.elf.dir/lib/tools/labyrinth/labyrinth.c.obj
  .text.labyrinth_getAllWalls
@@ -277,10 +276,10 @@ Discarded input sections
  .text          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/tools/remoteDataProcessing/remoteDataProcessing.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/tools/remoteDataProcessing/remoteDataProcessing.c.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/tools/remoteDataProcessing/remoteDataProcessing.c.obj
- .stab          0x0000000000000000      0x54c CMakeFiles/HWPRobot.elf.dir/lib/tools/remoteDataProcessing/remoteDataProcessing.c.obj
-                                        0x918 (size before relaxing)
+ .stab          0x0000000000000000      0x5e8 CMakeFiles/HWPRobot.elf.dir/lib/tools/remoteDataProcessing/remoteDataProcessing.c.obj
+                                        0x9b4 (size before relaxing)
  .text.rdp_command
-                0x0000000000000000       0x78 CMakeFiles/HWPRobot.elf.dir/lib/tools/remoteDataProcessing/remoteDataProcessing.c.obj
+                0x0000000000000000       0x7a CMakeFiles/HWPRobot.elf.dir/lib/tools/remoteDataProcessing/remoteDataProcessing.c.obj
  .text.remoteDataProcessing_command
                 0x0000000000000000       0x22 CMakeFiles/HWPRobot.elf.dir/lib/tools/remoteDataProcessing/remoteDataProcessing.c.obj
  .text.remoteDataProcessing_command_maxLength
@@ -294,7 +293,7 @@ Discarded input sections
  .text.timeTask_getTimestamp
                 0x0000000000000000       0x2e CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask.c.obj
  .text.timeTask_getDuration
-                0x0000000000000000       0x52 CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask.c.obj
+                0x0000000000000000       0x58 CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask_isr.S.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask_isr.S.obj
  .text          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/src/badISR.c.obj
@@ -303,240 +302,240 @@ Discarded input sections
  .text          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/src/main.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/src/main.c.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/src/main.c.obj
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(addsf3.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(addsf3.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(addsf3.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(addsf3x.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(addsf3x.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(addsf3x.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(cmpsf2.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(cmpsf2.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(cmpsf2.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(addsf3.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(addsf3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(addsf3.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(addsf3x.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(addsf3x.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(addsf3x.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(cmpsf2.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(cmpsf2.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(cmpsf2.o)
  .text.avr-libc.fplib
-                0x0000000000000000        0xa /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(cmpsf2.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(cos.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(cos.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(cos.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(divsf3.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(divsf3.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(divsf3.o)
+                0x0000000000000000        0xa /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(cmpsf2.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(cos.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(cos.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(cos.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(divsf3.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(divsf3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(divsf3.o)
  .text.avr-libc.fplib
-                0x0000000000000000        0x8 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(divsf3.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(divsf3x.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(divsf3x.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(divsf3x.o)
+                0x0000000000000000        0x8 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(divsf3.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(divsf3x.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(divsf3x.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(divsf3x.o)
  .text.avr-libc.fplib
-                0x0000000000000000       0xdc /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(divsf3x.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fixsfsi.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fixsfsi.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fixsfsi.o)
+                0x0000000000000000       0xdc /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(divsf3x.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fixsfsi.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fixsfsi.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fixsfsi.o)
  .text.avr-libc.fplib
-                0x0000000000000000        0xe /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fixsfsi.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fixunssfsi.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fixunssfsi.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fixunssfsi.o)
+                0x0000000000000000        0xe /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fixsfsi.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fixunssfsi.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fixunssfsi.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fixunssfsi.o)
  .text.avr-libc.fplib
-                0x0000000000000000       0x5e /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fixunssfsi.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(floatsisf.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(floatsisf.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(floatsisf.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fma.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fma.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fma.o)
+                0x0000000000000000       0x5e /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fixunssfsi.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(floatsisf.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(floatsisf.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(floatsisf.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fma.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fma.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fma.o)
  .text.avr-libc.fplib
-                0x0000000000000000       0x12 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fma.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_cmp.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_cmp.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_cmp.o)
+                0x0000000000000000       0x12 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fma.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_cmp.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_cmp.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_cmp.o)
  .text.avr-libc.fplib
-                0x0000000000000000       0x48 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_cmp.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_inf.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_inf.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_inf.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_nan.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_nan.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_nan.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_pscA.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_pscA.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_pscA.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_pscB.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_pscB.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_pscB.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_rempio2.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_rempio2.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_rempio2.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_round.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_round.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_round.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_sinus.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_sinus.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_sinus.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_split3.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_split3.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_split3.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_zero.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_zero.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_zero.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(gesf2.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(gesf2.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(gesf2.o)
+                0x0000000000000000       0x48 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_cmp.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_inf.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_inf.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_inf.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_nan.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_nan.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_nan.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_pscA.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_pscA.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_pscA.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_pscB.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_pscB.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_pscB.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_rempio2.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_rempio2.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_rempio2.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_round.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_round.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_round.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_sinus.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_sinus.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_sinus.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_split3.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_split3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_split3.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_zero.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_zero.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_zero.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(gesf2.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(gesf2.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(gesf2.o)
  .text.avr-libc.fplib
-                0x0000000000000000        0xa /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(gesf2.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(hypot.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(hypot.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(hypot.o)
+                0x0000000000000000        0xa /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(gesf2.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(hypot.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(hypot.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(hypot.o)
  .text.avr-libc.fplib
-                0x0000000000000000       0xda /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(hypot.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(ldexp.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(ldexp.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(ldexp.o)
+                0x0000000000000000       0xda /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(hypot.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(ldexp.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(ldexp.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(ldexp.o)
  .text.avr-libc.fplib
-                0x0000000000000000       0x74 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(ldexp.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(mulsf3.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(mulsf3.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(mulsf3.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(mulsf3x.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(mulsf3x.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(mulsf3x.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(sin.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(sin.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(sin.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(sqrt.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(sqrt.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(sqrt.o)
+                0x0000000000000000       0x74 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(ldexp.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(mulsf3.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(mulsf3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(mulsf3.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(mulsf3x.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(mulsf3x.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(mulsf3x.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(sin.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(sin.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(sin.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(sqrt.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(sqrt.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(sqrt.o)
  .text.avr-libc.fplib
-                0x0000000000000000       0x8c /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(sqrt.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(square.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(square.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(square.o)
+                0x0000000000000000       0x8c /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(sqrt.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(square.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(square.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(square.o)
  .text.avr-libc.fplib
-                0x0000000000000000        0x8 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(square.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_mpack.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_mpack.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_mpack.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_norm2.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_norm2.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_norm2.o)
+                0x0000000000000000        0x8 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(square.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_mpack.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_mpack.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_mpack.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_norm2.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_norm2.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_norm2.o)
  .text.avr-libc.fplib
-                0x0000000000000000        0xe /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_norm2.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_powsodd.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_powsodd.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_powsodd.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_powser.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_powser.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_powser.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_exit.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_exit.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_exit.o)
+                0x0000000000000000        0xe /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_norm2.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_powsodd.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_powsodd.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_powsodd.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_powser.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_powser.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_powser.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_exit.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_exit.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_exit.o)
  .text.libgcc.mul
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_exit.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_exit.o)
  .text.libgcc.div
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_exit.o)
- .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_exit.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_exit.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_exit.o)
  .text.libgcc.prologue
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_exit.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_exit.o)
  .text.libgcc.builtins
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_exit.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_exit.o)
  .text.libgcc.fmul
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_exit.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_exit.o)
  .text.libgcc.fixed
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_exit.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_copy_data.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_copy_data.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_copy_data.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_exit.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_copy_data.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_copy_data.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_copy_data.o)
  .text.libgcc.mul
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_copy_data.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_copy_data.o)
  .text.libgcc.div
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_copy_data.o)
- .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_copy_data.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_copy_data.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_copy_data.o)
  .text.libgcc.prologue
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_copy_data.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_copy_data.o)
  .text.libgcc.builtins
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_copy_data.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_copy_data.o)
  .text.libgcc.fmul
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_copy_data.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_copy_data.o)
  .text.libgcc.fixed
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_copy_data.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_clear_bss.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_clear_bss.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_clear_bss.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_copy_data.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_clear_bss.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_clear_bss.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_clear_bss.o)
  .text.libgcc.mul
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_clear_bss.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_clear_bss.o)
  .text.libgcc.div
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_clear_bss.o)
- .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_clear_bss.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_clear_bss.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_clear_bss.o)
  .text.libgcc.prologue
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_clear_bss.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_clear_bss.o)
  .text.libgcc.builtins
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_clear_bss.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_clear_bss.o)
  .text.libgcc.fmul
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_clear_bss.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_clear_bss.o)
  .text.libgcc.fixed
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_clear_bss.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_muluhisi3.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_muluhisi3.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_muluhisi3.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_clear_bss.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_muluhisi3.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_muluhisi3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_muluhisi3.o)
  .text.libgcc.mul
-                0x0000000000000000       0x16 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_muluhisi3.o)
+                0x0000000000000000       0x16 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_muluhisi3.o)
  .text.libgcc.div
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_muluhisi3.o)
- .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_muluhisi3.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_muluhisi3.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_muluhisi3.o)
  .text.libgcc.prologue
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_muluhisi3.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_muluhisi3.o)
  .text.libgcc.builtins
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_muluhisi3.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_muluhisi3.o)
  .text.libgcc.fmul
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_muluhisi3.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_muluhisi3.o)
  .text.libgcc.fixed
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_muluhisi3.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_umulhisi3.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_umulhisi3.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_umulhisi3.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_muluhisi3.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_umulhisi3.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_umulhisi3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_umulhisi3.o)
  .text.libgcc.mul
-                0x0000000000000000       0x1e /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_umulhisi3.o)
+                0x0000000000000000       0x1e /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_umulhisi3.o)
  .text.libgcc.div
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_umulhisi3.o)
- .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_umulhisi3.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_umulhisi3.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_umulhisi3.o)
  .text.libgcc.prologue
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_umulhisi3.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_umulhisi3.o)
  .text.libgcc.builtins
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_umulhisi3.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_umulhisi3.o)
  .text.libgcc.fmul
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_umulhisi3.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_umulhisi3.o)
  .text.libgcc.fixed
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_umulhisi3.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(malloc.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(malloc.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(memcpy.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(memcpy.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(memcpy.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_umulhisi3.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(malloc.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(malloc.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(memcpy.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(memcpy.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(memcpy.o)
  .text.avr-libc
-                0x0000000000000000       0x12 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(memcpy.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vsnprintf.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vsnprintf.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vsnprintf.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vsnprintf_p.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vsnprintf_p.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vsnprintf_p.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vfprintf_std.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vfprintf_std.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vfprintf_std.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(strnlen_P.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(strnlen_P.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(strnlen_P.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(strnlen.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(strnlen.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(strnlen.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(fputc.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(fputc.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(fputc.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(ultoa_invert.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(ultoa_invert.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(ultoa_invert.o)
+                0x0000000000000000       0x12 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(memcpy.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(vsnprintf.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(vsnprintf.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(vsnprintf.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(vsnprintf_p.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(vsnprintf_p.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(vsnprintf_p.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(vfprintf_std.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(vfprintf_std.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(vfprintf_std.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(strnlen_P.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(strnlen_P.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(strnlen_P.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(strnlen.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(strnlen.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(strnlen.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(fputc.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(fputc.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(fputc.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(ultoa_invert.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(ultoa_invert.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(ultoa_invert.o)
 
-Memory Configuration
+Speicherkonfiguration
 
-Name             Origin             Length             Attributes
+Name             Ursprung           Länge             Attribute
 text             0x0000000000000000 0x0000000000020000 xr
 data             0x0000000000800200 0x0000000000002000 rw !x
 eeprom           0x0000000000810000 0x0000000000001000 rw !x
@@ -548,8 +547,8 @@ user_signatures  0x0000000000850000 0x0000000000000400 rw !x
 
 Linker script and memory map
 
-Address of section .data set to 0x800200
-LOAD /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/crtatmega1280.o
+Adresse des Abschnitts .data gesetzt auf 0x800200
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtatmega1280.o
 LOAD CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
 LOAD CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc.c.obj
 LOAD CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc_isr.S.obj
@@ -564,12 +563,12 @@ LOAD CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask.c.obj
 LOAD CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask_isr.S.obj
 LOAD CMakeFiles/HWPRobot.elf.dir/src/badISR.c.obj
 LOAD CMakeFiles/HWPRobot.elf.dir/src/main.c.obj
-LOAD /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a
 START GROUP
-LOAD /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a
-LOAD /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a
-LOAD /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a
-LOAD /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libatmega1280.a
+LOAD /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libatmega1280.a
 END GROUP
                 0x0000000000000000                __TEXT_REGION_ORIGIN__ = DEFINED (__TEXT_REGION_ORIGIN__)?__TEXT_REGION_ORIGIN__:0x0
                 [0x0000000000800200]                __DATA_REGION_ORIGIN__ = DEFINED (__DATA_REGION_ORIGIN__)?__DATA_REGION_ORIGIN__:0x800100
@@ -671,14 +670,14 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x0000000000000000     0x1680
+.text           0x0000000000000000     0x16ba
  *(.vectors)
- .vectors       0x0000000000000000       0xe4 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/crtatmega1280.o
+ .vectors       0x0000000000000000       0xe4 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtatmega1280.o
                 0x0000000000000000                __vectors
  *(.vectors)
  *(.progmem.gcc*)
  .progmem.gcc_fplib
-                0x00000000000000e4       0x1e /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_sinus.o)
+                0x00000000000000e4       0x1e /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_sinus.o)
                 0x0000000000000102                . = ALIGN (0x2)
                 0x0000000000000102                __trampolines_start = .
  *(.trampolines)
@@ -688,7 +687,7 @@ END GROUP
  *libprintf_flt.a:*(.progmem.data)
  *libc.a:*(.progmem.data)
  *(.progmem*)
- .progmem.data.__c.2057
+ .progmem.data.__c.2161
                 0x0000000000000102        0x7 CMakeFiles/HWPRobot.elf.dir/src/main.c.obj
                 0x000000000000010a                . = ALIGN (0x2)
  *fill*         0x0000000000000109        0x1 
@@ -705,22 +704,22 @@ END GROUP
  SORT(*)(.ctors)
  SORT(*)(.dtors)
  *(.init0)
- .init0         0x000000000000010a        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/crtatmega1280.o
+ .init0         0x000000000000010a        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtatmega1280.o
                 0x000000000000010a                __init
  *(.init0)
  *(.init1)
  *(.init1)
  *(.init2)
- .init2         0x000000000000010a        0xc /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/crtatmega1280.o
+ .init2         0x000000000000010a        0xc /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtatmega1280.o
  *(.init2)
  *(.init3)
  .init3         0x0000000000000116        0x2 CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask.c.obj
                 0x0000000000000116                init_GPIOR0
  *(.init3)
  *(.init4)
- .init4         0x0000000000000118       0x1a /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_copy_data.o)
+ .init4         0x0000000000000118       0x1a /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_copy_data.o)
                 0x0000000000000118                __do_copy_data
- .init4         0x0000000000000132       0x10 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_clear_bss.o)
+ .init4         0x0000000000000132       0x10 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_clear_bss.o)
                 0x0000000000000132                __do_clear_bss
  *(.init4)
  *(.init5)
@@ -732,10 +731,10 @@ END GROUP
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x0000000000000142        0x6 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/crtatmega1280.o
+ .init9         0x0000000000000142        0x6 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtatmega1280.o
  *(.init9)
  *(.text)
- .text          0x0000000000000148        0x2 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/crtatmega1280.o
+ .text          0x0000000000000148        0x2 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtatmega1280.o
                 0x0000000000000148                __vector_38
                 0x0000000000000148                __vector_22
                 0x0000000000000148                __vector_28
@@ -799,152 +798,152 @@ END GROUP
                 0x00000000000002c8                . = ALIGN (0x2)
  *(.text.*)
  .text.readPackets
-                0x00000000000002c8      0x14c CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
+                0x00000000000002c8      0x17c CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
  .text.communication_init
-                0x0000000000000414       0x10 CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
-                0x0000000000000414                communication_init
+                0x0000000000000444       0x10 CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
+                0x0000000000000444                communication_init
  .text.communication_setCallback
-                0x0000000000000424       0x12 CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
-                0x0000000000000424                communication_setCallback
+                0x0000000000000454       0x12 CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
+                0x0000000000000454                communication_setCallback
  .text.communication_writePacket
-                0x0000000000000436       0xda CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
-                0x0000000000000436                communication_writePacket
+                0x0000000000000466       0xcc CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
+                0x0000000000000466                communication_writePacket
  .text.communication_log
-                0x0000000000000510       0x6c CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
-                0x0000000000000510                communication_log
+                0x0000000000000532       0x6c CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
+                0x0000000000000532                communication_log
  .text.communication_log_P
-                0x000000000000057c       0x6c CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
-                0x000000000000057c                communication_log_P
+                0x000000000000059e       0x6c CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
+                0x000000000000059e                communication_log_P
  .text.communication_readPackets
-                0x00000000000005e8        0xa CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
-                0x00000000000005e8                communication_readPackets
+                0x000000000000060a        0xa CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
+                0x000000000000060a                communication_readPackets
  .text.uart_write1
-                0x00000000000005f2       0x24 CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj
-                0x00000000000005f2                uart_write1
+                0x0000000000000614       0x24 CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj
+                0x0000000000000614                uart_write1
  .text.uart_read1
-                0x0000000000000616       0x24 CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj
-                0x0000000000000616                uart_read1
+                0x0000000000000638       0x24 CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj
+                0x0000000000000638                uart_read1
  .text.uart_available1
-                0x000000000000063a       0x12 CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj
-                0x000000000000063a                uart_available1
+                0x000000000000065c       0x12 CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj
+                0x000000000000065c                uart_available1
  .text.uart_init
-                0x000000000000064c       0x26 CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj
-                0x000000000000064c                uart_init
+                0x000000000000066e       0x26 CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj
+                0x000000000000066e                uart_init
  .text.Motor_init
-                0x0000000000000672       0x98 CMakeFiles/HWPRobot.elf.dir/lib/motor/motor.c.obj
-                0x0000000000000672                Motor_init
+                0x0000000000000694       0x98 CMakeFiles/HWPRobot.elf.dir/lib/motor/motor.c.obj
+                0x0000000000000694                Motor_init
  .text.Motor_setPWM
-                0x000000000000070a       0x70 CMakeFiles/HWPRobot.elf.dir/lib/motor/motor.c.obj
-                0x000000000000070a                Motor_setPWM
+                0x000000000000072c       0x70 CMakeFiles/HWPRobot.elf.dir/lib/motor/motor.c.obj
+                0x000000000000072c                Motor_setPWM
  .text.Motor_stopAll
-                0x000000000000077a       0x2c CMakeFiles/HWPRobot.elf.dir/lib/motor/motor.c.obj
-                0x000000000000077a                Motor_stopAll
+                0x000000000000079c       0x2c CMakeFiles/HWPRobot.elf.dir/lib/motor/motor.c.obj
+                0x000000000000079c                Motor_stopAll
  .text.timeTask_init
-                0x00000000000007a6       0x44 CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask.c.obj
-                0x00000000000007a6                timeTask_init
+                0x00000000000007c8       0x44 CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask.c.obj
+                0x00000000000007c8                timeTask_init
  .text.__vector_default
-                0x00000000000007ea       0x30 CMakeFiles/HWPRobot.elf.dir/src/badISR.c.obj
-                0x00000000000007ea                __vector_default
+                0x000000000000080c       0x30 CMakeFiles/HWPRobot.elf.dir/src/badISR.c.obj
+                0x000000000000080c                __vector_default
  .text.commDebug
-                0x000000000000081a       0x1e CMakeFiles/HWPRobot.elf.dir/src/main.c.obj
+                0x000000000000083c       0x1e CMakeFiles/HWPRobot.elf.dir/src/main.c.obj
  .text.commUserCommand
-                0x0000000000000838       0x26 CMakeFiles/HWPRobot.elf.dir/src/main.c.obj
+                0x000000000000085a       0x26 CMakeFiles/HWPRobot.elf.dir/src/main.c.obj
  .text.startup.main
-                0x000000000000085e      0x208 CMakeFiles/HWPRobot.elf.dir/src/main.c.obj
-                0x000000000000085e                main
+                0x0000000000000880      0x202 CMakeFiles/HWPRobot.elf.dir/src/main.c.obj
+                0x0000000000000880                main
  .text.avr-libc.fplib
-                0x0000000000000a66        0xa /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(addsf3.o)
-                0x0000000000000a66                __subsf3
-                0x0000000000000a68                __addsf3
+                0x0000000000000a82        0xa /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(addsf3.o)
+                0x0000000000000a82                __subsf3
+                0x0000000000000a84                __addsf3
  .text.avr-libc.fplib
-                0x0000000000000a70       0xc0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(addsf3x.o)
-                0x0000000000000a8a                __addsf3x
+                0x0000000000000a8c       0xc0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(addsf3x.o)
+                0x0000000000000aa6                __addsf3x
  .text.avr-libc.fplib
-                0x0000000000000b30        0x6 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(cos.o)
-                0x0000000000000b30                cos
+                0x0000000000000b4c        0x6 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(cos.o)
+                0x0000000000000b4c                cos
  .text.avr-libc.fplib
-                0x0000000000000b36       0x7a /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(floatsisf.o)
-                0x0000000000000b36                __floatunsisf
-                0x0000000000000b3a                __floatsisf
+                0x0000000000000b52       0x7a /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(floatsisf.o)
+                0x0000000000000b52                __floatunsisf
+                0x0000000000000b56                __floatsisf
  .text.avr-libc.fplib
-                0x0000000000000bb0        0xc /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_inf.o)
-                0x0000000000000bb0                __fp_inf
+                0x0000000000000bcc        0xc /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_inf.o)
+                0x0000000000000bcc                __fp_inf
  .text.avr-libc.fplib
-                0x0000000000000bbc        0x6 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_nan.o)
-                0x0000000000000bbc                __fp_nan
+                0x0000000000000bd8        0x6 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_nan.o)
+                0x0000000000000bd8                __fp_nan
  .text.avr-libc.fplib
-                0x0000000000000bc2        0xe /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_pscA.o)
-                0x0000000000000bc2                __fp_pscA
+                0x0000000000000bde        0xe /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_pscA.o)
+                0x0000000000000bde                __fp_pscA
  .text.avr-libc.fplib
-                0x0000000000000bd0        0xe /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_pscB.o)
-                0x0000000000000bd0                __fp_pscB
+                0x0000000000000bec        0xe /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_pscB.o)
+                0x0000000000000bec                __fp_pscB
  .text.avr-libc.fplib
-                0x0000000000000bde       0x50 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_rempio2.o)
-                0x0000000000000be0                __fp_rempio2
+                0x0000000000000bfa       0x50 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_rempio2.o)
+                0x0000000000000bfc                __fp_rempio2
  .text.avr-libc.fplib
-                0x0000000000000c2e       0x22 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_round.o)
-                0x0000000000000c2e                __fp_round
+                0x0000000000000c4a       0x22 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_round.o)
+                0x0000000000000c4a                __fp_round
  .text.avr-libc.fplib
-                0x0000000000000c50       0x22 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_sinus.o)
-                0x0000000000000c50                __fp_sinus
+                0x0000000000000c6c       0x22 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_sinus.o)
+                0x0000000000000c6c                __fp_sinus
  .text.avr-libc.fplib
-                0x0000000000000c72       0x44 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_split3.o)
-                0x0000000000000c72                __fp_split3
-                0x0000000000000c82                __fp_splitA
+                0x0000000000000c8e       0x44 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_split3.o)
+                0x0000000000000c8e                __fp_split3
+                0x0000000000000c9e                __fp_splitA
  .text.avr-libc.fplib
-                0x0000000000000cb6        0xe /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_zero.o)
-                0x0000000000000cb6                __fp_zero
-                0x0000000000000cb8                __fp_szero
+                0x0000000000000cd2        0xe /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_zero.o)
+                0x0000000000000cd2                __fp_zero
+                0x0000000000000cd4                __fp_szero
  .text.avr-libc.fplib
-                0x0000000000000cc4        0x4 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(mulsf3.o)
-                0x0000000000000cc4                __mulsf3
+                0x0000000000000ce0        0x4 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(mulsf3.o)
+                0x0000000000000ce0                __mulsf3
  .text.avr-libc.fplib
-                0x0000000000000cc8       0xc2 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(mulsf3x.o)
-                0x0000000000000cdc                __mulsf3x
-                0x0000000000000ce0                __mulsf3_pse
+                0x0000000000000ce4       0xc2 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(mulsf3x.o)
+                0x0000000000000cf8                __mulsf3x
+                0x0000000000000cfc                __mulsf3_pse
  .text.avr-libc.fplib
-                0x0000000000000d8a        0xc /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(sin.o)
-                0x0000000000000d8a                sin
+                0x0000000000000da6        0xc /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(sin.o)
+                0x0000000000000da6                sin
  .text.avr-libc.fplib
-                0x0000000000000d96       0x1c /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_mpack.o)
-                0x0000000000000d96                __fp_mpack
-                0x0000000000000d9a                __fp_mpack_finite
+                0x0000000000000db2       0x1c /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_mpack.o)
+                0x0000000000000db2                __fp_mpack
+                0x0000000000000db6                __fp_mpack_finite
  .text.avr-libc.fplib
-                0x0000000000000db2       0x22 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_powsodd.o)
-                0x0000000000000db2                __fp_powsodd
+                0x0000000000000dce       0x22 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_powsodd.o)
+                0x0000000000000dce                __fp_powsodd
  .text.avr-libc.fplib
-                0x0000000000000dd4       0x4a /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_powser.o)
-                0x0000000000000dd4                __fp_powser
+                0x0000000000000df0       0x4a /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libm.a(fp_powser.o)
+                0x0000000000000df0                __fp_powser
  .text.avr-libc
-                0x0000000000000e1e      0x24a /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(malloc.o)
-                0x0000000000000e1e                malloc
-                0x0000000000000f56                free
+                0x0000000000000e3a      0x242 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(malloc.o)
+                0x0000000000000e3a                malloc
+                0x0000000000000f6a                free
  .text.avr-libc
-                0x0000000000001068       0x70 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vsnprintf.o)
-                0x0000000000001068                vsnprintf
+                0x000000000000107c       0x70 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(vsnprintf.o)
+                0x000000000000107c                vsnprintf
  .text.avr-libc
-                0x00000000000010d8       0x70 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vsnprintf_p.o)
-                0x00000000000010d8                vsnprintf_P
+                0x00000000000010ec       0x70 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(vsnprintf_p.o)
+                0x00000000000010ec                vsnprintf_P
  .text.avr-libc
-                0x0000000000001148      0x3ec /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vfprintf_std.o)
-                0x0000000000001148                vfprintf
+                0x000000000000115c      0x3fa /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(vfprintf_std.o)
+                0x000000000000115c                vfprintf
  .text.avr-libc
-                0x0000000000001534       0x16 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(strnlen_P.o)
-                0x0000000000001534                strnlen_P
+                0x0000000000001556       0x16 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(strnlen_P.o)
+                0x0000000000001556                strnlen_P
  .text.avr-libc
-                0x000000000000154a       0x16 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(strnlen.o)
-                0x000000000000154a                strnlen
+                0x000000000000156c       0x16 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(strnlen.o)
+                0x000000000000156c                strnlen
  .text.avr-libc
-                0x0000000000001560       0x60 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(fputc.o)
-                0x0000000000001560                fputc
+                0x0000000000001582       0x78 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(fputc.o)
+                0x0000000000001582                fputc
  .text.avr-libc
-                0x00000000000015c0       0xbc /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(ultoa_invert.o)
-                0x00000000000015c0                __ultoa_invert
-                0x000000000000167c                . = ALIGN (0x2)
+                0x00000000000015fa       0xbc /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(ultoa_invert.o)
+                0x00000000000015fa                __ultoa_invert
+                0x00000000000016b6                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000000000000167c        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_exit.o)
-                0x000000000000167c                exit
-                0x000000000000167c                _exit
+ .fini9         0x00000000000016b6        0x0 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_exit.o)
+                0x00000000000016b6                exit
+                0x00000000000016b6                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -963,14 +962,14 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000000000000167c        0x4 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_exit.o)
+ .fini0         0x00000000000016b6        0x4 /usr/lib/gcc/avr/5.4.0/avr51/libgcc.a(_exit.o)
  *(.fini0)
-                0x0000000000001680                _etext = .
+                0x00000000000016ba                _etext = .
 
-.data           0x0000000000800200       0x28 load address 0x0000000000001680
+.data           0x0000000000800200       0x28 load address 0x00000000000016ba
                 0x0000000000800200                PROVIDE (__data_start, .)
  *(.data)
- .data          0x0000000000800200        0x6 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(malloc.o)
+ .data          0x0000000000800200        0x6 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(malloc.o)
                 0x0000000000800200                __malloc_heap_end
                 0x0000000000800202                __malloc_heap_start
                 0x0000000000800204                __malloc_margin
@@ -982,7 +981,7 @@ END GROUP
  *(.gnu.linkonce.d*)
  *(.rodata)
  *(.rodata*)
- .rodata.commDebug.str1.1
+ .rodata.str1.1
                 0x0000000000800216       0x12 CMakeFiles/HWPRobot.elf.dir/src/main.c.obj
  *(.gnu.linkonce.r*)
                 0x0000000000800228                . = ALIGN (0x2)
@@ -1005,13 +1004,13 @@ END GROUP
  .bss.timeTask_time_ms
                 0x0000000000800652        0x4 CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask.c.obj
                 0x0000000000800652                timeTask_time_ms
- .bss.t_index.2069
+ .bss.t_index.2173
                 0x0000000000800656        0x2 CMakeFiles/HWPRobot.elf.dir/src/main.c.obj
- .bss.POSE_TASK.2066
+ .bss.POSE_TASK.2170
                 0x0000000000800658        0x2 CMakeFiles/HWPRobot.elf.dir/src/main.c.obj
- .bss.TELEMETRY_TASK.2062
+ .bss.TELEMETRY_TASK.2166
                 0x000000000080065a        0x2 CMakeFiles/HWPRobot.elf.dir/src/main.c.obj
- .bss.LED_TASK.2059
+ .bss.LED_TASK.2163
                 0x000000000080065c        0x2 CMakeFiles/HWPRobot.elf.dir/src/main.c.obj
  *(COMMON)
  COMMON         0x000000000080065e       0x16 CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc.c.obj
@@ -1020,12 +1019,12 @@ END GROUP
  COMMON         0x0000000000800674      0x180 CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj
                 0x0000000000800674                uart1_RX_buf
                 0x00000000008006f4                uart1_TX_buf
- COMMON         0x00000000008007f4        0x4 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(malloc.o)
+ COMMON         0x00000000008007f4        0x4 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(malloc.o)
                 0x00000000008007f4                __brkval
                 0x00000000008007f6                __flp
                 0x00000000008007f8                PROVIDE (__bss_end, .)
-                0x0000000000001680                __data_load_start = LOADADDR (.data)
-                0x00000000000016a8                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00000000000016ba                __data_load_start = LOADADDR (.data)
+                0x00000000000016e2                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00000000008007f8        0x0
                 [!provide]                        PROVIDE (__noinit_start, .)
@@ -1053,32 +1052,32 @@ END GROUP
 .user_signatures
  *(.user_signatures*)
 
-.stab           0x0000000000000000     0x2ee0
+.stab           0x0000000000000000     0x3450
  *(.stab)
- .stab          0x0000000000000000      0xdbc CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
-                                        0xeac (size before relaxing)
- .stab          0x0000000000000dbc      0x390 CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc.c.obj
-                                        0xa08 (size before relaxing)
- .stab          0x000000000000114c      0x354 CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc_isr.S.obj
+ .stab          0x0000000000000000     0x1044 CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
+                                       0x1104 (size before relaxing)
+ .stab          0x0000000000001044      0x3f0 CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc.c.obj
+                                        0xc00 (size before relaxing)
+ .stab          0x0000000000001434      0x354 CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc_isr.S.obj
                                         0x360 (size before relaxing)
- .stab          0x00000000000014a0      0x438 CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj
-                                        0x768 (size before relaxing)
- .stab          0x00000000000018d8       0x30 CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart_isr.S.obj
+ .stab          0x0000000000001788      0x4ec CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj
+                                        0x864 (size before relaxing)
+ .stab          0x0000000000001c74       0x30 CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart_isr.S.obj
                                          0x3c (size before relaxing)
- .stab          0x0000000000001908      0x558 CMakeFiles/HWPRobot.elf.dir/lib/motor/motor.c.obj
-                                        0x8d0 (size before relaxing)
- .stab          0x0000000000001e60      0x3f0 CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask.c.obj
-                                        0x72c (size before relaxing)
- .stab          0x0000000000002250      0x234 CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask_isr.S.obj
+ .stab          0x0000000000001ca4      0x630 CMakeFiles/HWPRobot.elf.dir/lib/motor/motor.c.obj
+                                        0xa2c (size before relaxing)
+ .stab          0x00000000000022d4      0x48c CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask.c.obj
+                                        0x7ec (size before relaxing)
+ .stab          0x0000000000002760      0x234 CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask_isr.S.obj
                                         0x240 (size before relaxing)
- .stab          0x0000000000002484      0x354 CMakeFiles/HWPRobot.elf.dir/src/badISR.c.obj
-                                        0x51c (size before relaxing)
- .stab          0x00000000000027d8      0x708 CMakeFiles/HWPRobot.elf.dir/src/main.c.obj
-                                        0xab0 (size before relaxing)
+ .stab          0x0000000000002994      0x378 CMakeFiles/HWPRobot.elf.dir/src/badISR.c.obj
+                                        0x540 (size before relaxing)
+ .stab          0x0000000000002d0c      0x744 CMakeFiles/HWPRobot.elf.dir/src/main.c.obj
+                                        0xaec (size before relaxing)
 
-.stabstr        0x0000000000000000     0x34ee
+.stabstr        0x0000000000000000     0x3711
  *(.stabstr)
- .stabstr       0x0000000000000000     0x34ee CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
+ .stabstr       0x0000000000000000     0x3711 CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
 
 .stab.excl
  *(.stab.excl)
@@ -1102,16 +1101,16 @@ END GROUP
  .comment       0x0000000000000011       0x12 CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask.c.obj
  .comment       0x0000000000000011       0x12 CMakeFiles/HWPRobot.elf.dir/src/badISR.c.obj
  .comment       0x0000000000000011       0x12 CMakeFiles/HWPRobot.elf.dir/src/main.c.obj
- .comment       0x0000000000000011       0x12 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(malloc.o)
- .comment       0x0000000000000011       0x12 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vsnprintf.o)
- .comment       0x0000000000000011       0x12 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vsnprintf_p.o)
- .comment       0x0000000000000011       0x12 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vfprintf_std.o)
- .comment       0x0000000000000011       0x12 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(fputc.o)
+ .comment       0x0000000000000011       0x12 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(malloc.o)
+ .comment       0x0000000000000011       0x12 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(vsnprintf.o)
+ .comment       0x0000000000000011       0x12 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(vsnprintf_p.o)
+ .comment       0x0000000000000011       0x12 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(vfprintf_std.o)
+ .comment       0x0000000000000011       0x12 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/libc.a(fputc.o)
 
 .note.gnu.avr.deviceinfo
                 0x0000000000000000       0x40
  .note.gnu.avr.deviceinfo
-                0x0000000000000000       0x40 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/crtatmega1280.o
+                0x0000000000000000       0x40 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtatmega1280.o
 
 .note.gnu.build-id
  *(.note.gnu.build-id)
@@ -1136,22 +1135,22 @@ END GROUP
 
 .debug_info     0x0000000000000000      0xbbc
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x0000000000000000      0xbbc /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/crtatmega1280.o
+ .debug_info    0x0000000000000000      0xbbc /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtatmega1280.o
 
 .debug_abbrev   0x0000000000000000      0xb1a
  *(.debug_abbrev)
- .debug_abbrev  0x0000000000000000      0xb1a /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/crtatmega1280.o
+ .debug_abbrev  0x0000000000000000      0xb1a /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtatmega1280.o
 
 .debug_line     0x0000000000000000       0x1a
  *(.debug_line .debug_line.* .debug_line_end)
- .debug_line    0x0000000000000000       0x1a /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/crtatmega1280.o
+ .debug_line    0x0000000000000000       0x1a /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtatmega1280.o
 
 .debug_frame
  *(.debug_frame)
 
 .debug_str      0x0000000000000000      0x3e6
  *(.debug_str)
- .debug_str     0x0000000000000000      0x3e6 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/crtatmega1280.o
+ .debug_str     0x0000000000000000      0x3e6 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr51/crtatmega1280.o
 
 .debug_loc
  *(.debug_loc)

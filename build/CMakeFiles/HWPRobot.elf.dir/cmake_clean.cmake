@@ -1,0 +1,41 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj"
+  "CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj.d"
+  "CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc.c.obj"
+  "CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc.c.obj.d"
+  "CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc_isr.S.obj"
+  "CMakeFiles/HWPRobot.elf.dir/lib/io/i2c/i2c.c.obj"
+  "CMakeFiles/HWPRobot.elf.dir/lib/io/i2c/i2c.c.obj.d"
+  "CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj"
+  "CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj.d"
+  "CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart_isr.S.obj"
+  "CMakeFiles/HWPRobot.elf.dir/lib/motor/motor.c.obj"
+  "CMakeFiles/HWPRobot.elf.dir/lib/motor/motor.c.obj.d"
+  "CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj"
+  "CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj.d"
+  "CMakeFiles/HWPRobot.elf.dir/lib/tools/labyrinth/labyrinth.c.obj"
+  "CMakeFiles/HWPRobot.elf.dir/lib/tools/labyrinth/labyrinth.c.obj.d"
+  "CMakeFiles/HWPRobot.elf.dir/lib/tools/remoteDataProcessing/remoteDataProcessing.c.obj"
+  "CMakeFiles/HWPRobot.elf.dir/lib/tools/remoteDataProcessing/remoteDataProcessing.c.obj.d"
+  "CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask.c.obj"
+  "CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask.c.obj.d"
+  "CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask_isr.S.obj"
+  "CMakeFiles/HWPRobot.elf.dir/src/badISR.c.obj"
+  "CMakeFiles/HWPRobot.elf.dir/src/badISR.c.obj.d"
+  "CMakeFiles/HWPRobot.elf.dir/src/bumper.c.obj"
+  "CMakeFiles/HWPRobot.elf.dir/src/bumper.c.obj.d"
+  "CMakeFiles/HWPRobot.elf.dir/src/encoder.c.obj"
+  "CMakeFiles/HWPRobot.elf.dir/src/encoder.c.obj.d"
+  "CMakeFiles/HWPRobot.elf.dir/src/main.c.obj"
+  "CMakeFiles/HWPRobot.elf.dir/src/main.c.obj.d"
+  "CMakeFiles/HWPRobot.elf.dir/src/statemachine.c.obj"
+  "CMakeFiles/HWPRobot.elf.dir/src/statemachine.c.obj.d"
+  "HWPRobot.elf"
+  "HWPRobot.elf.pdb"
+  "HWPRobot.map"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang ASM C)
+  include(CMakeFiles/HWPRobot.elf.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

@@ -18,11 +18,11 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/usr/lib/avr/include"
+                "/usr/lib/avr/include",
+                "${workspaceFolder}/lib"
             ],
             "defines": [
-                "__AVR_ATmega1280__",
-                "F_CPU=8000000UL"
+                "__AVR_ATmega1280__"
             ],
             "compilerPath": "/usr/bin/gcc",
             "cStandard": "c17",

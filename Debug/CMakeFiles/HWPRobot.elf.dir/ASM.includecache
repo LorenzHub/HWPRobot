@@ -6,29 +6,29 @@
 
 #IncludeRegexTransform: 
 
-/home/lorenz/Desktop/HWP/HWPRobot/lib/io/adc/adc_isr.S
+../src/cfg/io/adc/adc_cfg.h
+
+../src/cfg/io/uart/uart_cfg.h
+
+/home/linuxmint/Schreibtisch/HWP/HWPRobot/lib/io/adc/adc_isr.S
 cfg/io/adc/adc_cfg.h
 -
 avr/io.h
 -
 
-/home/lorenz/Desktop/HWP/HWPRobot/lib/io/uart/uart_isr.S
+/home/linuxmint/Schreibtisch/HWP/HWPRobot/lib/io/uart/uart_isr.S
 cfg/io/uart/uart_cfg.h
 -
 avr/io.h
 -
 
-/home/lorenz/Desktop/HWP/HWPRobot/lib/tools/timeTask/GPIOR0Defs.h
+/home/linuxmint/Schreibtisch/HWP/HWPRobot/lib/tools/timeTask/GPIOR0Defs.h
 
-/home/lorenz/Desktop/HWP/HWPRobot/lib/tools/timeTask/timeTask_isr.S
+/home/linuxmint/Schreibtisch/HWP/HWPRobot/lib/tools/timeTask/timeTask_isr.S
 GPIOR0Defs.h
-/home/lorenz/Desktop/HWP/HWPRobot/lib/tools/timeTask/GPIOR0Defs.h
+/home/linuxmint/Schreibtisch/HWP/HWPRobot/lib/tools/timeTask/GPIOR0Defs.h
 cfg/io/adc/adc_cfg.h
 -
 avr/io.h
 -
-
-/home/lorenz/Desktop/HWP/HWPRobot/src/cfg/io/adc/adc_cfg.h
-
-/home/lorenz/Desktop/HWP/HWPRobot/src/cfg/io/uart/uart_cfg.h
 
