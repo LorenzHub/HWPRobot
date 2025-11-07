@@ -74,6 +74,14 @@ if [ -f "src/statemachine.c" ]; then
     C_SOURCES+=("src/statemachine.c")
 fi
 
+# Prüfe ob bumper.c und encoder.c existieren und füge sie hinzu
+if [ -f "src/bumper.c" ]; then
+    C_SOURCES+=("src/bumper.c")
+fi
+if [ -f "src/encoder.c" ]; then
+    C_SOURCES+=("src/encoder.c")
+fi
+
 # Alle Assembler-Quelldateien
 ASM_SOURCES=(
     "lib/io/adc/adc_isr.S"

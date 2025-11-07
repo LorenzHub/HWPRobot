@@ -1,524 +1,550 @@
 Archive member included to satisfy reference by file (symbol)
 
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(addsf3.o)
-                              CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj (__subsf3)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(addsf3x.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(addsf3.o) (__addsf3x)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(cmpsf2.o)
-                              CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj (__ltsf2)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(cos.o)
-                              CMakeFiles/HWPRobot.elf.dir/src/main.c.obj (cos)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(divsf3.o)
-                              CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj (__divsf3)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(divsf3x.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(divsf3.o) (__divsf3x)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fixsfsi.o)
-                              CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj (__fixsfsi)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fixunssfsi.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fixsfsi.o) (__fixunssfsi)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(floatsisf.o)
-                              CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj (__floatsisf)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fma.o)
-                              CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj (fma)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_cmp.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(cmpsf2.o) (__fp_cmp)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_inf.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(addsf3x.o) (__fp_inf)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_nan.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(addsf3x.o) (__fp_nan)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_pscA.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(addsf3x.o) (__fp_pscA)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_pscB.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(addsf3x.o) (__fp_pscB)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_rempio2.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(cos.o) (__fp_rempio2)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_round.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(addsf3.o) (__fp_round)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_sinus.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(cos.o) (__fp_sinus)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_split3.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(addsf3x.o) (__fp_split3)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_zero.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(addsf3x.o) (__fp_zero)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(gesf2.o)
-                              CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj (__gesf2)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(hypot.o)
-                              CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj (hypot)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(ldexp.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(hypot.o) (ldexp)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(mulsf3.o)
-                              CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj (__mulsf3)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(mulsf3x.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fma.o) (__mulsf3x)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(sin.o)
-                              CMakeFiles/HWPRobot.elf.dir/src/main.c.obj (sin)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(sqrt.o)
-                              CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj (sqrt)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(square.o)
-                              CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj (square)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_mpack.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(hypot.o) (__fp_mpack)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_norm2.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(sqrt.o) (__fp_norm2)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_powsodd.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_sinus.o) (__fp_powsodd)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_powser.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_powsodd.o) (__fp_powser)
-/usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_exit.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/crtatmega1280.o (exit)
-/usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_copy_data.o)
-                              CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj (__do_copy_data)
-/usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_clear_bss.o)
-                              CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj (__do_clear_bss)
-/usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_muluhisi3.o)
-                              CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask.c.obj (__muluhisi3)
-/usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_umulhisi3.o)
-                              /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_muluhisi3.o) (__umulhisi3)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(malloc.o)
-                              CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj (malloc)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(memcpy.o)
-                              CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj (memcpy)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vsnprintf.o)
-                              CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj (vsnprintf)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vsnprintf_p.o)
-                              CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj (vsnprintf_P)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vfprintf_std.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vsnprintf.o) (vfprintf)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(strnlen_P.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vfprintf_std.o) (strnlen_P)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(strnlen.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vfprintf_std.o) (strnlen)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(fputc.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vfprintf_std.o) (fputc)
-/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(ultoa_invert.o)
-                              /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vfprintf_std.o) (__ultoa_invert)
-
-Allocating common symbols
-Common symbol       size              file
-
-uart1_RX_buf        0x80              CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj
-__brkval            0x2               /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(malloc.o)
-uart1_TX_buf        0x100             CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj
-__flp               0x2               /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(malloc.o)
-ADC_currentChannel  0x2               CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc.c.obj
-ADC_channels        0x32              CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc.c.obj
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_exit.o)
+                              C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51/crtatmega1280.o (exit)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_tablejump2.o)
+                              Build\obj\main.o (__tablejump2__)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_copy_data.o)
+                              Build\obj\pathFollower.o (__do_copy_data)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_clear_bss.o)
+                              Build\obj\communication.o (__do_clear_bss)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_muluhisi3.o)
+                              Build\obj\timeTask.o (__muluhisi3)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_umulhisi3.o)
+                              C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_muluhisi3.o) (__umulhisi3)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(addsf3.o)
+                              Build\obj\pathFollower.o (__subsf3)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(addsf3x.o)
+                              C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(addsf3.o) (__addsf3x)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(cmpsf2.o)
+                              Build\obj\pathFollower.o (__ltsf2)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(cos.o)
+                              Build\obj\main.o (cosf)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(divsf3.o)
+                              Build\obj\pathFollower.o (__divsf3)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(divsf3x.o)
+                              C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(divsf3.o) (__divsf3x)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fixsfsi.o)
+                              Build\obj\pathFollower.o (__fixsfsi)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fixunssfsi.o)
+                              C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fixsfsi.o) (__fixunssfsi)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(floatsisf.o)
+                              Build\obj\pathFollower.o (__floatsisf)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fma.o)
+                              Build\obj\pathFollower.o (fmaf)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_cmp.o)
+                              C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(cmpsf2.o) (__fp_cmp)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_inf.o)
+                              C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(addsf3x.o) (__fp_inf)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_nan.o)
+                              C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(addsf3x.o) (__fp_nan)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_pscA.o)
+                              C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(addsf3x.o) (__fp_pscA)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_pscB.o)
+                              C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(addsf3x.o) (__fp_pscB)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_rempio2.o)
+                              C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(cos.o) (__fp_rempio2)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_round.o)
+                              C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(addsf3.o) (__fp_round)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_sinus.o)
+                              C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(cos.o) (__fp_sinus)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_split3.o)
+                              C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(addsf3x.o) (__fp_split3)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_zero.o)
+                              C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(addsf3x.o) (__fp_zero)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(gesf2.o)
+                              Build\obj\pathFollower.o (__gesf2)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(hypot.o)
+                              Build\obj\pathFollower.o (hypotf)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(ldexp.o)
+                              C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(hypot.o) (ldexpf)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(mulsf3.o)
+                              Build\obj\pathFollower.o (__mulsf3)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(mulsf3x.o)
+                              C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fma.o) (__mulsf3x)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(sin.o)
+                              Build\obj\main.o (sinf)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(sqrt.o)
+                              C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(hypot.o) (sqrtf)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(square.o)
+                              Build\obj\pathFollower.o (square)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_mpack.o)
+                              C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(hypot.o) (__fp_mpack)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_norm2.o)
+                              C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(sqrt.o) (__fp_norm2)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_powsodd.o)
+                              C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_sinus.o) (__fp_powsodd)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_powser.o)
+                              C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_powsodd.o) (__fp_powser)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(malloc.o)
+                              Build\obj\communication.o (malloc)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(memcpy.o)
+                              Build\obj\pathFollower.o (memcpy)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(vsnprintf.o)
+                              Build\obj\communication.o (vsnprintf)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(vsnprintf_p.o)
+                              Build\obj\communication.o (vsnprintf_P)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(vfprintf_std.o)
+                              C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(vsnprintf.o) (vfprintf)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(strnlen_P.o)
+                              C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(vfprintf_std.o) (strnlen_P)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(strnlen.o)
+                              C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(vfprintf_std.o) (strnlen)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(fputc.o)
+                              C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(vfprintf_std.o) (fputc)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(ultoa_invert.o)
+                              C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(vfprintf_std.o) (__ultoa_invert)
+C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_negsi2.o)
+                              C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(vfprintf_std.o) (__negsi2)
 
 Discarded input sections
 
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/crtatmega1280.o
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/crtatmega1280.o
- .text          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
- .data          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
- .bss           0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51/crtatmega1280.o
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51/crtatmega1280.o
+ .text          0x00000000        0x0 Build\obj\communication.o
+ .data          0x00000000        0x0 Build\obj\communication.o
+ .bss           0x00000000        0x0 Build\obj\communication.o
  .text.communication_clearCallback
-                0x0000000000000000       0x12 CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
+                0x00000000       0x12 Build\obj\communication.o
  .text.communication_getErrors
-                0x0000000000000000        0xa CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
- .text          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc.c.obj
- .data          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc.c.obj
- .bss           0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc.c.obj
- .text.ADC_init
-                0x0000000000000000       0xbe CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc.c.obj
+                0x00000000        0xa Build\obj\communication.o
+ .text          0x00000000        0x0 Build\obj\adc.o
+ .data          0x00000000        0x0 Build\obj\adc.o
+ .bss           0x00000000        0x0 Build\obj\adc.o
  .text.ADC_getLastValue
-                0x0000000000000000       0x30 CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc.c.obj
+                0x00000000       0x32 Build\obj\adc.o
  .text.ADC_isUpToDate
-                0x0000000000000000       0x22 CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc.c.obj
+                0x00000000       0x22 Build\obj\adc.o
  .text.ADC_setUpToDate
-                0x0000000000000000       0x20 CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc.c.obj
- .data          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc_isr.S.obj
- .bss           0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc_isr.S.obj
- .text          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/io/i2c/i2c.c.obj
- .data          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/io/i2c/i2c.c.obj
- .bss           0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/io/i2c/i2c.c.obj
- .stab          0x0000000000000000      0x318 CMakeFiles/HWPRobot.elf.dir/lib/io/i2c/i2c.c.obj
-                                        0x534 (size before relaxing)
- .comment       0x0000000000000000       0x12 CMakeFiles/HWPRobot.elf.dir/lib/io/i2c/i2c.c.obj
- .text          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj
- .data          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj
- .bss           0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj
+                0x00000000       0x20 Build\obj\adc.o
+ .text          0x00000000        0x0 Build\obj\i2c.o
+ .data          0x00000000        0x0 Build\obj\i2c.o
+ .bss           0x00000000        0x0 Build\obj\i2c.o
+ .debug_info    0x00000000       0x5e Build\obj\i2c.o
+ .debug_abbrev  0x00000000       0x26 Build\obj\i2c.o
+ .debug_aranges
+                0x00000000       0x18 Build\obj\i2c.o
+ .debug_line    0x00000000       0x35 Build\obj\i2c.o
+ .debug_str     0x00000000      0x139 Build\obj\i2c.o
+ .debug_line_str
+                0x00000000       0x38 Build\obj\i2c.o
+ .comment       0x00000000       0x30 Build\obj\i2c.o
+ .text          0x00000000        0x0 Build\obj\uart.o
+ .data          0x00000000        0x0 Build\obj\uart.o
+ .bss           0x00000000        0x0 Build\obj\uart.o
  .text.uart_TXBufSpaceAvailable1
-                0x0000000000000000       0x14 CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj
+                0x00000000       0x14 Build\obj\uart.o
  .text.uart_getTXBufSpace1
-                0x0000000000000000        0xe CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj
+                0x00000000        0xe Build\obj\uart.o
  .text.uart_waitRXAvailable1
-                0x0000000000000000       0x3a CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj
+                0x00000000       0x24 Build\obj\uart.o
  .text.uart_isRXBufOverflow1
-                0x0000000000000000       0x12 CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj
- .data          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart_isr.S.obj
- .bss           0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart_isr.S.obj
- .text          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/motor/motor.c.obj
- .data          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/motor/motor.c.obj
- .bss           0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/motor/motor.c.obj
+                0x00000000       0x12 Build\obj\uart.o
+ .text          0x00000000        0x0 Build\obj\motor.o
+ .data          0x00000000        0x0 Build\obj\motor.o
+ .bss           0x00000000        0x0 Build\obj\motor.o
  .text.Motor_setPWM_A
-                0x0000000000000000       0x3e CMakeFiles/HWPRobot.elf.dir/lib/motor/motor.c.obj
+                0x00000000       0x3e Build\obj\motor.o
  .text.Motor_setPWM_B
-                0x0000000000000000       0x3e CMakeFiles/HWPRobot.elf.dir/lib/motor/motor.c.obj
+                0x00000000       0x3e Build\obj\motor.o
  .text.Motor_stopA
-                0x0000000000000000       0x1c CMakeFiles/HWPRobot.elf.dir/lib/motor/motor.c.obj
+                0x00000000       0x1c Build\obj\motor.o
  .text.Motor_stopB
-                0x0000000000000000       0x1c CMakeFiles/HWPRobot.elf.dir/lib/motor/motor.c.obj
- .text          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
- .data          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
- .bss           0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
+                0x00000000       0x1c Build\obj\motor.o
+ .text          0x00000000        0x0 Build\obj\pathFollower.o
+ .data          0x00000000        0x0 Build\obj\pathFollower.o
+ .bss           0x00000000        0x0 Build\obj\pathFollower.o
  .text.pathFollower_setNewPath
-                0x0000000000000000       0x14 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
+                0x00000000        0xc Build\obj\pathFollower.o
  .text.pathFollower_clearPath
-                0x0000000000000000       0x46 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
+                0x00000000       0x46 Build\obj\pathFollower.o
  .text.pathFollower_command
-                0x0000000000000000       0x4c CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
+                0x00000000       0x4a Build\obj\pathFollower.o
  .rodata.pathFollower_update.str1.1
-                0x0000000000000000       0x20 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
+                0x00000000       0x20 Build\obj\pathFollower.o
  .text.pathFollower_update
-                0x0000000000000000     0x1056 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
+                0x00000000     0x1132 Build\obj\pathFollower.o
  .text.pathFollower_getStatus
-                0x0000000000000000        0x6 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
+                0x00000000        0x6 Build\obj\pathFollower.o
  .text.pathFollower_getExtStatus
-                0x0000000000000000        0x6 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
+                0x00000000        0x6 Build\obj\pathFollower.o
  .text.pathFollower_getLookaheadDistance
-                0x0000000000000000       0x12 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
+                0x00000000       0x12 Build\obj\pathFollower.o
  .text.pathFollower_setLookaheadDistance
-                0x0000000000000000       0x34 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
+                0x00000000       0x48 Build\obj\pathFollower.o
  .text.pathFollower_getSegmentLimit
-                0x0000000000000000        0x6 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
+                0x00000000        0x6 Build\obj\pathFollower.o
  .text.pathFollower_setSegmentLimit
-                0x0000000000000000        0x6 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
+                0x00000000        0x6 Build\obj\pathFollower.o
  .text.pathFollower_setCallback
-                0x0000000000000000        0xa CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
+                0x00000000        0xa Build\obj\pathFollower.o
  .text.pathFollower_removeCallback
-                0x0000000000000000        0xa CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
- .progmem.data.__c.2403
-                0x0000000000000000       0x2d CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
- .progmem.data.__c.2387
-                0x0000000000000000       0x14 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
- .progmem.data.__c.2385
-                0x0000000000000000       0x33 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
- .bss.relL      0x0000000000000000        0x4 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
+                0x00000000        0xa Build\obj\pathFollower.o
+ .progmem.data.__c.0
+                0x00000000       0x2d Build\obj\pathFollower.o
+ .progmem.data.__c.1
+                0x00000000       0x14 Build\obj\pathFollower.o
+ .progmem.data.__c.2
+                0x00000000       0x33 Build\obj\pathFollower.o
+ .bss.relL      0x00000000        0x4 Build\obj\pathFollower.o
  .bss.nextSegLen
-                0x0000000000000000        0x4 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
+                0x00000000        0x4 Build\obj\pathFollower.o
  .bss.nextSegLenSq
-                0x0000000000000000        0x4 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
+                0x00000000        0x4 Build\obj\pathFollower.o
  .bss.nextSegVec
-                0x0000000000000000        0x8 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
+                0x00000000        0x8 Build\obj\pathFollower.o
  .bss.nextSegEnd
-                0x0000000000000000        0x4 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
+                0x00000000        0x4 Build\obj\pathFollower.o
  .bss.curSegLen
-                0x0000000000000000        0x4 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
+                0x00000000        0x4 Build\obj\pathFollower.o
  .bss.curSegLenSq
-                0x0000000000000000        0x4 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
+                0x00000000        0x4 Build\obj\pathFollower.o
  .bss.curSegVec
-                0x0000000000000000        0x8 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
- .text          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/tools/labyrinth/labyrinth.c.obj
- .data          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/tools/labyrinth/labyrinth.c.obj
- .bss           0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/tools/labyrinth/labyrinth.c.obj
- .stab          0x0000000000000000      0x834 CMakeFiles/HWPRobot.elf.dir/lib/tools/labyrinth/labyrinth.c.obj
-                                        0xb64 (size before relaxing)
- .text.labyrinth_getWallIndex.part.0
-                0x0000000000000000       0x48 CMakeFiles/HWPRobot.elf.dir/lib/tools/labyrinth/labyrinth.c.obj
+                0x00000000        0x8 Build\obj\pathFollower.o
+ .text          0x00000000        0x0 Build\obj\labyrinth.o
+ .data          0x00000000        0x0 Build\obj\labyrinth.o
+ .bss           0x00000000        0x0 Build\obj\labyrinth.o
  .text.labyrinth_init
-                0x0000000000000000       0x1a CMakeFiles/HWPRobot.elf.dir/lib/tools/labyrinth/labyrinth.c.obj
+                0x00000000       0x1a Build\obj\labyrinth.o
  .text.labyrinth_getCellIndex
-                0x0000000000000000       0x12 CMakeFiles/HWPRobot.elf.dir/lib/tools/labyrinth/labyrinth.c.obj
+                0x00000000       0x12 Build\obj\labyrinth.o
  .text.labyrinth_getWallIndex
-                0x0000000000000000       0x12 CMakeFiles/HWPRobot.elf.dir/lib/tools/labyrinth/labyrinth.c.obj
+                0x00000000       0x56 Build\obj\labyrinth.o
  .text.labyrinth_getWalls
-                0x0000000000000000       0xec CMakeFiles/HWPRobot.elf.dir/lib/tools/labyrinth/labyrinth.c.obj
+                0x00000000       0xfa Build\obj\labyrinth.o
  .text.labyrinth_setWalls
-                0x0000000000000000      0x11c CMakeFiles/HWPRobot.elf.dir/lib/tools/labyrinth/labyrinth.c.obj
+                0x00000000      0x13c Build\obj\labyrinth.o
  .text.labyrinth_clearAllWalls
-                0x0000000000000000       0x10 CMakeFiles/HWPRobot.elf.dir/lib/tools/labyrinth/labyrinth.c.obj
+                0x00000000       0x10 Build\obj\labyrinth.o
  .text.labyrinth_getAllWalls
-                0x0000000000000000        0x6 CMakeFiles/HWPRobot.elf.dir/lib/tools/labyrinth/labyrinth.c.obj
+                0x00000000        0x6 Build\obj\labyrinth.o
  .bss.labyrinthWalls
-                0x0000000000000000       0x10 CMakeFiles/HWPRobot.elf.dir/lib/tools/labyrinth/labyrinth.c.obj
- .comment       0x0000000000000000       0x12 CMakeFiles/HWPRobot.elf.dir/lib/tools/labyrinth/labyrinth.c.obj
- .text          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/tools/remoteDataProcessing/remoteDataProcessing.c.obj
- .data          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/tools/remoteDataProcessing/remoteDataProcessing.c.obj
- .bss           0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/tools/remoteDataProcessing/remoteDataProcessing.c.obj
- .stab          0x0000000000000000      0x5e8 CMakeFiles/HWPRobot.elf.dir/lib/tools/remoteDataProcessing/remoteDataProcessing.c.obj
-                                        0x9b4 (size before relaxing)
- .text.rdp_command
-                0x0000000000000000       0x78 CMakeFiles/HWPRobot.elf.dir/lib/tools/remoteDataProcessing/remoteDataProcessing.c.obj
- .text.remoteDataProcessing_command
-                0x0000000000000000       0x22 CMakeFiles/HWPRobot.elf.dir/lib/tools/remoteDataProcessing/remoteDataProcessing.c.obj
+                0x00000000       0x10 Build\obj\labyrinth.o
+ .debug_info    0x00000000      0x71a Build\obj\labyrinth.o
+ .debug_abbrev  0x00000000      0x2ae Build\obj\labyrinth.o
+ .debug_loclists
+                0x00000000      0x65a Build\obj\labyrinth.o
+ .debug_aranges
+                0x00000000       0x50 Build\obj\labyrinth.o
+ .debug_rnglists
+                0x00000000       0x48 Build\obj\labyrinth.o
+ .debug_line    0x00000000      0x671 Build\obj\labyrinth.o
+ .debug_str     0x00000000      0x2c9 Build\obj\labyrinth.o
+ .debug_line_str
+                0x00000000      0x104 Build\obj\labyrinth.o
+ .comment       0x00000000       0x30 Build\obj\labyrinth.o
+ .debug_frame   0x00000000       0xac Build\obj\labyrinth.o
+ .text          0x00000000        0x0 Build\obj\remoteDataProcessing.o
+ .data          0x00000000        0x0 Build\obj\remoteDataProcessing.o
+ .bss           0x00000000        0x0 Build\obj\remoteDataProcessing.o
  .text.remoteDataProcessing_command_maxLength
-                0x0000000000000000       0x22 CMakeFiles/HWPRobot.elf.dir/lib/tools/remoteDataProcessing/remoteDataProcessing.c.obj
- .text.remoteDataProcessing_clear
-                0x0000000000000000       0x24 CMakeFiles/HWPRobot.elf.dir/lib/tools/remoteDataProcessing/remoteDataProcessing.c.obj
- .comment       0x0000000000000000       0x12 CMakeFiles/HWPRobot.elf.dir/lib/tools/remoteDataProcessing/remoteDataProcessing.c.obj
- .text          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask.c.obj
- .data          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask.c.obj
- .bss           0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask.c.obj
- .data          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask_isr.S.obj
- .bss           0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask_isr.S.obj
- .text          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/src/badISR.c.obj
- .data          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/src/badISR.c.obj
- .bss           0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/src/badISR.c.obj
- .text          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/src/main.c.obj
- .data          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/src/main.c.obj
- .bss           0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/src/main.c.obj
- .text          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/src/statemachine.c.obj
- .data          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/src/statemachine.c.obj
- .bss           0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/src/statemachine.c.obj
- .text          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/src/bumper.c.obj
- .data          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/src/bumper.c.obj
- .bss           0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/src/bumper.c.obj
- .text          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/src/encoder.c.obj
- .data          0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/src/encoder.c.obj
- .bss           0x0000000000000000        0x0 CMakeFiles/HWPRobot.elf.dir/src/encoder.c.obj
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(addsf3.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(addsf3.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(addsf3.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(addsf3x.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(addsf3x.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(addsf3x.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(cmpsf2.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(cmpsf2.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(cmpsf2.o)
- .text.avr-libc.fplib
-                0x0000000000000000        0xa /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(cmpsf2.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(cos.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(cos.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(cos.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(divsf3.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(divsf3.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(divsf3.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(divsf3x.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(divsf3x.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(divsf3x.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fixsfsi.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fixsfsi.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fixsfsi.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fixunssfsi.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fixunssfsi.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fixunssfsi.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(floatsisf.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(floatsisf.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(floatsisf.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fma.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fma.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fma.o)
- .text.avr-libc.fplib
-                0x0000000000000000       0x12 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fma.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_cmp.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_cmp.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_cmp.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_inf.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_inf.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_inf.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_nan.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_nan.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_nan.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_pscA.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_pscA.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_pscA.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_pscB.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_pscB.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_pscB.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_rempio2.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_rempio2.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_rempio2.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_round.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_round.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_round.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_sinus.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_sinus.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_sinus.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_split3.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_split3.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_split3.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_zero.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_zero.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_zero.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(gesf2.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(gesf2.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(gesf2.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(hypot.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(hypot.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(hypot.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(ldexp.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(ldexp.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(ldexp.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(mulsf3.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(mulsf3.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(mulsf3.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(mulsf3x.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(mulsf3x.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(mulsf3x.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(sin.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(sin.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(sin.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(sqrt.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(sqrt.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(sqrt.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(square.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(square.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(square.o)
- .text.avr-libc.fplib
-                0x0000000000000000        0x8 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(square.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_mpack.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_mpack.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_mpack.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_norm2.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_norm2.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_norm2.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_powsodd.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_powsodd.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_powsodd.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_powser.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_powser.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_powser.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_exit.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_exit.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_exit.o)
+                0x00000000       0x22 Build\obj\remoteDataProcessing.o
+ .text          0x00000000        0x0 Build\obj\timeTask.o
+ .data          0x00000000        0x0 Build\obj\timeTask.o
+ .bss           0x00000000        0x0 Build\obj\timeTask.o
+ .text          0x00000000        0x0 Build\obj\badISR.o
+ .data          0x00000000        0x0 Build\obj\badISR.o
+ .bss           0x00000000        0x0 Build\obj\badISR.o
+ .text          0x00000000        0x0 Build\obj\main.o
+ .data          0x00000000        0x0 Build\obj\main.o
+ .bss           0x00000000        0x0 Build\obj\main.o
+ .text          0x00000000        0x0 Build\obj\statemachine.o
+ .data          0x00000000        0x0 Build\obj\statemachine.o
+ .bss           0x00000000        0x0 Build\obj\statemachine.o
+ .text          0x00000000        0x0 Build\obj\bumper.o
+ .data          0x00000000        0x0 Build\obj\bumper.o
+ .bss           0x00000000        0x0 Build\obj\bumper.o
+ .text          0x00000000        0x0 Build\obj\encoder.o
+ .data          0x00000000        0x0 Build\obj\encoder.o
+ .bss           0x00000000        0x0 Build\obj\encoder.o
+ .data          0x00000000        0x0 Build\obj\adc_isr.o
+ .bss           0x00000000        0x0 Build\obj\adc_isr.o
+ .data          0x00000000        0x0 Build\obj\uart_isr.o
+ .bss           0x00000000        0x0 Build\obj\uart_isr.o
+ .data          0x00000000        0x0 Build\obj\timeTask_isr.o
+ .bss           0x00000000        0x0 Build\obj\timeTask_isr.o
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_exit.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_exit.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_exit.o)
  .text.libgcc.mul
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_exit.o)
+                0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_exit.o)
  .text.libgcc.div
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_exit.o)
- .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_exit.o)
+                0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_exit.o)
+ .text.libgcc   0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_exit.o)
  .text.libgcc.prologue
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_exit.o)
+                0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_exit.o)
  .text.libgcc.builtins
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_exit.o)
+                0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_exit.o)
  .text.libgcc.fmul
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_exit.o)
+                0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_exit.o)
  .text.libgcc.fixed
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_exit.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_copy_data.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_copy_data.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_copy_data.o)
+                0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_exit.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_tablejump2.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_tablejump2.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_tablejump2.o)
  .text.libgcc.mul
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_copy_data.o)
+                0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_tablejump2.o)
  .text.libgcc.div
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_copy_data.o)
- .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_copy_data.o)
+                0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_tablejump2.o)
  .text.libgcc.prologue
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_copy_data.o)
+                0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_tablejump2.o)
  .text.libgcc.builtins
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_copy_data.o)
+                0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_tablejump2.o)
  .text.libgcc.fmul
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_copy_data.o)
+                0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_tablejump2.o)
  .text.libgcc.fixed
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_copy_data.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_clear_bss.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_clear_bss.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_clear_bss.o)
+                0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_tablejump2.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_copy_data.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_copy_data.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_copy_data.o)
  .text.libgcc.mul
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_clear_bss.o)
+                0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_copy_data.o)
  .text.libgcc.div
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_clear_bss.o)
- .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_clear_bss.o)
+                0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_copy_data.o)
  .text.libgcc.prologue
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_clear_bss.o)
+                0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_copy_data.o)
  .text.libgcc.builtins
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_clear_bss.o)
+                0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_copy_data.o)
  .text.libgcc.fmul
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_clear_bss.o)
+                0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_copy_data.o)
  .text.libgcc.fixed
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_clear_bss.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_muluhisi3.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_muluhisi3.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_muluhisi3.o)
+                0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_copy_data.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_clear_bss.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_clear_bss.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_clear_bss.o)
+ .text.libgcc.mul
+                0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_clear_bss.o)
  .text.libgcc.div
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_muluhisi3.o)
- .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_muluhisi3.o)
+                0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_clear_bss.o)
  .text.libgcc.prologue
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_muluhisi3.o)
+                0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_clear_bss.o)
  .text.libgcc.builtins
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_muluhisi3.o)
+                0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_clear_bss.o)
  .text.libgcc.fmul
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_muluhisi3.o)
+                0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_clear_bss.o)
  .text.libgcc.fixed
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_muluhisi3.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_umulhisi3.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_umulhisi3.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_umulhisi3.o)
+                0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_clear_bss.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_muluhisi3.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_muluhisi3.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_muluhisi3.o)
  .text.libgcc.div
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_umulhisi3.o)
- .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_umulhisi3.o)
+                0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_muluhisi3.o)
+ .text.libgcc   0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_muluhisi3.o)
  .text.libgcc.prologue
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_umulhisi3.o)
+                0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_muluhisi3.o)
  .text.libgcc.builtins
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_umulhisi3.o)
+                0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_muluhisi3.o)
  .text.libgcc.fmul
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_umulhisi3.o)
+                0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_muluhisi3.o)
  .text.libgcc.fixed
-                0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_umulhisi3.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(malloc.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(malloc.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(memcpy.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(memcpy.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(memcpy.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vsnprintf.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vsnprintf.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vsnprintf.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vsnprintf_p.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vsnprintf_p.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vsnprintf_p.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vfprintf_std.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vfprintf_std.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vfprintf_std.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(strnlen_P.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(strnlen_P.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(strnlen_P.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(strnlen.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(strnlen.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(strnlen.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(fputc.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(fputc.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(fputc.o)
- .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(ultoa_invert.o)
- .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(ultoa_invert.o)
- .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(ultoa_invert.o)
+                0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_muluhisi3.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_umulhisi3.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_umulhisi3.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_umulhisi3.o)
+ .text.libgcc.div
+                0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_umulhisi3.o)
+ .text.libgcc   0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_umulhisi3.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_umulhisi3.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_umulhisi3.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_umulhisi3.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_umulhisi3.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(addsf3.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(addsf3.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(addsf3.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(addsf3x.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(addsf3x.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(addsf3x.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(cmpsf2.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(cmpsf2.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(cmpsf2.o)
+ .text.avr-libc.fplib
+                0x00000000        0xa C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(cmpsf2.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(cos.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(cos.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(cos.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(divsf3.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(divsf3.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(divsf3.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(divsf3x.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(divsf3x.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(divsf3x.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fixsfsi.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fixsfsi.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fixsfsi.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fixunssfsi.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fixunssfsi.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fixunssfsi.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(floatsisf.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(floatsisf.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(floatsisf.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fma.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fma.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fma.o)
+ .text.avr-libc.fplib
+                0x00000000       0x12 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fma.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_cmp.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_cmp.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_cmp.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_inf.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_inf.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_inf.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_nan.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_nan.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_nan.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_pscA.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_pscA.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_pscA.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_pscB.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_pscB.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_pscB.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_rempio2.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_rempio2.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_rempio2.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_round.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_round.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_round.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_sinus.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_sinus.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_sinus.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_split3.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_split3.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_split3.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_zero.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_zero.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_zero.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(gesf2.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(gesf2.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(gesf2.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(hypot.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(hypot.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(hypot.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(ldexp.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(ldexp.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(ldexp.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(mulsf3.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(mulsf3.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(mulsf3.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(mulsf3x.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(mulsf3x.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(mulsf3x.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(sin.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(sin.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(sin.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(sqrt.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(sqrt.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(sqrt.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(square.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(square.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(square.o)
+ .text.avr-libc.fplib
+                0x00000000        0x8 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(square.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_mpack.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_mpack.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_mpack.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_norm2.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_norm2.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_norm2.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_powsodd.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_powsodd.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_powsodd.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_powser.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_powser.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_powser.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(malloc.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(memcpy.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(memcpy.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(memcpy.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(vsnprintf.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(vsnprintf.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(vsnprintf.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(vsnprintf_p.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(vsnprintf_p.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(vsnprintf_p.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(vfprintf_std.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(vfprintf_std.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(vfprintf_std.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(strnlen_P.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(strnlen_P.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(strnlen_P.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(strnlen.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(strnlen.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(strnlen.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(fputc.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(fputc.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(fputc.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(ultoa_invert.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(ultoa_invert.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(ultoa_invert.o)
+ .text          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_negsi2.o)
+ .data          0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_negsi2.o)
+ .bss           0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_negsi2.o)
+ .text.libgcc.mul
+                0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_negsi2.o)
+ .text.libgcc   0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_negsi2.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_negsi2.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_negsi2.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_negsi2.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_negsi2.o)
 
 Memory Configuration
 
 Name             Origin             Length             Attributes
-text             0x0000000000000000 0x0000000000020000 xr
-data             0x0000000000800200 0x0000000000002000 rw !x
-eeprom           0x0000000000810000 0x0000000000001000 rw !x
-fuse             0x0000000000820000 0x0000000000000003 rw !x
-lock             0x0000000000830000 0x0000000000000400 rw !x
-signature        0x0000000000840000 0x0000000000000400 rw !x
-user_signatures  0x0000000000850000 0x0000000000000400 rw !x
-*default*        0x0000000000000000 0xffffffffffffffff
+text             0x00000000         0x00020000         xr
+data             0x00800200         0x00002000         rw!x
+eeprom           0x00810000         0x00001000         rw!x
+fuse             0x00820000         0x00000003         rw!x
+lock             0x00830000         0x00000400         rw!x
+signature        0x00840000         0x00000400         rw!x
+user_signatures  0x00850000         0x00000400         rw!x
+*default*        0x00000000         0xffffffff
 
 Linker script and memory map
 
 Address of section .data set to 0x800200
-LOAD /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/crtatmega1280.o
-LOAD CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
-LOAD CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc.c.obj
-LOAD CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc_isr.S.obj
-LOAD CMakeFiles/HWPRobot.elf.dir/lib/io/i2c/i2c.c.obj
-LOAD CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj
-LOAD CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart_isr.S.obj
-LOAD CMakeFiles/HWPRobot.elf.dir/lib/motor/motor.c.obj
-LOAD CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
-LOAD CMakeFiles/HWPRobot.elf.dir/lib/tools/labyrinth/labyrinth.c.obj
-LOAD CMakeFiles/HWPRobot.elf.dir/lib/tools/remoteDataProcessing/remoteDataProcessing.c.obj
-LOAD CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask.c.obj
-LOAD CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask_isr.S.obj
-LOAD CMakeFiles/HWPRobot.elf.dir/src/badISR.c.obj
-LOAD CMakeFiles/HWPRobot.elf.dir/src/main.c.obj
-LOAD CMakeFiles/HWPRobot.elf.dir/src/statemachine.c.obj
-LOAD CMakeFiles/HWPRobot.elf.dir/src/bumper.c.obj
-LOAD CMakeFiles/HWPRobot.elf.dir/src/encoder.c.obj
-LOAD /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a
+LOAD C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51/crtatmega1280.o
+LOAD C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a
+LOAD Build\obj\communication.o
+LOAD Build\obj\adc.o
+LOAD Build\obj\i2c.o
+LOAD Build\obj\uart.o
+LOAD Build\obj\motor.o
+LOAD Build\obj\pathFollower.o
+LOAD Build\obj\labyrinth.o
+LOAD Build\obj\remoteDataProcessing.o
+LOAD Build\obj\timeTask.o
+LOAD Build\obj\badISR.o
+LOAD Build\obj\main.o
+LOAD Build\obj\statemachine.o
+LOAD Build\obj\bumper.o
+LOAD Build\obj\encoder.o
+LOAD Build\obj\adc_isr.o
+LOAD Build\obj\uart_isr.o
+LOAD Build\obj\timeTask_isr.o
 START GROUP
-LOAD /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a
-LOAD /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a
-LOAD /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a
-LOAD /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libatmega1280.a
+LOAD C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a
+LOAD C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a
+LOAD C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a
+LOAD C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libatmega1280.a
 END GROUP
-                0x0000000000000000                __TEXT_REGION_ORIGIN__ = DEFINED (__TEXT_REGION_ORIGIN__)?__TEXT_REGION_ORIGIN__:0x0
-                [0x0000000000800200]                __DATA_REGION_ORIGIN__ = DEFINED (__DATA_REGION_ORIGIN__)?__DATA_REGION_ORIGIN__:0x800100
-                [0x0000000000020000]                __TEXT_REGION_LENGTH__ = DEFINED (__TEXT_REGION_LENGTH__)?__TEXT_REGION_LENGTH__:0x20000
-                [0x0000000000002000]                __DATA_REGION_LENGTH__ = DEFINED (__DATA_REGION_LENGTH__)?__DATA_REGION_LENGTH__:0xff00
-                [0x0000000000001000]                __EEPROM_REGION_LENGTH__ = DEFINED (__EEPROM_REGION_LENGTH__)?__EEPROM_REGION_LENGTH__:0x10000
-                [0x0000000000000003]                __FUSE_REGION_LENGTH__ = DEFINED (__FUSE_REGION_LENGTH__)?__FUSE_REGION_LENGTH__:0x400
-                0x0000000000000400                __LOCK_REGION_LENGTH__ = DEFINED (__LOCK_REGION_LENGTH__)?__LOCK_REGION_LENGTH__:0x400
-                0x0000000000000400                __SIGNATURE_REGION_LENGTH__ = DEFINED (__SIGNATURE_REGION_LENGTH__)?__SIGNATURE_REGION_LENGTH__:0x400
-                0x0000000000000400                __USER_SIGNATURE_REGION_LENGTH__ = DEFINED (__USER_SIGNATURE_REGION_LENGTH__)?__USER_SIGNATURE_REGION_LENGTH__:0x400
+                [0x00000000]                      __TEXT_REGION_ORIGIN__ = DEFINED (__TEXT_REGION_ORIGIN__)?__TEXT_REGION_ORIGIN__:0x0
+                [0x00020000]                      __TEXT_REGION_LENGTH__ = DEFINED (__TEXT_REGION_LENGTH__)?__TEXT_REGION_LENGTH__:0x20000
+                [0x00800200]                      __DATA_REGION_ORIGIN__ = DEFINED (__DATA_REGION_ORIGIN__)?__DATA_REGION_ORIGIN__:0x800100
+                [0x00002000]                      __DATA_REGION_LENGTH__ = DEFINED (__DATA_REGION_LENGTH__)?__DATA_REGION_LENGTH__:0xff00
+                [0x00001000]                      __EEPROM_REGION_LENGTH__ = DEFINED (__EEPROM_REGION_LENGTH__)?__EEPROM_REGION_LENGTH__:0x10000
+                [0x00000003]                      __FUSE_REGION_LENGTH__ = DEFINED (__FUSE_REGION_LENGTH__)?__FUSE_REGION_LENGTH__:0x400
+                0x00000400                        __LOCK_REGION_LENGTH__ = DEFINED (__LOCK_REGION_LENGTH__)?__LOCK_REGION_LENGTH__:0x400
+                0x00000400                        __SIGNATURE_REGION_LENGTH__ = DEFINED (__SIGNATURE_REGION_LENGTH__)?__SIGNATURE_REGION_LENGTH__:0x400
+                0x00000400                        __USER_SIGNATURE_REGION_LENGTH__ = DEFINED (__USER_SIGNATURE_REGION_LENGTH__)?__USER_SIGNATURE_REGION_LENGTH__:0x400
 
 .hash
  *(.hash)
@@ -610,71 +636,82 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x0000000000000000     0x1f88
+.text           0x00000000     0x2b1a
  *(.vectors)
- .vectors       0x0000000000000000       0xe4 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/crtatmega1280.o
-                0x0000000000000000                __vectors
+ .vectors       0x00000000       0xe4 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51/crtatmega1280.o
+                0x00000000                __vectors
  *(.vectors)
  *(.progmem.gcc*)
- .progmem.gcc_fplib
-                0x00000000000000e4       0x1e /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_sinus.o)
-                0x0000000000000102                . = ALIGN (0x2)
-                0x0000000000000102                __trampolines_start = .
+                0x000000e4                        . = ALIGN (0x2)
+                0x000000e4                        __trampolines_start = .
  *(.trampolines)
- .trampolines   0x0000000000000102        0x0 linker stubs
+ .trampolines   0x000000e4        0x0 linker stubs
  *(.trampolines*)
-                0x0000000000000102                __trampolines_end = .
+                0x000000e4                        __trampolines_end = .
  *libprintf_flt.a:*(.progmem.data)
  *libc.a:*(.progmem.data)
- *(.progmem*)
- .progmem.data.__c.2340
-                0x0000000000000102       0x18 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
- .progmem.data.__c.2333
-                0x000000000000011a        0xf CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
- .progmem.data.__c.2331
-                0x0000000000000129       0x10 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
- .progmem.data.__c.2329
-                0x0000000000000139       0x11 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
- .progmem.data.__c.2327
-                0x000000000000014a       0x12 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
- .progmem.data.__c.2325
-                0x000000000000015c       0x2b CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
- .progmem.data.__c.2323
-                0x0000000000000187       0x33 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
- .progmem.data.__c.2143
-                0x00000000000001ba        0x7 CMakeFiles/HWPRobot.elf.dir/src/main.c.obj
-                0x00000000000001c2                . = ALIGN (0x2)
- *fill*         0x00000000000001c1        0x1 
- *(.jumptables)
- *(.jumptables*)
+ *(.progmem.*)
+ .progmem.data.__c.3
+                0x000000e4       0x18 Build\obj\pathFollower.o
+ .progmem.data.__c.4
+                0x000000fc        0xf Build\obj\pathFollower.o
+ .progmem.data.__c.5
+                0x0000010b       0x10 Build\obj\pathFollower.o
+ .progmem.data.__c.6
+                0x0000011b       0x11 Build\obj\pathFollower.o
+ .progmem.data.__c.7
+                0x0000012c       0x12 Build\obj\pathFollower.o
+ .progmem.data.__c.8
+                0x0000013e       0x2b Build\obj\pathFollower.o
+ .progmem.data.__c.9
+                0x00000169       0x33 Build\obj\pathFollower.o
+ .progmem.data.__c.0
+                0x0000019c       0x1c Build\obj\main.o
+ .progmem.data.__c.1
+                0x000001b8       0x3f Build\obj\main.o
+ .progmem.data.__c.2
+                0x000001f7       0x2c Build\obj\main.o
+ .progmem.data.__c.3
+                0x00000223       0x2c Build\obj\main.o
+ .progmem.data.__c.4
+                0x0000024f       0x4a Build\obj\main.o
+ .progmem.data.__c.5
+                0x00000299       0x1d Build\obj\main.o
+ .progmem.data.__c.6
+                0x000002b6       0x25 Build\obj\main.o
+ .progmem.data.__c.7
+                0x000002db       0x18 Build\obj\main.o
+ .progmem.data.__c.14
+                0x000002f3        0x7 Build\obj\main.o
+                0x000002fa                        . = ALIGN (0x2)
  *(.lowtext)
  *(.lowtext*)
-                0x00000000000001c2                __ctors_start = .
+                0x000002fa                        __ctors_start = .
  *(.ctors)
-                0x00000000000001c2                __ctors_end = .
-                0x00000000000001c2                __dtors_start = .
+                0x000002fa                        __ctors_end = .
+                0x000002fa                        __dtors_start = .
  *(.dtors)
-                0x00000000000001c2                __dtors_end = .
- SORT(*)(.ctors)
- SORT(*)(.dtors)
+                0x000002fa                        __dtors_end = .
+ SORT_BY_NAME(*)(.ctors)
+ SORT_BY_NAME(*)(.dtors)
  *(.init0)
- .init0         0x00000000000001c2        0x0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/crtatmega1280.o
-                0x00000000000001c2                __init
+ .init0         0x000002fa        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51/crtatmega1280.o
+                0x000002fa                __init
  *(.init0)
  *(.init1)
  *(.init1)
  *(.init2)
- .init2         0x00000000000001c2        0xc /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/crtatmega1280.o
+ .init2         0x000002fa        0xc C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51/crtatmega1280.o
  *(.init2)
  *(.init3)
- .init3         0x00000000000001ce        0x2 CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask.c.obj
-                0x00000000000001ce                init_GPIOR0
+ .init3         0x00000306        0x2 Build\obj\timeTask.o
+                0x00000306                init_GPIOR0
  *(.init3)
  *(.init4)
- .init4         0x00000000000001d0       0x1a /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_copy_data.o)
-                0x00000000000001d0                __do_copy_data
- .init4         0x00000000000001ea       0x10 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_clear_bss.o)
-                0x00000000000001ea                __do_clear_bss
+ .init4         0x00000308       0x1a C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_copy_data.o)
+                0x00000308                __do_copy_data
+ .init4         0x00000322       0x10 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_clear_bss.o)
+                0x00000322                __do_clear_bss
  *(.init4)
  *(.init5)
  *(.init5)
@@ -685,304 +722,336 @@ END GROUP
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x00000000000001fa        0x6 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/crtatmega1280.o
+ .init9         0x00000332        0x6 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51/crtatmega1280.o
  *(.init9)
  *(.text)
- .text          0x0000000000000200        0x2 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/crtatmega1280.o
-                0x0000000000000200                __vector_38
-                0x0000000000000200                __vector_22
-                0x0000000000000200                __vector_28
-                0x0000000000000200                __vector_1
-                0x0000000000000200                __vector_32
-                0x0000000000000200                __vector_34
-                0x0000000000000200                __vector_24
-                0x0000000000000200                __vector_12
-                0x0000000000000200                __vector_55
-                0x0000000000000200                __vector_46
-                0x0000000000000200                __bad_interrupt
-                0x0000000000000200                __vector_6
-                0x0000000000000200                __vector_31
-                0x0000000000000200                __vector_35
-                0x0000000000000200                __vector_39
-                0x0000000000000200                __vector_3
-                0x0000000000000200                __vector_23
-                0x0000000000000200                __vector_30
-                0x0000000000000200                __vector_45
-                0x0000000000000200                __vector_25
-                0x0000000000000200                __vector_11
-                0x0000000000000200                __vector_54
-                0x0000000000000200                __vector_13
-                0x0000000000000200                __vector_17
-                0x0000000000000200                __vector_19
-                0x0000000000000200                __vector_56
-                0x0000000000000200                __vector_7
-                0x0000000000000200                __vector_49
-                0x0000000000000200                __vector_41
-                0x0000000000000200                __vector_43
-                0x0000000000000200                __vector_27
-                0x0000000000000200                __vector_5
-                0x0000000000000200                __vector_33
-                0x0000000000000200                __vector_52
-                0x0000000000000200                __vector_4
-                0x0000000000000200                __vector_44
-                0x0000000000000200                __vector_51
-                0x0000000000000200                __vector_9
-                0x0000000000000200                __vector_2
-                0x0000000000000200                __vector_21
-                0x0000000000000200                __vector_15
-                0x0000000000000200                __vector_40
-                0x0000000000000200                __vector_8
-                0x0000000000000200                __vector_26
-                0x0000000000000200                __vector_48
-                0x0000000000000200                __vector_14
-                0x0000000000000200                __vector_53
-                0x0000000000000200                __vector_10
-                0x0000000000000200                __vector_50
-                0x0000000000000200                __vector_16
-                0x0000000000000200                __vector_18
-                0x0000000000000200                __vector_20
-                0x0000000000000200                __vector_42
- .text          0x0000000000000202       0x9a CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc_isr.S.obj
-                0x0000000000000202                __vector_29
- .text          0x000000000000029c       0x78 CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart_isr.S.obj
-                0x000000000000029c                __vector_36
-                0x00000000000002da                __vector_37
- .text          0x0000000000000314       0x6c CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask_isr.S.obj
-                0x0000000000000314                __vector_47
-                0x0000000000000380                . = ALIGN (0x2)
+ .text          0x00000338        0x2 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51/crtatmega1280.o
+                0x00000338                __vector_38
+                0x00000338                __vector_22
+                0x00000338                __vector_28
+                0x00000338                __vector_1
+                0x00000338                __vector_32
+                0x00000338                __vector_34
+                0x00000338                __vector_24
+                0x00000338                __vector_12
+                0x00000338                __vector_55
+                0x00000338                __vector_46
+                0x00000338                __bad_interrupt
+                0x00000338                __vector_6
+                0x00000338                __vector_31
+                0x00000338                __vector_35
+                0x00000338                __vector_39
+                0x00000338                __vector_3
+                0x00000338                __vector_23
+                0x00000338                __vector_30
+                0x00000338                __vector_45
+                0x00000338                __vector_25
+                0x00000338                __vector_54
+                0x00000338                __vector_13
+                0x00000338                __vector_17
+                0x00000338                __vector_19
+                0x00000338                __vector_56
+                0x00000338                __vector_7
+                0x00000338                __vector_49
+                0x00000338                __vector_41
+                0x00000338                __vector_43
+                0x00000338                __vector_27
+                0x00000338                __vector_5
+                0x00000338                __vector_33
+                0x00000338                __vector_52
+                0x00000338                __vector_4
+                0x00000338                __vector_44
+                0x00000338                __vector_51
+                0x00000338                __vector_2
+                0x00000338                __vector_21
+                0x00000338                __vector_15
+                0x00000338                __vector_40
+                0x00000338                __vector_8
+                0x00000338                __vector_26
+                0x00000338                __vector_48
+                0x00000338                __vector_14
+                0x00000338                __vector_53
+                0x00000338                __vector_10
+                0x00000338                __vector_50
+                0x00000338                __vector_16
+                0x00000338                __vector_18
+                0x00000338                __vector_20
+                0x00000338                __vector_42
+ .text          0x0000033a       0x9a Build\obj\adc_isr.o
+                0x0000033a                __vector_29
+ .text          0x000003d4       0x78 Build\obj\uart_isr.o
+                0x000003d4                __vector_36
+                0x00000412                __vector_37
+ .text          0x0000044c       0x6c Build\obj\timeTask_isr.o
+                0x0000044c                __vector_47
+                0x000004b8                        . = ALIGN (0x2)
  *(.text.*)
  .text.readPackets
-                0x0000000000000380      0x14c CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
+                0x000004b8      0x15c Build\obj\communication.o
  .text.communication_init
-                0x00000000000004cc       0x10 CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
-                0x00000000000004cc                communication_init
+                0x00000614       0x10 Build\obj\communication.o
+                0x00000614                communication_init
  .text.communication_setCallback
-                0x00000000000004dc       0x12 CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
-                0x00000000000004dc                communication_setCallback
+                0x00000624       0x12 Build\obj\communication.o
+                0x00000624                communication_setCallback
  .text.communication_writePacket
-                0x00000000000004ee       0xda CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
-                0x00000000000004ee                communication_writePacket
+                0x00000636       0xec Build\obj\communication.o
+                0x00000636                communication_writePacket
  .text.communication_log
-                0x00000000000005c8       0x72 CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
-                0x00000000000005c8                communication_log
+                0x00000722       0x68 Build\obj\communication.o
+                0x00000722                communication_log
  .text.communication_log_P
-                0x000000000000063a       0x72 CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
-                0x000000000000063a                communication_log_P
+                0x0000078a       0x68 Build\obj\communication.o
+                0x0000078a                communication_log_P
  .text.communication_readPackets
-                0x00000000000006ac        0xa CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
-                0x00000000000006ac                communication_readPackets
+                0x000007f2        0xa Build\obj\communication.o
+                0x000007f2                communication_readPackets
+ .text.ADC_init
+                0x000007fc       0xb6 Build\obj\adc.o
+                0x000007fc                ADC_init
  .text.ADC_getFilteredValue
-                0x00000000000006b6       0x36 CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc.c.obj
-                0x00000000000006b6                ADC_getFilteredValue
+                0x000008b2       0x28 Build\obj\adc.o
+                0x000008b2                ADC_getFilteredValue
  .text.uart_write1
-                0x00000000000006ec       0x24 CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj
-                0x00000000000006ec                uart_write1
+                0x000008da       0x24 Build\obj\uart.o
+                0x000008da                uart_write1
  .text.uart_read1
-                0x0000000000000710       0x24 CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj
-                0x0000000000000710                uart_read1
+                0x000008fe       0x24 Build\obj\uart.o
+                0x000008fe                uart_read1
  .text.uart_available1
-                0x0000000000000734       0x12 CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj
-                0x0000000000000734                uart_available1
+                0x00000922       0x12 Build\obj\uart.o
+                0x00000922                uart_available1
  .text.uart_init
-                0x0000000000000746       0x26 CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj
-                0x0000000000000746                uart_init
+                0x00000934       0x26 Build\obj\uart.o
+                0x00000934                uart_init
  .text.Motor_init
-                0x000000000000076c       0x98 CMakeFiles/HWPRobot.elf.dir/lib/motor/motor.c.obj
-                0x000000000000076c                Motor_init
+                0x0000095a       0x98 Build\obj\motor.o
+                0x0000095a                Motor_init
  .text.Motor_setPWM
-                0x0000000000000804       0x70 CMakeFiles/HWPRobot.elf.dir/lib/motor/motor.c.obj
-                0x0000000000000804                Motor_setPWM
+                0x000009f2       0x70 Build\obj\motor.o
+                0x000009f2                Motor_setPWM
  .text.Motor_stopAll
-                0x0000000000000874       0x2c CMakeFiles/HWPRobot.elf.dir/lib/motor/motor.c.obj
-                0x0000000000000874                Motor_stopAll
+                0x00000a62       0x2c Build\obj\motor.o
+                0x00000a62                Motor_stopAll
  .text.commPathFollowerParameters
-                0x00000000000008a0       0x5e CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
-                0x00000000000008a0                commPathFollowerParameters
- .text.setPath.part.0
-                0x00000000000008fe      0x162 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
+                0x00000a8e       0x82 Build\obj\pathFollower.o
+                0x00000a8e                commPathFollowerParameters
+ .text.setPath  0x00000b10      0x1ac Build\obj\pathFollower.o
  .text.commPathFollower
-                0x0000000000000a60      0x11e CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
-                0x0000000000000a60                commPathFollower
+                0x00000cbc      0x122 Build\obj\pathFollower.o
+                0x00000cbc                commPathFollower
  .text.pathFollower_init
-                0x0000000000000b7e       0x10 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
-                0x0000000000000b7e                pathFollower_init
+                0x00000dde       0x10 Build\obj\pathFollower.o
+                0x00000dde                pathFollower_init
+ .text.rdp_command
+                0x00000dee       0x96 Build\obj\remoteDataProcessing.o
+ .text.remoteDataProcessing_command
+                0x00000e84       0x20 Build\obj\remoteDataProcessing.o
+                0x00000e84                remoteDataProcessing_command
+ .text.remoteDataProcessing_clear
+                0x00000ea4       0x22 Build\obj\remoteDataProcessing.o
+                0x00000ea4                remoteDataProcessing_clear
  .text.timeTask_init
-                0x0000000000000b8e       0x44 CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask.c.obj
-                0x0000000000000b8e                timeTask_init
+                0x00000ec6       0x44 Build\obj\timeTask.o
+                0x00000ec6                timeTask_init
  .text.timeTask_getTimestamp
-                0x0000000000000bd2       0x2e CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask.c.obj
-                0x0000000000000bd2                timeTask_getTimestamp
+                0x00000f0a       0x2e Build\obj\timeTask.o
+                0x00000f0a                timeTask_getTimestamp
  .text.timeTask_getDuration
-                0x0000000000000c00       0x50 CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask.c.obj
-                0x0000000000000c00                timeTask_getDuration
+                0x00000f38       0x46 Build\obj\timeTask.o
+                0x00000f38                timeTask_getDuration
  .text.__vector_default
-                0x0000000000000c50       0x30 CMakeFiles/HWPRobot.elf.dir/src/badISR.c.obj
-                0x0000000000000c50                __vector_default
+                0x00000f7e       0x2c Build\obj\badISR.o
+                0x00000f7e                __vector_default
  .text.commDriveCommand
-                0x0000000000000c80        0x2 CMakeFiles/HWPRobot.elf.dir/src/main.c.obj
+                0x00000faa        0x2 Build\obj\main.o
  .text.commDebug
-                0x0000000000000c82       0x1e CMakeFiles/HWPRobot.elf.dir/src/main.c.obj
+                0x00000fac       0x1e Build\obj\main.o
  .text.commUserCommand
-                0x0000000000000ca0       0x7a CMakeFiles/HWPRobot.elf.dir/src/main.c.obj
- .text.commPose
-                0x0000000000000d1a        0x2 CMakeFiles/HWPRobot.elf.dir/src/main.c.obj
+                0x00000fca      0x26a Build\obj\main.o
  .text.commAdditionalPose
-                0x0000000000000d1c        0x2 CMakeFiles/HWPRobot.elf.dir/src/main.c.obj
+                0x00001234        0x2 Build\obj\main.o
  .text.commRobotParameters
-                0x0000000000000d1e        0x2 CMakeFiles/HWPRobot.elf.dir/src/main.c.obj
+                0x00001236        0x2 Build\obj\main.o
+ .text.commPose
+                0x00001238        0x2 Build\obj\main.o
  .text.startup.main
-                0x0000000000000d20      0x23c CMakeFiles/HWPRobot.elf.dir/src/main.c.obj
-                0x0000000000000d20                main
+                0x0000123a      0x69e Build\obj\main.o
+                0x0000123a                main
  .text.drive_Forward_5sec
-                0x0000000000000f5c       0x64 CMakeFiles/HWPRobot.elf.dir/src/statemachine.c.obj
-                0x0000000000000f5c                drive_Forward_5sec
+                0x000018d8       0x62 Build\obj\statemachine.o
+                0x000018d8                drive_Forward_5sec
  .text.stateMachine
-                0x0000000000000fc0       0x12 CMakeFiles/HWPRobot.elf.dir/src/statemachine.c.obj
-                0x0000000000000fc0                stateMachine
+                0x0000193a       0x20 Build\obj\statemachine.o
+                0x0000193a                stateMachine
  .text.setState
-                0x0000000000000fd2        0x6 CMakeFiles/HWPRobot.elf.dir/src/statemachine.c.obj
-                0x0000000000000fd2                setState
+                0x0000195a        0x6 Build\obj\statemachine.o
+                0x0000195a                setState
  .text.bumper_init
-                0x0000000000000fd8        0x6 CMakeFiles/HWPRobot.elf.dir/src/bumper.c.obj
-                0x0000000000000fd8                bumper_init
+                0x00001960        0x6 Build\obj\bumper.o
+                0x00001960                bumper_init
+ .text.__vector_11
+                0x00001966       0x66 Build\obj\encoder.o
+                0x00001966                __vector_11
+ .text.__vector_9
+                0x000019cc       0x6c Build\obj\encoder.o
+                0x000019cc                __vector_9
  .text.encoder_init
-                0x0000000000000fde        0xa CMakeFiles/HWPRobot.elf.dir/src/encoder.c.obj
-                0x0000000000000fde                encoder_init
- .text.avr-libc.fplib
-                0x0000000000000fe8        0xa /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(addsf3.o)
-                0x0000000000000fe8                __subsf3
-                0x0000000000000fea                __addsf3
- .text.avr-libc.fplib
-                0x0000000000000ff2       0xc0 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(addsf3x.o)
-                0x000000000000100c                __addsf3x
- .text.avr-libc.fplib
-                0x00000000000010b2        0x6 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(cos.o)
-                0x00000000000010b2                cos
- .text.avr-libc.fplib
-                0x00000000000010b8        0x4 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(divsf3.o)
-                0x00000000000010b8                __divsf3
- .text.avr-libc.fplib
-                0x00000000000010bc       0xcc /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(divsf3x.o)
-                0x00000000000010d2                __divsf3x
-                0x00000000000010d6                __divsf3_pse
- .text.avr-libc.fplib
-                0x0000000000001188        0xa /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fixsfsi.o)
-                0x0000000000001188                __fixsfsi
- .text.avr-libc.fplib
-                0x0000000000001192       0x58 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fixunssfsi.o)
-                0x0000000000001192                __fixunssfsi
- .text.avr-libc.fplib
-                0x00000000000011ea       0x7a /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(floatsisf.o)
-                0x00000000000011ea                __floatunsisf
-                0x00000000000011ee                __floatsisf
- .text.avr-libc.fplib
-                0x0000000000001264       0x48 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_cmp.o)
-                0x0000000000001264                __fp_cmp
- .text.avr-libc.fplib
-                0x00000000000012ac        0xc /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_inf.o)
-                0x00000000000012ac                __fp_inf
- .text.avr-libc.fplib
-                0x00000000000012b8        0x6 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_nan.o)
-                0x00000000000012b8                __fp_nan
- .text.avr-libc.fplib
-                0x00000000000012be        0xe /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_pscA.o)
-                0x00000000000012be                __fp_pscA
- .text.avr-libc.fplib
-                0x00000000000012cc        0xe /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_pscB.o)
-                0x00000000000012cc                __fp_pscB
- .text.avr-libc.fplib
-                0x00000000000012da       0x50 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_rempio2.o)
-                0x00000000000012dc                __fp_rempio2
- .text.avr-libc.fplib
-                0x000000000000132a       0x22 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_round.o)
-                0x000000000000132a                __fp_round
- .text.avr-libc.fplib
-                0x000000000000134c       0x22 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_sinus.o)
-                0x000000000000134c                __fp_sinus
- .text.avr-libc.fplib
-                0x000000000000136e       0x44 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_split3.o)
-                0x000000000000136e                __fp_split3
-                0x000000000000137e                __fp_splitA
- .text.avr-libc.fplib
-                0x00000000000013b2        0xe /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_zero.o)
-                0x00000000000013b2                __fp_zero
-                0x00000000000013b4                __fp_szero
- .text.avr-libc.fplib
-                0x00000000000013c0        0x8 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(gesf2.o)
-                0x00000000000013c0                __gtsf2
-                0x00000000000013c0                __gesf2
- .text.avr-libc.fplib
-                0x00000000000013c8       0xc2 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(hypot.o)
-                0x00000000000013da                hypot
- .text.avr-libc.fplib
-                0x000000000000148a       0x6c /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(ldexp.o)
-                0x000000000000148e                ldexp
- .text.avr-libc.fplib
-                0x00000000000014f6        0x4 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(mulsf3.o)
-                0x00000000000014f6                __mulsf3
- .text.avr-libc.fplib
-                0x00000000000014fa       0xc2 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(mulsf3x.o)
-                0x000000000000150e                __mulsf3x
-                0x0000000000001512                __mulsf3_pse
- .text.avr-libc.fplib
-                0x00000000000015bc        0xc /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(sin.o)
-                0x00000000000015bc                sin
- .text.avr-libc.fplib
-                0x00000000000015c8       0x84 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(sqrt.o)
-                0x00000000000015d0                sqrt
-                0x00000000000015d0                sqrtf
- .text.avr-libc.fplib
-                0x000000000000164c       0x1c /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_mpack.o)
-                0x000000000000164c                __fp_mpack
-                0x0000000000001650                __fp_mpack_finite
- .text.avr-libc.fplib
-                0x0000000000001668        0xe /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_norm2.o)
-                0x0000000000001668                __fp_norm2
- .text.avr-libc.fplib
-                0x0000000000001676       0x22 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_powsodd.o)
-                0x0000000000001676                __fp_powsodd
- .text.avr-libc.fplib
-                0x0000000000001698       0x4a /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libm.a(fp_powser.o)
-                0x0000000000001698                __fp_powser
+                0x00001a38       0x5c Build\obj\encoder.o
+                0x00001a38                encoder_init
+ .text.encoder_getValue
+                0x00001a94       0x2e Build\obj\encoder.o
+                0x00001a94                encoder_getValue
+ .text.encoder_reset
+                0x00001ac2       0x2a Build\obj\encoder.o
+                0x00001ac2                encoder_reset
+ .text.encoder_getRawPins
+                0x00001aec       0x1e Build\obj\encoder.o
+                0x00001aec                encoder_getRawPins
+ .text.libgcc   0x00001b0a       0x12 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_tablejump2.o)
+                0x00001b0a                __tablejump2__
  .text.libgcc.mul
-                0x00000000000016e2       0x14 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_muluhisi3.o)
-                0x00000000000016e2                __muluhisi3
+                0x00001b1c       0x14 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_muluhisi3.o)
+                0x00001b1c                __muluhisi3
  .text.libgcc.mul
-                0x00000000000016f6       0x1e /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_umulhisi3.o)
-                0x00000000000016f6                __umulhisi3
+                0x00001b30       0x1e C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_umulhisi3.o)
+                0x00001b30                __umulhisi3
+ .text.avr-libc.fplib
+                0x00001b4e        0xa C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(addsf3.o)
+                0x00001b4e                __subsf3
+                0x00001b50                __addsf3
+ .text.avr-libc.fplib
+                0x00001b58       0xc0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(addsf3x.o)
+                0x00001b72                __addsf3x
+ .text.avr-libc.fplib
+                0x00001c18        0x6 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(cos.o)
+                0x00001c18                cos
+                0x00001c18                cosf
+ .text.avr-libc.fplib
+                0x00001c1e        0x4 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(divsf3.o)
+                0x00001c1e                __divsf3
+ .text.avr-libc.fplib
+                0x00001c22       0xcc C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(divsf3x.o)
+                0x00001c38                __divsf3x
+                0x00001c3c                __divsf3_pse
+ .text.avr-libc.fplib
+                0x00001cee        0xa C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fixsfsi.o)
+                0x00001cee                __fixsfsi
+ .text.avr-libc.fplib
+                0x00001cf8       0x58 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fixunssfsi.o)
+                0x00001cf8                __fixunssfsi
+ .text.avr-libc.fplib
+                0x00001d50       0x7a C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(floatsisf.o)
+                0x00001d50                __floatunsisf
+                0x00001d54                __floatsisf
+ .text.avr-libc.fplib
+                0x00001dca       0x48 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_cmp.o)
+                0x00001dca                __fp_cmp
+ .text.avr-libc.fplib
+                0x00001e12        0xc C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_inf.o)
+                0x00001e12                __fp_inf
+ .text.avr-libc.fplib
+                0x00001e1e        0x6 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_nan.o)
+                0x00001e1e                __fp_nan
+ .text.avr-libc.fplib
+                0x00001e24        0xe C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_pscA.o)
+                0x00001e24                __fp_pscA
+ .text.avr-libc.fplib
+                0x00001e32        0xe C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_pscB.o)
+                0x00001e32                __fp_pscB
+ .text.avr-libc.fplib
+                0x00001e40       0x50 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_rempio2.o)
+                0x00001e42                __fp_rempio2
+ .text.avr-libc.fplib
+                0x00001e90       0x22 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_round.o)
+                0x00001e90                __fp_round
+ .text.avr-libc.fplib
+                0x00001eb2       0x24 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_sinus.o)
+                0x00001eb2                __fp_sinus
+ .text.avr-libc.fplib
+                0x00001ed6       0x44 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_split3.o)
+                0x00001ed6                __fp_split3
+                0x00001ee6                __fp_splitA
+ .text.avr-libc.fplib
+                0x00001f1a        0xe C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_zero.o)
+                0x00001f1a                __fp_zero
+                0x00001f1c                __fp_szero
+ .text.avr-libc.fplib
+                0x00001f28        0x8 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(gesf2.o)
+                0x00001f28                __gesf2
+                0x00001f28                __gtsf2
+ .text.avr-libc.fplib
+                0x00001f30       0xc2 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(hypot.o)
+                0x00001f42                hypot
+                0x00001f42                hypotf
+ .text.avr-libc.fplib
+                0x00001ff2       0x6c C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(ldexp.o)
+                0x00001ff6                ldexp
+                0x00001ff6                ldexpf
+ .text.avr-libc.fplib
+                0x0000205e        0x4 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(mulsf3.o)
+                0x0000205e                __mulsf3
+ .text.avr-libc.fplib
+                0x00002062       0xc2 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(mulsf3x.o)
+                0x00002076                __mulsf3x
+                0x0000207a                __mulsf3_pse
+ .text.avr-libc.fplib
+                0x00002124        0xc C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(sin.o)
+                0x00002124                sinf
+                0x00002124                sin
+ .text.avr-libc.fplib
+                0x00002130       0x84 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(sqrt.o)
+                0x00002138                sqrtf
+                0x00002138                sqrt
+ .text.avr-libc.fplib
+                0x000021b4       0x1c C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_mpack.o)
+                0x000021b4                __fp_mpack
+                0x000021b8                __fp_mpack_finite
+ .text.avr-libc.fplib
+                0x000021d0        0xe C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_norm2.o)
+                0x000021d0                __fp_norm2
+ .text.avr-libc.fplib
+                0x000021de       0x26 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_powsodd.o)
+                0x000021de                __fp_powsodd
+ .text.avr-libc.fplib
+                0x00002204       0x4c C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_powser.o)
+                0x00002204                __fp_powser
  .text.avr-libc
-                0x0000000000001714      0x24a /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(malloc.o)
-                0x0000000000001714                malloc
-                0x000000000000184c                free
+                0x00002250      0x23a C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(malloc.o)
+                0x00002250                malloc
+                0x00002374                free
  .text.avr-libc
-                0x000000000000195e       0x12 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(memcpy.o)
-                0x000000000000195e                memcpy
+                0x0000248a       0x12 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(memcpy.o)
+                0x0000248a                memcpy
  .text.avr-libc
-                0x0000000000001970       0x70 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vsnprintf.o)
-                0x0000000000001970                vsnprintf
+                0x0000249c       0x72 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(vsnprintf.o)
+                0x0000249c                vsnprintf
  .text.avr-libc
-                0x00000000000019e0       0x70 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vsnprintf_p.o)
-                0x00000000000019e0                vsnprintf_P
+                0x0000250e       0x72 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(vsnprintf_p.o)
+                0x0000250e                vsnprintf_P
  .text.avr-libc
-                0x0000000000001a50      0x3ec /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vfprintf_std.o)
-                0x0000000000001a50                vfprintf
+                0x00002580      0x40c C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(vfprintf_std.o)
+                0x00002580                vfprintf
  .text.avr-libc
-                0x0000000000001e3c       0x16 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(strnlen_P.o)
-                0x0000000000001e3c                strnlen_P
+                0x0000298c       0x16 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(strnlen_P.o)
+                0x0000298c                strnlen_P
  .text.avr-libc
-                0x0000000000001e52       0x16 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(strnlen.o)
-                0x0000000000001e52                strnlen
+                0x000029a2       0x16 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(strnlen.o)
+                0x000029a2                strnlen
  .text.avr-libc
-                0x0000000000001e68       0x60 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(fputc.o)
-                0x0000000000001e68                fputc
+                0x000029b8       0x60 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(fputc.o)
+                0x000029b8                fputc
  .text.avr-libc
-                0x0000000000001ec8       0xbc /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(ultoa_invert.o)
-                0x0000000000001ec8                __ultoa_invert
-                0x0000000000001f84                . = ALIGN (0x2)
+                0x00002a18       0xbc C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(ultoa_invert.o)
+                0x00002a18                __ultoa_invert
+ .text.libgcc.div
+                0x00002ad4       0x10 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_negsi2.o)
+                0x00002ad4                __negsi2
+                0x00002ae4                        . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000000000001f84        0x0 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_exit.o)
-                0x0000000000001f84                exit
-                0x0000000000001f84                _exit
+ .fini9         0x00002ae4        0x0 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_exit.o)
+                0x00002ae4                _exit
+                0x00002ae4                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -1001,102 +1070,155 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000000000001f84        0x4 /usr/lib/gcc/avr/7.3.0/avr51/libgcc.a(_exit.o)
+ .fini0         0x00002ae4        0x4 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/avr51\libgcc.a(_exit.o)
  *(.fini0)
-                0x0000000000001f88                _etext = .
+ *(.hightext)
+ *(.hightext*)
+ *(.progmemx.*)
+ .progmemx.gcc_fplib.sinus
+                0x00002ae8       0x1e C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libm.a(fp_sinus.o)
+                0x00002b06                        . = ALIGN (0x2)
+ *(.jumptables)
+ *(.jumptables*)
+ .jumptables.gcc.commUserCommand
+                0x00002b06       0x14 Build\obj\main.o
+                0x00002b1a                        _etext = .
 
-.data           0x0000000000800200       0x30 load address 0x0000000000001f88
-                0x0000000000800200                PROVIDE (__data_start, .)
+.data           0x00800200      0xc90 load address 0x00002b1a
+                0x00800200                        PROVIDE (__data_start = .)
  *(.data)
- .data          0x0000000000800200        0x6 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(malloc.o)
-                0x0000000000800200                __malloc_heap_end
-                0x0000000000800202                __malloc_heap_start
-                0x0000000000800204                __malloc_margin
+ .data          0x00800200        0x6 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(malloc.o)
+                0x00800200                __malloc_heap_end
+                0x00800202                __malloc_heap_start
+                0x00800204                __malloc_margin
  *(.data*)
- .data.curSeg   0x0000000000800206        0x2 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
+ .data.curSeg   0x00800206        0x2 Build\obj\pathFollower.o
  .data.pathFollower_segmentLimit
-                0x0000000000800208        0x1 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
+                0x00800208        0x1 Build\obj\pathFollower.o
  .data.pathFollower_lookaheadDistance
-                0x0000000000800209        0x4 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
+                0x00800209        0x4 Build\obj\pathFollower.o
  .data.timeTask_uptime
-                0x000000000080020d        0x4 CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask.c.obj
-                0x000000000080020d                timeTask_uptime
- .data.pose     0x0000000000800211        0xc CMakeFiles/HWPRobot.elf.dir/src/main.c.obj
+                0x0080020d        0x4 Build\obj\timeTask.o
+                0x0080020d                timeTask_uptime
+ .data.pose     0x00800211        0xc Build\obj\main.o
  *(.gnu.linkonce.d*)
  *(.rodata)
  *(.rodata*)
  .rodata.commDebug.str1.1
-                0x000000000080021d       0x12 CMakeFiles/HWPRobot.elf.dir/src/main.c.obj
+                0x0080021d      0xc63 Build\obj\main.o
+                                 0x12 (size before relaxing)
+ .rodata.commUserCommand.str1.1
+                0x00800e80      0x261 Build\obj\main.o
+ .rodata.main.str1.1
+                0x00800e80      0x9f0 Build\obj\main.o
+ .rodata.quadrature_table
+                0x00800e80       0x10 Build\obj\encoder.o
  *(.gnu.linkonce.r*)
-                0x0000000000800230                . = ALIGN (0x2)
- *fill*         0x000000000080022f        0x1 
-                0x0000000000800230                _edata = .
-                0x0000000000800230                PROVIDE (__data_end, .)
+                0x00801870                        . = ALIGN (0x2)
+                0x00800e90                        _edata = .
+                0x00800e90                        PROVIDE (__data_end = .)
 
-.bss            0x0000000000800230      0x612
-                0x0000000000800230                PROVIDE (__bss_start, .)
+.bss            0x00800e90      0xcf6
+                0x00800e90                        PROVIDE (__bss_start = .)
  *(.bss)
+ .bss           0x00800e90        0x4 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(malloc.o)
+                0x00800e90                __flp
+                0x00800e92                __brkval
  *(.bss*)
- .bss.errors    0x0000000000800230        0x1 CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
- .bss.inChksum  0x0000000000800231        0x1 CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
- .bss.isESC     0x0000000000800232        0x1 CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
- .bss.inBufLen  0x0000000000800233        0x2 CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
- .bss.inBuf     0x0000000000800235      0x400 CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
+ .bss.errors    0x00800e94        0x1 Build\obj\communication.o
+ .bss.inChksum  0x00800e95        0x1 Build\obj\communication.o
+ .bss.isESC     0x00800e96        0x1 Build\obj\communication.o
+ .bss.inBufLen  0x00800e97        0x2 Build\obj\communication.o
+ .bss.inBuf     0x00800e99      0x400 Build\obj\communication.o
  .bss.communication_ChannelReceivers
-                0x0000000000800635       0x20 CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
- .bss.uart1     0x0000000000800655        0x5 CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj
-                0x0000000000800655                uart1
+                0x00801299       0x20 Build\obj\communication.o
+ .bss.ADC_currentChannel
+                0x008012b9        0x2 Build\obj\adc.o
+                0x008012b9                ADC_currentChannel
+ .bss.ADC_channels
+                0x008012bb       0x32 Build\obj\adc.o
+                0x008012bb                ADC_channels
+ .bss.uart1_TX_buf
+                0x008012ed      0x100 Build\obj\uart.o
+                0x008012ed                uart1_TX_buf
+ .bss.uart1_RX_buf
+                0x008013ed       0x80 Build\obj\uart.o
+                0x008013ed                uart1_RX_buf
+ .bss.uart1     0x0080146d        0x5 Build\obj\uart.o
+                0x0080146d                uart1
  .bss.initialized
-                0x000000000080065a        0x1 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
+                0x00801472        0x1 Build\obj\pathFollower.o
  .bss.pathLength
-                0x000000000080065b        0x1 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
- .bss.path      0x000000000080065c        0x2 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
+                0x00801473        0x1 Build\obj\pathFollower.o
+ .bss.path      0x00801474        0x2 Build\obj\pathFollower.o
  .bss.pathFollower_callback
-                0x000000000080065e        0x2 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
+                0x00801476        0x2 Build\obj\pathFollower.o
  .bss.pathFollower_extStatus
-                0x0000000000800660        0x5 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
+                0x00801478        0x5 Build\obj\pathFollower.o
  .bss.pathFollower_status
-                0x0000000000800665       0x11 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
+                0x0080147d       0x11 Build\obj\pathFollower.o
  .bss.timeTask_time_ms
-                0x0000000000800676        0x4 CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask.c.obj
-                0x0000000000800676                timeTask_time_ms
- .bss.t_index.2155
-                0x000000000080067a        0x2 CMakeFiles/HWPRobot.elf.dir/src/main.c.obj
- .bss.POSE_TASK.2152
-                0x000000000080067c        0x2 CMakeFiles/HWPRobot.elf.dir/src/main.c.obj
- .bss.TELEMETRY_TASK.2148
-                0x000000000080067e        0x2 CMakeFiles/HWPRobot.elf.dir/src/main.c.obj
- .bss.LED_TASK.2145
-                0x0000000000800680        0x2 CMakeFiles/HWPRobot.elf.dir/src/main.c.obj
- .bss.initialized.1548
-                0x0000000000800682        0x1 CMakeFiles/HWPRobot.elf.dir/src/statemachine.c.obj
- .bss.start     0x0000000000800683        0x6 CMakeFiles/HWPRobot.elf.dir/src/statemachine.c.obj
+                0x0080148e        0x4 Build\obj\timeTask.o
+                0x0080148e                timeTask_time_ms
+ .bss.ENCODER_CALIBRATION_TASK.8
+                0x00801492        0x2 Build\obj\main.o
+ .bss.INFRARED3_OUTPUT_TASK.9
+                0x00801494        0x2 Build\obj\main.o
+ .bss.t_index.10
+                0x00801496        0x2 Build\obj\main.o
+ .bss.POSE_TASK.11
+                0x00801498        0x2 Build\obj\main.o
+ .bss.TELEMETRY_TASK.12
+                0x0080149a        0x2 Build\obj\main.o
+ .bss.LED_TASK.13
+                0x0080149c        0x2 Build\obj\main.o
+ .bss.calibration_phase
+                0x0080149e       0xfa Build\obj\main.o
+ .bss.calibration_pwm
+                0x00801598      0x1f4 Build\obj\main.o
+ .bss.calibration_enc2
+                0x0080178c      0x1f4 Build\obj\main.o
+ .bss.calibration_enc1
+                0x00801980      0x1f4 Build\obj\main.o
+ .bss.calibration_rotation_phase
+                0x00801b74        0x1 Build\obj\main.o
+ .bss.calibration_sample_count
+                0x00801b75        0x1 Build\obj\main.o
+ .bss.encoder_calibration_active
+                0x00801b76        0x1 Build\obj\main.o
+ .bss.infrared3_output_active
+                0x00801b77        0x1 Build\obj\main.o
+ .bss.initialized.0
+                0x00801b78        0x1 Build\obj\statemachine.o
+ .bss.start     0x00801b79        0x6 Build\obj\statemachine.o
  .bss.currentState
-                0x0000000000800689        0x1 CMakeFiles/HWPRobot.elf.dir/src/statemachine.c.obj
+                0x00801b7f        0x1 Build\obj\statemachine.o
+                0x00801b7f                currentState
+ .bss.encoder2_last_state
+                0x00801b80        0x1 Build\obj\encoder.o
+ .bss.encoder1_last_state
+                0x00801b81        0x1 Build\obj\encoder.o
+ .bss.encoder2_count
+                0x00801b82        0x2 Build\obj\encoder.o
+ .bss.encoder1_count
+                0x00801b84        0x2 Build\obj\encoder.o
  *(COMMON)
- COMMON         0x000000000080068a       0x34 CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc.c.obj
-                0x000000000080068a                ADC_currentChannel
-                0x000000000080068c                ADC_channels
- COMMON         0x00000000008006be      0x180 CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj
-                0x00000000008006be                uart1_RX_buf
-                0x000000000080073e                uart1_TX_buf
- COMMON         0x000000000080083e        0x4 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(malloc.o)
-                0x000000000080083e                __brkval
-                0x0000000000800840                __flp
-                0x0000000000800842                PROVIDE (__bss_end, .)
-                0x0000000000001f88                __data_load_start = LOADADDR (.data)
-                0x0000000000001fb8                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00801b86                        PROVIDE (__bss_end = .)
+                0x00002b1a                        __data_load_start = LOADADDR (.data)
+                0x000037aa                        __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x0000000000800842        0x0
-                [!provide]                        PROVIDE (__noinit_start, .)
- *(.noinit*)
-                [!provide]                        PROVIDE (__noinit_end, .)
-                0x0000000000800842                _end = .
-                0x0000000000800842                PROVIDE (__heap_start, .)
+.noinit         0x00801b86        0x0
+                [!provide]                        PROVIDE (__noinit_start = .)
+ *(.noinit .noinit.* .gnu.linkonce.n.*)
+                [!provide]                        PROVIDE (__noinit_end = .)
+                0x00801b86                        _end = .
+                0x00801b86                        PROVIDE (__heap_start = .)
+                0x00000000                        __flmap_init_label = DEFINED (__flmap_noinit_start)?__flmap_noinit_start:0x0
+                0x00000000                        __flmap = DEFINED (__flmap)?__flmap:0x0
 
-.eeprom         0x0000000000810000        0x0
+.eeprom         0x00810000        0x0
  *(.eeprom*)
-                0x0000000000810000                __eeprom_end = .
+                0x00810000                        __eeprom_end = .
 
 .fuse
  *(.fuse)
@@ -1110,43 +1232,11 @@ END GROUP
 .signature
  *(.signature*)
 
-.user_signatures
- *(.user_signatures*)
-
-.stab           0x0000000000000000     0x4b3c
+.stab
  *(.stab)
- .stab          0x0000000000000000      0xf30 CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
-                                        0xffc (size before relaxing)
- .stab          0x0000000000000f30      0x4ec CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc.c.obj
-                                        0xbb8 (size before relaxing)
- .stab          0x000000000000141c      0x354 CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc_isr.S.obj
-                                        0x360 (size before relaxing)
- .stab          0x0000000000001770      0x504 CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj
-                                        0x894 (size before relaxing)
- .stab          0x0000000000001c74       0x30 CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart_isr.S.obj
-                                         0x3c (size before relaxing)
- .stab          0x0000000000001ca4      0x600 CMakeFiles/HWPRobot.elf.dir/lib/motor/motor.c.obj
-                                        0x9d8 (size before relaxing)
- .stab          0x00000000000022a4      0x8d0 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
-                                       0x18d8 (size before relaxing)
- .stab          0x0000000000002b74      0x5e8 CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask.c.obj
-                                        0x7c8 (size before relaxing)
- .stab          0x000000000000315c      0x234 CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask_isr.S.obj
-                                        0x240 (size before relaxing)
- .stab          0x0000000000003390      0x384 CMakeFiles/HWPRobot.elf.dir/src/badISR.c.obj
-                                        0x54c (size before relaxing)
- .stab          0x0000000000003714      0x924 CMakeFiles/HWPRobot.elf.dir/src/main.c.obj
-                                        0xcfc (size before relaxing)
- .stab          0x0000000000004038      0x4b0 CMakeFiles/HWPRobot.elf.dir/src/statemachine.c.obj
-                                        0x6c0 (size before relaxing)
- .stab          0x00000000000044e8      0x324 CMakeFiles/HWPRobot.elf.dir/src/bumper.c.obj
-                                        0x4ec (size before relaxing)
- .stab          0x000000000000480c      0x330 CMakeFiles/HWPRobot.elf.dir/src/encoder.c.obj
-                                        0x4f8 (size before relaxing)
 
-.stabstr        0x0000000000000000     0x39f4
+.stabstr
  *(.stabstr)
- .stabstr       0x0000000000000000     0x39f4 CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
 
 .stab.excl
  *(.stab.excl)
@@ -1160,30 +1250,34 @@ END GROUP
 .stab.indexstr
  *(.stab.indexstr)
 
-.comment        0x0000000000000000       0x11
+.comment        0x00000000       0x5c
  *(.comment)
- .comment       0x0000000000000000       0x11 CMakeFiles/HWPRobot.elf.dir/lib/communication/communication.c.obj
-                                         0x12 (size before relaxing)
- .comment       0x0000000000000011       0x12 CMakeFiles/HWPRobot.elf.dir/lib/io/adc/adc.c.obj
- .comment       0x0000000000000011       0x12 CMakeFiles/HWPRobot.elf.dir/lib/io/uart/uart.c.obj
- .comment       0x0000000000000011       0x12 CMakeFiles/HWPRobot.elf.dir/lib/motor/motor.c.obj
- .comment       0x0000000000000011       0x12 CMakeFiles/HWPRobot.elf.dir/lib/pathFollower/pathFollower.c.obj
- .comment       0x0000000000000011       0x12 CMakeFiles/HWPRobot.elf.dir/lib/tools/timeTask/timeTask.c.obj
- .comment       0x0000000000000011       0x12 CMakeFiles/HWPRobot.elf.dir/src/badISR.c.obj
- .comment       0x0000000000000011       0x12 CMakeFiles/HWPRobot.elf.dir/src/main.c.obj
- .comment       0x0000000000000011       0x12 CMakeFiles/HWPRobot.elf.dir/src/statemachine.c.obj
- .comment       0x0000000000000011       0x12 CMakeFiles/HWPRobot.elf.dir/src/bumper.c.obj
- .comment       0x0000000000000011       0x12 CMakeFiles/HWPRobot.elf.dir/src/encoder.c.obj
- .comment       0x0000000000000011       0x12 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(malloc.o)
- .comment       0x0000000000000011       0x12 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vsnprintf.o)
- .comment       0x0000000000000011       0x12 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vsnprintf_p.o)
- .comment       0x0000000000000011       0x12 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(vfprintf_std.o)
- .comment       0x0000000000000011       0x12 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/libc.a(fputc.o)
+ .comment       0x00000000       0x5c Build\obj\communication.o
+                                 0x30 (size before relaxing)
+ .comment       0x0000005c       0x30 Build\obj\adc.o
+ .comment       0x0000005c       0x30 Build\obj\uart.o
+ .comment       0x0000005c       0x30 Build\obj\motor.o
+ .comment       0x0000005c       0x30 Build\obj\pathFollower.o
+ .comment       0x0000005c       0x30 Build\obj\remoteDataProcessing.o
+ .comment       0x0000005c       0x30 Build\obj\timeTask.o
+ .comment       0x0000005c       0x30 Build\obj\badISR.o
+ .comment       0x0000005c       0x30 Build\obj\main.o
+ .comment       0x0000005c       0x30 Build\obj\statemachine.o
+ .comment       0x0000005c       0x30 Build\obj\bumper.o
+ .comment       0x0000005c       0x30 Build\obj\encoder.o
+ .comment       0x0000005c       0x30 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(malloc.o)
+ .comment       0x0000005c       0x30 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(vsnprintf.o)
+ .comment       0x0000005c       0x30 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(vsnprintf_p.o)
+ .comment       0x0000005c       0x2e C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(vfprintf_std.o)
+ .comment       0x0000005c       0x30 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51\libc.a(fputc.o)
 
 .note.gnu.avr.deviceinfo
-                0x0000000000000000       0x40
+                0x00000000       0x40
  .note.gnu.avr.deviceinfo
-                0x0000000000000000       0x40 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/crtatmega1280.o
+                0x00000000       0x40 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51/crtatmega1280.o
+
+.gnu.build.attributes
+ *(.gnu.build.attributes .gnu.build.attributes.*)
 
 .note.gnu.build-id
  *(.note.gnu.build-id)
@@ -1200,30 +1294,133 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges
+.debug_aranges  0x00000000      0x3b8
  *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x60 Build\obj\communication.o
+ .debug_aranges
+                0x00000060       0x40 Build\obj\adc.o
+ .debug_aranges
+                0x000000a0       0x58 Build\obj\uart.o
+ .debug_aranges
+                0x000000f8       0x50 Build\obj\motor.o
+ .debug_aranges
+                0x00000148       0x98 Build\obj\pathFollower.o
+ .debug_aranges
+                0x000001e0       0x38 Build\obj\remoteDataProcessing.o
+ .debug_aranges
+                0x00000218       0x38 Build\obj\timeTask.o
+ .debug_aranges
+                0x00000250       0x20 Build\obj\badISR.o
+ .debug_aranges
+                0x00000270       0x50 Build\obj\main.o
+ .debug_aranges
+                0x000002c0       0x30 Build\obj\statemachine.o
+ .debug_aranges
+                0x000002f0       0x20 Build\obj\bumper.o
+ .debug_aranges
+                0x00000310       0x48 Build\obj\encoder.o
+ .debug_aranges
+                0x00000358       0x20 Build\obj\adc_isr.o
+ .debug_aranges
+                0x00000378       0x20 Build\obj\uart_isr.o
+ .debug_aranges
+                0x00000398       0x20 Build\obj\timeTask_isr.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000      0xbbc
+.debug_info     0x00000000     0x5674
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x0000000000000000      0xbbc /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/crtatmega1280.o
+ .debug_info    0x00000000      0xbbc C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51/crtatmega1280.o
+ .debug_info    0x00000bbc      0x817 Build\obj\communication.o
+ .debug_info    0x000013d3      0x423 Build\obj\adc.o
+ .debug_info    0x000017f6      0x3e6 Build\obj\uart.o
+ .debug_info    0x00001bdc      0x32f Build\obj\motor.o
+ .debug_info    0x00001f0b     0x1659 Build\obj\pathFollower.o
+ .debug_info    0x00003564      0x3d8 Build\obj\remoteDataProcessing.o
+ .debug_info    0x0000393c      0x2b4 Build\obj\timeTask.o
+ .debug_info    0x00003bf0      0x11e Build\obj\badISR.o
+ .debug_info    0x00003d0e     0x1191 Build\obj\main.o
+ .debug_info    0x00004e9f      0x2be Build\obj\statemachine.o
+ .debug_info    0x0000515d       0x7d Build\obj\bumper.o
+ .debug_info    0x000051da      0x42d Build\obj\encoder.o
+ .debug_info    0x00005607       0x25 Build\obj\adc_isr.o
+ .debug_info    0x0000562c       0x24 Build\obj\uart_isr.o
+ .debug_info    0x00005650       0x24 Build\obj\timeTask_isr.o
 
-.debug_abbrev   0x0000000000000000      0xb1a
+.debug_abbrev   0x00000000     0x234f
  *(.debug_abbrev)
- .debug_abbrev  0x0000000000000000      0xb1a /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/crtatmega1280.o
+ .debug_abbrev  0x00000000      0xb1a C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51/crtatmega1280.o
+ .debug_abbrev  0x00000b1a      0x268 Build\obj\communication.o
+ .debug_abbrev  0x00000d82      0x20c Build\obj\adc.o
+ .debug_abbrev  0x00000f8e      0x1fd Build\obj\uart.o
+ .debug_abbrev  0x0000118b      0x17a Build\obj\motor.o
+ .debug_abbrev  0x00001305      0x436 Build\obj\pathFollower.o
+ .debug_abbrev  0x0000173b      0x196 Build\obj\remoteDataProcessing.o
+ .debug_abbrev  0x000018d1      0x19f Build\obj\timeTask.o
+ .debug_abbrev  0x00001a70       0xe5 Build\obj\badISR.o
+ .debug_abbrev  0x00001b55      0x3fa Build\obj\main.o
+ .debug_abbrev  0x00001f4f      0x1fe Build\obj\statemachine.o
+ .debug_abbrev  0x0000214d       0x50 Build\obj\bumper.o
+ .debug_abbrev  0x0000219d      0x176 Build\obj\encoder.o
+ .debug_abbrev  0x00002313       0x14 Build\obj\adc_isr.o
+ .debug_abbrev  0x00002327       0x14 Build\obj\uart_isr.o
+ .debug_abbrev  0x0000233b       0x14 Build\obj\timeTask_isr.o
 
-.debug_line     0x0000000000000000       0x1a
+.debug_line     0x00000000     0x4f04
  *(.debug_line .debug_line.* .debug_line_end)
- .debug_line    0x0000000000000000       0x1a /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/crtatmega1280.o
+ .debug_line    0x00000000       0x1d C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51/crtatmega1280.o
+ .debug_line    0x0000001d      0x9da Build\obj\communication.o
+ .debug_line    0x000009f7      0x4df Build\obj\adc.o
+ .debug_line    0x00000ed6      0x305 Build\obj\uart.o
+ .debug_line    0x000011db      0x52c Build\obj\motor.o
+ .debug_line    0x00001707     0x1872 Build\obj\pathFollower.o
+ .debug_line    0x00002f79      0x22e Build\obj\remoteDataProcessing.o
+ .debug_line    0x000031a7      0x30b Build\obj\timeTask.o
+ .debug_line    0x000034b2       0xe4 Build\obj\badISR.o
+ .debug_line    0x00003596      0xdd5 Build\obj\main.o
+ .debug_line    0x0000436b      0x177 Build\obj\statemachine.o
+ .debug_line    0x000044e2       0x6c Build\obj\bumper.o
+ .debug_line    0x0000454e      0x631 Build\obj\encoder.o
+ .debug_line    0x00004b7f      0x1e2 Build\obj\adc_isr.o
+ .debug_line    0x00004d61       0x51 Build\obj\uart_isr.o
+ .debug_line    0x00004db2      0x152 Build\obj\timeTask_isr.o
 
-.debug_frame
+.debug_frame    0x00000000      0x884
  *(.debug_frame)
+ .debug_frame   0x00000000      0x118 Build\obj\communication.o
+ .debug_frame   0x00000118       0x70 Build\obj\adc.o
+ .debug_frame   0x00000188       0x94 Build\obj\uart.o
+ .debug_frame   0x0000021c       0x90 Build\obj\motor.o
+ .debug_frame   0x000002ac      0x210 Build\obj\pathFollower.o
+ .debug_frame   0x000004bc       0xa0 Build\obj\remoteDataProcessing.o
+ .debug_frame   0x0000055c       0x60 Build\obj\timeTask.o
+ .debug_frame   0x000005bc       0x24 Build\obj\badISR.o
+ .debug_frame   0x000005e0      0x180 Build\obj\main.o
+ .debug_frame   0x00000760       0x54 Build\obj\statemachine.o
+ .debug_frame   0x000007b4       0x24 Build\obj\bumper.o
+ .debug_frame   0x000007d8       0xac Build\obj\encoder.o
 
-.debug_str      0x0000000000000000      0x3e6
+.debug_str      0x00000000     0x1669
  *(.debug_str)
- .debug_str     0x0000000000000000      0x3e6 /usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr51/crtatmega1280.o
+ .debug_str     0x00000000      0x3e6 C:/HWP/HWP/avr8-gnu-toolchain-4.0.0.52-win32.any.x86_64/avr8-gnu-toolchain-win32_x86_64/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr51/crtatmega1280.o
+ .debug_str     0x000003e6     0x1283 Build\obj\communication.o
+                                0x500 (size before relaxing)
+ .debug_str     0x00001669      0x275 Build\obj\adc.o
+ .debug_str     0x00001669      0x2a7 Build\obj\uart.o
+ .debug_str     0x00001669      0x1dc Build\obj\motor.o
+ .debug_str     0x00001669      0x8f2 Build\obj\pathFollower.o
+ .debug_str     0x00001669      0x391 Build\obj\remoteDataProcessing.o
+ .debug_str     0x00001669      0x222 Build\obj\timeTask.o
+ .debug_str     0x00001669      0x198 Build\obj\badISR.o
+ .debug_str     0x00001669      0x8fb Build\obj\main.o
+ .debug_str     0x00001669      0x25a Build\obj\statemachine.o
+ .debug_str     0x00001669      0x148 Build\obj\bumper.o
+ .debug_str     0x00001669      0x262 Build\obj\encoder.o
+ .debug_str     0x00001669       0x2c Build\obj\adc_isr.o
+ .debug_str     0x00001669       0x2e Build\obj\uart_isr.o
+ .debug_str     0x00001669       0x39 Build\obj\timeTask_isr.o
 
 .debug_loc
  *(.debug_loc)
@@ -1249,7 +1446,108 @@ END GROUP
 .debug_ranges
  *(.debug_ranges)
 
+.debug_addr
+ *(.debug_addr)
+
+.debug_line_str
+                0x00000000      0x46b
+ *(.debug_line_str)
+ .debug_line_str
+                0x00000000      0x46b Build\obj\communication.o
+                                0x1a7 (size before relaxing)
+ .debug_line_str
+                0x0000046b      0x144 Build\obj\adc.o
+ .debug_line_str
+                0x0000046b      0x121 Build\obj\uart.o
+ .debug_line_str
+                0x0000046b      0x121 Build\obj\motor.o
+ .debug_line_str
+                0x0000046b      0x1b1 Build\obj\pathFollower.o
+ .debug_line_str
+                0x0000046b      0x1c3 Build\obj\remoteDataProcessing.o
+ .debug_line_str
+                0x0000046b      0x147 Build\obj\timeTask.o
+ .debug_line_str
+                0x0000046b      0x117 Build\obj\badISR.o
+ .debug_line_str
+                0x0000046b      0x230 Build\obj\main.o
+ .debug_line_str
+                0x0000046b       0xf7 Build\obj\statemachine.o
+ .debug_line_str
+                0x0000046b       0xa6 Build\obj\bumper.o
+ .debug_line_str
+                0x0000046b      0x11b Build\obj\encoder.o
+ .debug_line_str
+                0x0000046b       0x20 Build\obj\adc_isr.o
+ .debug_line_str
+                0x0000046b       0x22 Build\obj\uart_isr.o
+ .debug_line_str
+                0x0000046b       0x2d Build\obj\timeTask_isr.o
+
+.debug_loclists
+                0x00000000     0x1d3b
+ *(.debug_loclists)
+ .debug_loclists
+                0x00000000      0x724 Build\obj\communication.o
+ .debug_loclists
+                0x00000724      0x239 Build\obj\adc.o
+ .debug_loclists
+                0x0000095d       0xf4 Build\obj\uart.o
+ .debug_loclists
+                0x00000a51       0xd0 Build\obj\motor.o
+ .debug_loclists
+                0x00000b21      0xb56 Build\obj\pathFollower.o
+ .debug_loclists
+                0x00001677      0x124 Build\obj\remoteDataProcessing.o
+ .debug_loclists
+                0x0000179b       0xe0 Build\obj\timeTask.o
+ .debug_loclists
+                0x0000187b       0x3c Build\obj\badISR.o
+ .debug_loclists
+                0x000018b7      0x1ea Build\obj\main.o
+ .debug_loclists
+                0x00001aa1       0x18 Build\obj\statemachine.o
+ .debug_loclists
+                0x00001ab9      0x282 Build\obj\encoder.o
+
 .debug_macro
  *(.debug_macro)
-OUTPUT(HWPRobot.elf elf32-avr)
+
+.debug_names
+ *(.debug_names)
+
+.debug_rnglists
+                0x00000000      0x33e
+ *(.debug_rnglists)
+ .debug_rnglists
+                0x00000000       0x8e Build\obj\communication.o
+ .debug_rnglists
+                0x0000008e       0x47 Build\obj\adc.o
+ .debug_rnglists
+                0x000000d5       0x49 Build\obj\uart.o
+ .debug_rnglists
+                0x0000011e       0x38 Build\obj\motor.o
+ .debug_rnglists
+                0x00000156       0xb7 Build\obj\pathFollower.o
+ .debug_rnglists
+                0x0000020d       0x26 Build\obj\remoteDataProcessing.o
+ .debug_rnglists
+                0x00000233       0x25 Build\obj\timeTask.o
+ .debug_rnglists
+                0x00000258       0x13 Build\obj\badISR.o
+ .debug_rnglists
+                0x0000026b       0x70 Build\obj\main.o
+ .debug_rnglists
+                0x000002db       0x1f Build\obj\statemachine.o
+ .debug_rnglists
+                0x000002fa       0x13 Build\obj\bumper.o
+ .debug_rnglists
+                0x0000030d       0x31 Build\obj\encoder.o
+
+.debug_str_offsets
+ *(.debug_str_offsets)
+
+.debug_sup
+ *(.debug_sup)
+OUTPUT(Build\HWPRobot.elf elf32-avr)
 LOAD linker stubs
