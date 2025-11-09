@@ -1,0 +1,96 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "HWPRobot",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "HWPRobot::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-HWPRobot-Debug-4d7a89bb1fbb75005e40.json",
+					"name" : "HWPRobot",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "HWPRobot.elf::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-HWPRobot.elf-Debug-dd9582b46b77187f6fe1.json",
+					"name" : "HWPRobot.elf",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "disassemble_HWPRobot::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-disassemble_HWPRobot-Debug-a9738a85d89137bec40d.json",
+					"name" : "disassemble_HWPRobot",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "upload_HWPRobot::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-upload_HWPRobot-Debug-46fdc5399bce83c8517e.json",
+					"name" : "upload_HWPRobot",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "upload_HWPRobot_eeprom::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-upload_HWPRobot_eeprom-Debug-30df00f9a0243bd524d0.json",
+					"name" : "upload_HWPRobot_eeprom",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/lorenz/Desktop/HWP/HWPRobot/Debug",
+		"source" : "/home/lorenz/Desktop/HWP/HWPRobot"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

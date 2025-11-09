@@ -1,0 +1,18 @@
+{
+  "cmake.sourceDirectory": "${workspaceFolder}",
+  "cmake.buildDirectory": "${workspaceFolder}/${buildType}",
+  "cmake.configureSettings": {
+    "CMAKE_TOOLCHAIN_FILE" : "${workspaceFolder}/generic-gcc-avr.cmake"
+  },
+  "cmake.generator": "Unix Makefiles",
+  "C_Cpp.autoAddFileAssociations": false,
+  "svn.delete.ignoredRulesForDeletedFiles": [
+    "Debug/.cmake/api/v1/reply/cache-v2-00964b47438b255738c3.json",
+    "Debug/.cmake/api/v1/reply/cmakeFiles-v1-d1d628f6be399589e9ed.json",
+    "Debug/.cmake/api/v1/reply/codemodel-v2-4dde3a9f5e386403582c.json",
+    "Debug/.cmake/api/v1/reply/index-2025-11-01T22-38-27-0266.json",
+    "Debug/.cmake/api/v1/reply/target-HWPRobot.elf-Debug-d709a9397ac28b4f5f38.json",
+    "Debug/CMakeFiles/HWPRobot.elf.dir/compiler_depend.internal",
+    "Debug/CMakeFiles/HWPRobot.elf.dir/depend.internal"
+  ]
+}

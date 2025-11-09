@@ -1,0 +1,96 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "HWPRobot",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "HWPRobot::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-HWPRobot-Debug-db4d21f276f96cbf86f2.json",
+					"name" : "HWPRobot",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "HWPRobot.elf::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-HWPRobot.elf-Debug-d709a9397ac28b4f5f38.json",
+					"name" : "HWPRobot.elf",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "disassemble_HWPRobot::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-disassemble_HWPRobot-Debug-e358053ae36ae825a33c.json",
+					"name" : "disassemble_HWPRobot",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "upload_HWPRobot::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-upload_HWPRobot-Debug-cd7bd9ec2af035d32751.json",
+					"name" : "upload_HWPRobot",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "upload_HWPRobot_eeprom::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-upload_HWPRobot_eeprom-Debug-a99a3d321f5bf689cce6.json",
+					"name" : "upload_HWPRobot_eeprom",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/linuxmint/Schreibtisch/HWP/HWPRobot/Debug",
+		"source" : "/home/linuxmint/Schreibtisch/HWP/HWPRobot"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

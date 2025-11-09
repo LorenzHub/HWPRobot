@@ -1,0 +1,9 @@
+{
+  "cmake.sourceDirectory": "${workspaceFolder}",
+  "cmake.buildDirectory": "${workspaceFolder}/${buildType}",
+  "cmake.configureSettings": {
+    "CMAKE_TOOLCHAIN_FILE" : "${workspaceFolder}/generic-gcc-avr.cmake"
+  },
+  "cmake.generator": "Unix Makefiles",
+  "C_Cpp.autoAddFileAssociations": false
+}

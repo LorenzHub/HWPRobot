@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Atmel Studio Solution File, Format Version 11.00
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "HWPRobot", "HWPRobot.cproj", "{BDD36BBE-0406-4CA0-ABF3-4C18FD015A8F}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BDD36BBE-0406-4CA0-ABF3-4C18FD015A8F}.Debug|AVR.ActiveCfg = Debug|AVR
+		{BDD36BBE-0406-4CA0-ABF3-4C18FD015A8F}.Debug|AVR.Build.0 = Debug|AVR
+		{BDD36BBE-0406-4CA0-ABF3-4C18FD015A8F}.Release|AVR.ActiveCfg = Release|AVR
+		{BDD36BBE-0406-4CA0-ABF3-4C18FD015A8F}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

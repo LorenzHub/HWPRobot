@@ -1,0 +1,132 @@
+#include <io/uart/uart.h>
+#include <communication/communication.h>
+#include <tools/timeTask/timeTask.h>
+#include <tools/powerSaver.h>
+#include <io/led/led.h>
+#include <motor/motor.h>
+
+#include <avr/io.h>                 // AVR IO ports
+#include <avr/interrupt.h>          // AVR Interrupts
+#include <avr/pgmspace.h>           // AVR Program Space Utilities
+#include <math.h>                   // Math functions and constants
+#include <inttypes.h>               // Integer type conversions for printf, scanf and alike
+#include <stdint.h>
+
+
+/*
+ *******************************************************************************
+ * PRIVATE VARIABLES
+ *******************************************************************************
+ */
+
+// robot's pose, initial pose: x=200, y=0, theta=PI/2 (Northern direction)
+static Pose_t pose = { 200.0f, 0.0f, M_PI_2 };
+
+
+/*
+ *******************************************************************************
+ * PRIVATE FUNCTIONS
+ *******************************************************************************
+ */
+
+// callback function for communication channel CH_IN_DEBUG (Debug View in HWPCS)
+static void commDebug(__attribute__((unused)) const uint8_t* packet, const uint16_t size) {
+    communication_log(LEVEL_FINE, "received %" PRIu16 " bytes", size);
+}
+
+
+// callback function for communication channel CH_IN_USER_COMMAND (User Command View in HWPCS)
+static void commUserCommand(const uint8_t* packet, __attribute__((unused)) const uint16_t size) {
+    UserCommand_t* cmd = (UserCommand_t*) packet;
+    switch (cmd->id) {
+    case 0: // command ID 0: stop motors
+        Motor_stopAll();
+        break;
+    case 1: // command ID 1: turn on spot
+        Motor_setPWM(3000, -3000);
+        break;
+    case 2: // command ID 2: drive forwards
+        Motor_setPWM(3000, 3000);
+        break;
+    case 3: // command ID 3
+        // implement your own commands
+        break;
+    }
+}
+
+
+// initialization
+static void init(void) {
+    powerSaver_init(); // must be the first call!
+    LED_init();
+    uart_init();
+    communication_init();
+
+    // register communication callback functions which are executed by
+    // communication_readPackets() in main loop when a packet is received from
+    // HWPCS on the corresponding communication channel
+    communication_setCallback(CH_IN_DEBUG, commDebug);
+    communication_setCallback(CH_IN_USER_COMMAND, commUserCommand);
+
+    Motor_init();
+    timeTask_init();
+
+    // global interrupt enable
+    sei();
+}
+
+
+int main(void) {
+    init();
+
+    communication_log_P(LEVEL_INFO, PSTR("Booted"));
+
+    // do forever
+    for (;;) {
+
+        // TODO: do some other stuff
+
+        TIMETASK(LED_TASK, 500) { // execute block approximately every 500ms
+            LED2_TOGGLE();
+        }
+
+        TIMETASK(TELEMETRY_TASK, 300) { // execute block approximately every 300ms
+            // send telemetry data to HWPCS
+            Telemetry_t telemetry;
+            telemetry.bumpers.value = 0; // initialize with zero
+            telemetry.bumpers.bitset.bit1 = 1;
+            telemetry.contacts = 0;
+            telemetry.encoder1 = 200;
+            telemetry.encoder2 = -324;
+            telemetry.infrared1 = 217;
+            telemetry.infrared2 = 117;
+            telemetry.infrared3 = 0;
+            telemetry.infrared4 = 0;
+            telemetry.infrared5 = 0;
+            telemetry.user1 = 20;
+            telemetry.user2 = 42.42f;
+            communication_writePacket(CH_OUT_TELEMETRY, (uint8_t*)&telemetry, sizeof(telemetry));
+        }
+
+        TIMETASK(POSE_TASK, 150) { // execute block approximately every 150ms
+            static int t_index = 0; // time index
+
+            // simulate the robot moving on a circular trajectory with a frequency of 0.1Hz
+            // angle = omega * t = (2 * PI * 0.1Hz) * (t_index * 0.15s)
+            float wt = 2.0f * M_PI * 0.1f * (float)t_index * 0.15f;
+            pose.x = 200.0f * cosf(wt);
+            pose.y = 200.0f * sinf(wt);
+            pose.theta = wt + M_PI_2;
+            ++t_index;
+
+            // send pose update to HWPCS
+            communication_writePacket(CH_OUT_POSE, (uint8_t*)&pose, sizeof(pose));
+        }
+
+        // poll receive buffer (read and parse all available packets from UART buffer)
+        // and execute registered callback functions
+        communication_readPackets();
+    }
+
+    return 0;
+}
