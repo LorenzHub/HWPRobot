@@ -136,8 +136,8 @@ int main(void) {
             telemetry.bumpers.value = 0; // initialize with zero
             telemetry.bumpers.bitset.bit1 = 1;
             telemetry.contacts = 0;
-            telemetry.encoder1 = 200;
-            telemetry.encoder2 = -324;
+            telemetry.encoder1 = encoder_getCountR();
+            telemetry.encoder2 = encoder_getCountL();
             telemetry.infrared1 = ADC_getFilteredValue(0); //right front
             telemetry.infrared2 = ADC_getFilteredValue(1); //right back
             telemetry.infrared3 = ADC_getFilteredValue(2); //front
