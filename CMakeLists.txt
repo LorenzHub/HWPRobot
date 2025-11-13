@@ -142,7 +142,9 @@ add_avr_executable(HWPRobot
 		src/bumper.h
 		src/bumper.c
 		src/encoder.h
-		src/encoder.c)
+		src/encoder.c
+		src/position.h
+		src/position.c)
 
 ##########################################################################
 # include search paths

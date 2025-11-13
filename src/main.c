@@ -21,6 +21,7 @@
 
 #include "bumper.h"
 #include "encoder.h"
+#include "position.h"
 
 /*
  *******************************************************************************
@@ -30,6 +31,19 @@
 
 // robot's pose, initial pose: x=200, y=0, theta=PI/2 (Northern direction)
 static Pose_t pose = { 200.0f, 0.0f, M_PI_2 };
+
+// Robot parameters for odometry calculation
+static RobotParameters_t robotParams = {
+    .axleWidth = 170.0f,      // mm (aus encoder.h Kommentaren)
+    .distPerTick = 0.0688f,   // mm/Tick (2048 Ticks = 1 Rad-Umdrehung)
+    .user1 = 0.0f,
+    .user2 = 0.0f
+};
+
+// Getter-Funktion für Robot-Parameter (für position.c)
+const RobotParameters_t* getRobotParams(void) {
+    return &robotParams;
+}
 
 
 /*
@@ -47,15 +61,16 @@ static void commDebug(__attribute__((unused)) const uint8_t* packet, __attribute
 static void commDriveCommand(const uint8_t* packet, __attribute__((unused)) const uint16_t size) {
 }
 
-// Statische Variable für eingegebene Distanz aus HWPCS
-static float userInputDistance_mm = 0.0f;
-
 // callback function for communication channel CH_IN_ROBOT_PARAMS (Scene View in HWPCS)
 static void commRobotParameters(const uint8_t* packet, __attribute__((unused)) const uint16_t size) {
     RobotParameters_t* params = (RobotParameters_t*) packet;
-    // Speichere user1 als Distanz in mm
-    userInputDistance_mm = params->user1;
-    communication_log(LEVEL_INFO, "Distanz aus HWPCS empfangen: %.1f mm", userInputDistance_mm);
+    // Speichere Robot-Parameter für Odometrie-Berechnung
+    robotParams.axleWidth = params->axleWidth;
+    robotParams.distPerTick = params->distPerTick;
+    robotParams.user1 = params->user1;
+    robotParams.user2 = params->user2;
+    communication_log(LEVEL_INFO, "Robot-Parameter aktualisiert: axleWidth=%.2f mm, distPerTick=%.4f mm/Tick", 
+                     robotParams.axleWidth, robotParams.distPerTick);
 }
 
 // callback function for communication channel CH_IN_POSE (Scene View in HWPCS)
@@ -182,6 +197,9 @@ static void init(void) {
     
     // Lade gespeicherte PWM-Kalibrierungswerte aus EEPROM
     calibration_init();
+    
+    // Initialisiere Position-Modul mit Start-Pose
+    position_init(&pose);
 
     // global interrupt enable
     sei();
@@ -219,17 +237,16 @@ int main(void) {
             communication_writePacket(CH_OUT_TELEMETRY, (uint8_t*)&telemetry, sizeof(telemetry));
         }
 
-        TIMETASK(POSE_TASK, 150) { // execute block approximately every 150ms
-            static int t_index = 0; // time index
-
-            // simulate the robot moving on a circular trajectory with a frequency of 0.1Hz
-            // angle = omega * t = (2 * PI * 0.1Hz) * (t_index * 0.15s)
-            float wt = 2.0f * M_PI * 0.1f * (float)t_index * 0.15f;
-            pose.x = 200.0f * cosf(wt);
-            pose.y = 200.0f * sinf(wt);
-            pose.theta = wt + M_PI_2;
-            ++t_index;
-
+        TIMETASK(POSE_TASK, 10) { // execute block approximately every 10ms (100 Hz)
+            // Aktualisiere Odometrie
+            position_updateExpectedPose();
+            
+            // Hole aktuelle Pose
+            const Pose_t* currentPose = position_getCurrentPose();
+            
+            // Aktualisiere lokale pose-Variable für Kompatibilität
+            pose = *currentPose;
+            
             // send pose update to HWPCS
             communication_writePacket(CH_OUT_POSE, (uint8_t*)&pose, sizeof(pose));
         }
