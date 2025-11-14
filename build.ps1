@@ -68,6 +68,11 @@ if (Test-Path "src\calibration.c") {
     $C_SOURCES += "src\calibration.c"
 }
 
+# Prüfe ob position.c existiert und füge es hinzu
+if (Test-Path "src\position.c") {
+    $C_SOURCES += "src\position.c"
+}
+
 # Alle Assembler-Quelldateien
 $ASM_SOURCES = @(
     "lib\io\adc\adc_isr.S",

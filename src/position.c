@@ -4,9 +4,10 @@
 #include <tools/timeTask/timeTask.h>
 #include <math.h>
 #include <inttypes.h>
+#include <stddef.h>
 
 // Konstanten für Kamera-Pose und Korrektur
-#define CAMERA_POSE_MAX_AGE_MS 2000          // 2 Sekunden
+#define CAMERA_POSE_MAX_AGE_MS 10000         // 10 Sekunden
 #define CORRECTION_POSITION_THRESHOLD_MM 50.0f  // 50mm
 #define CORRECTION_ANGLE_THRESHOLD_RAD 0.2f     // ≈11°
 #define ERROR_POSITION_THRESHOLD_MM 100.0f       // 100mm
@@ -34,12 +35,17 @@ const RobotParameters_t* getRobotParams(void);
 void position_init(const Pose_t* initialPose) {
     if (initialPose != NULL) {
         expectedPose = *initialPose;
+        // Synchronisiere auch Kamera-Pose auf Start-Pose
+        truePose = *initialPose;
     }
     
     // Initialisiere Encoder-Referenzwerte
     lastEncoderR = encoder_getCountR();
     lastEncoderL = encoder_getCountL();
     initialized = 1;
+    
+    // Kamera-Pose ist noch nicht empfangen, aber auf Start-Pose gesetzt
+    cameraPoseValid = 0;  // Wird auf 1 gesetzt, wenn erste echte Kamera-Pose kommt
 }
 
 void position_updateExpectedPose(void) {
@@ -129,6 +135,21 @@ void position_setPose(const Pose_t* newPose) {
 
 void position_setAprilTagPose(const Pose_t* cameraPose) {
     if (cameraPose != NULL) {
+        // Wenn dies die erste Kamera-Pose ist, synchronisiere Odometrie darauf
+        // (nur wenn noch keine große Bewegung stattgefunden hat)
+        if (!cameraPoseValid) {
+            // Erste Kamera-Pose: Synchronisiere Odometrie
+            expectedPose = *cameraPose;
+            
+            // Normalisiere Theta auf [-π, +π]
+            while (expectedPose.theta > M_PI) {
+                expectedPose.theta -= 2.0f * M_PI;
+            }
+            while (expectedPose.theta < -M_PI) {
+                expectedPose.theta += 2.0f * M_PI;
+            }
+        }
+        
         truePose = *cameraPose;
         
         // Normalisiere Theta auf [-π, +π]
@@ -200,5 +221,111 @@ void position_calculatePoseDifference(void) {
 
 const Pose_t* position_getPoseDifference(void) {
     return &poseDifference;
+}
+
+uint8_t position_wasCameraPoseReceived(void) {
+    return cameraPoseValid;
+}
+
+uint8_t position_syncPoses(void) {
+    // Debug-Informationen
+    if (!cameraPoseValid) {
+        return 0;  // Kamera-Pose wurde noch nie empfangen
+    }
+    
+    // Prüfe ob Kamera-Pose zu alt ist
+    uint32_t age_us = position_getLastCameraUpdateTime();
+    uint32_t maxAge_us = CAMERA_POSE_MAX_AGE_MS * 1000UL;
+    
+    if (age_us >= maxAge_us) {
+        // Kamera-Pose ist zu alt
+        return 0;
+    }
+    
+    // Synchronisiere Odometrie auf Kamera-Pose
+    expectedPose = truePose;
+    
+    // Normalisiere Theta auf [-π, +π]
+    while (expectedPose.theta > M_PI) {
+        expectedPose.theta -= 2.0f * M_PI;
+    }
+    while (expectedPose.theta < -M_PI) {
+        expectedPose.theta += 2.0f * M_PI;
+    }
+    
+    return 1;  // Erfolgreich synchronisiert
+}
+
+void position_applyCorrection(void) {
+    // Prüfe ob gültige Kamera-Pose vorhanden
+    if (!position_hasValidCameraPose()) {
+        return;  // Keine Korrektur möglich
+    }
+    
+    // Hole aktuelle Differenz (muss bereits berechnet sein)
+    const Pose_t* diff = position_getPoseDifference();
+    
+    // Prüfe ob Differenz über Threshold liegt
+    float absPosDiff = sqrtf(diff->x * diff->x + diff->y * diff->y);
+    float absAngleDiff = (diff->theta > 0) ? diff->theta : -diff->theta;
+    
+    // Prüfe ob Korrektur nötig ist
+    if (absPosDiff < CORRECTION_POSITION_THRESHOLD_MM && 
+        absAngleDiff < CORRECTION_ANGLE_THRESHOLD_RAD) {
+        return;  // Differenz zu klein, keine Korrektur nötig
+    }
+    
+    // Bestimme ob Roboter geradeaus fährt oder dreht
+    // Prüfe ob große Winkeländerung in letzter Zeit (heuristisch: große Theta-Differenz deutet auf Drehen hin)
+    uint8_t isTurning = (absAngleDiff > CORRECTION_ANGLE_THRESHOLD_RAD) ? 1 : 0;
+    
+    // Gewichtete Fusion
+    float alphaPos = 0.7f;  // 70% Odometrie, 30% Kamera für Position
+    float alphaTheta;
+    
+    if (isTurning) {
+        // Beim Drehen: Mehr Gewicht auf Kamera (Theta-Korrektur wichtiger)
+        alphaTheta = 0.5f;  // 50% Odometrie, 50% Kamera
+    } else {
+        // Bei Geradeausfahrt: Mehr Gewicht auf Odometrie (Position bereits gut)
+        alphaTheta = 0.9f;  // 90% Odometrie, 10% Kamera
+    }
+    
+    // Korrigiere Position
+    expectedPose.x = alphaPos * expectedPose.x + (1.0f - alphaPos) * truePose.x;
+    expectedPose.y = alphaPos * expectedPose.y + (1.0f - alphaPos) * truePose.y;
+    
+    // Korrigiere Theta (kürzester Weg)
+    // Berechne gewichtete Theta-Differenz
+    float thetaDiff = truePose.theta - expectedPose.theta;
+    
+    // Normalisiere Theta-Differenz auf [-π, +π]
+    while (thetaDiff > M_PI) {
+        thetaDiff -= 2.0f * M_PI;
+    }
+    while (thetaDiff < -M_PI) {
+        thetaDiff += 2.0f * M_PI;
+    }
+    
+    // Wende gewichtete Korrektur an
+    expectedPose.theta += (1.0f - alphaTheta) * thetaDiff;
+    
+    // Normalisiere Theta auf [-π, +π]
+    while (expectedPose.theta > M_PI) {
+        expectedPose.theta -= 2.0f * M_PI;
+    }
+    while (expectedPose.theta < -M_PI) {
+        expectedPose.theta += 2.0f * M_PI;
+    }
+    
+    // Logge nur bei größeren Abweichungen (vermeidet Log-Spam)
+    static uint16_t correctionCount = 0;
+    if (++correctionCount >= 50) {  // Alle ~1 Sekunde (50 * 20ms)
+        int16_t posDiff_mm = (int16_t)absPosDiff;
+        int16_t angleDiff_mrad = (int16_t)(absAngleDiff * 1000.0f);
+        communication_log(LEVEL_FINE, "Odometrie korrigiert: Pos=%d mm, Theta=%d mrad", 
+                         posDiff_mm, angleDiff_mrad);
+        correctionCount = 0;
+    }
 }
 

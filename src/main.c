@@ -14,6 +14,7 @@
 #include <math.h>                   // Math functions and constants
 #include <inttypes.h>               // Integer type conversions for printf, scanf and alike
 #include <stdint.h>
+#include <stddef.h>                 // NULL definition
 
 #include "statemachine.h"
 #include "calibration.h"
@@ -69,14 +70,32 @@ static void commRobotParameters(const uint8_t* packet, __attribute__((unused)) c
     robotParams.distPerTick = params->distPerTick;
     robotParams.user1 = params->user1;
     robotParams.user2 = params->user2;
-    communication_log(LEVEL_INFO, "Robot-Parameter aktualisiert: axleWidth=%.2f mm, distPerTick=%.4f mm/Tick", 
-                     robotParams.axleWidth, robotParams.distPerTick);
+    // Konvertiere Float-Werte zu Integer für Log-Ausgabe (AVR unterstützt kein Float-Format)
+    int16_t axleWidth_cm = (int16_t)(robotParams.axleWidth / 10.0f);  // in cm
+    int16_t distPerTick_um = (int16_t)(robotParams.distPerTick * 1000.0f);  // in Mikrometer
+    communication_log(LEVEL_INFO, "Robot-Parameter: axleWidth=%d cm, distPerTick=%d um/Tick", 
+                     axleWidth_cm, distPerTick_um);
 }
 
 // callback function for communication channel CH_IN_POSE (Scene View in HWPCS)
-static void commPose(const uint8_t* packet, __attribute__((unused)) const uint16_t size) {
+static void commPose(const uint8_t* packet, const uint16_t size) {
+    // WICHTIG: Diese Funktion wird aufgerufen, wenn HWPCS eine Pose sendet
+    // Prüfe Paketgröße
+    if (size != sizeof(Pose_t)) {
+        communication_log(LEVEL_WARNING, "commPose: Falsche Paketgroesse: %" PRIu16 " Bytes (erwartet: %zu)", size, sizeof(Pose_t));
+        return;
+    }
     Pose_t* aprilTagPose = (Pose_t*)packet;
+    
+    // Setze Pose (wichtig: vor Log-Ausgabe, damit sie gespeichert ist)
     position_setAprilTagPose(aprilTagPose);
+    
+    // Konvertiere Float-Werte zu Integer für Log-Ausgabe (AVR unterstützt kein Float-Format)
+    int16_t x = (int16_t)(aprilTagPose->x);
+    int16_t y = (int16_t)(aprilTagPose->y);
+    int16_t theta_mrad = (int16_t)(aprilTagPose->theta * 1000.0f);  // Theta in Milliradiant
+    communication_log(LEVEL_INFO, "Kamera-Pose empfangen: x=%d y=%d theta=%d mrad", 
+                     x, y, theta_mrad);
 }
 
 // callback function for communication channel CH_IN_USER_COMMAND (User Command View in HWPCS)
@@ -161,6 +180,53 @@ static void commUserCommand(const uint8_t* packet, __attribute__((unused)) const
         communication_log(LEVEL_INFO, "Drehe 180° auf der Stelle mit PWM 4000...");
         break;
     }
+    case 14: { // command ID 14: Synchronisiere Odometrie mit Kamera-Pose
+        const Pose_t* currentPose = position_getCurrentPose();
+        const Pose_t* cameraPose = position_getAprilTagPose();
+        uint32_t age_us = position_getLastCameraUpdateTime();
+        uint8_t hasValid = position_hasValidCameraPose();
+        uint8_t wasReceived = position_wasCameraPoseReceived();
+        
+        // Konvertiere Float-Werte zu Integer für Log-Ausgabe (AVR unterstützt kein Float-Format)
+        int16_t odom_x = (int16_t)(currentPose->x);
+        int16_t odom_y = (int16_t)(currentPose->y);
+        int16_t odom_theta_mrad = (int16_t)(currentPose->theta * 1000.0f);  // Theta in Milliradiant
+        
+        int16_t cam_x = (int16_t)(cameraPose->x);
+        int16_t cam_y = (int16_t)(cameraPose->y);
+        int16_t cam_theta_mrad = (int16_t)(cameraPose->theta * 1000.0f);
+        
+        communication_log(LEVEL_INFO, "Sync-Status: wasReceived=%d, age=%" PRIu32 " us, hasValid=%d", 
+                         wasReceived, age_us, hasValid);
+        communication_log(LEVEL_INFO, "Odometrie: x=%d y=%d theta=%d mrad", 
+                         odom_x, odom_y, odom_theta_mrad);
+        communication_log(LEVEL_INFO, "Kamera: x=%d y=%d theta=%d mrad", 
+                         cam_x, cam_y, cam_theta_mrad);
+        
+        if (position_syncPoses()) {
+            currentPose = position_getCurrentPose();
+            odom_x = (int16_t)(currentPose->x);
+            odom_y = (int16_t)(currentPose->y);
+            odom_theta_mrad = (int16_t)(currentPose->theta * 1000.0f);
+            communication_log(LEVEL_INFO, "Posen synchronisiert: x=%d y=%d theta=%d mrad", 
+                             odom_x, odom_y, odom_theta_mrad);
+        } else {
+            if (age_us == UINT32_MAX) {
+                communication_log(LEVEL_WARNING, "Synchronisierung fehlgeschlagen: Kamera-Pose wurde noch nie empfangen");
+            } else {
+                communication_log(LEVEL_WARNING, "Synchronisierung fehlgeschlagen: Kamera-Pose zu alt (%" PRIu32 " us, max 10000 ms)", 
+                                 age_us);
+            }
+        }
+        break;
+    }
+    case 15: { // command ID 15: Sende sofortige Pose-Anfrage an HWPCS
+        GetPose_t getPose;
+        getPose.aprilTagType = APRIL_TAG_MAIN;
+        communication_writePacket(CH_OUT_GET_POSE, (uint8_t*)&getPose, sizeof(GetPose_t));
+        communication_log(LEVEL_INFO, "Pose-Anfrage an HWPCS gesendet");
+        break;
+    }
     }
 }
 
@@ -238,9 +304,15 @@ int main(void) {
             communication_writePacket(CH_OUT_TELEMETRY, (uint8_t*)&telemetry, sizeof(telemetry));
         }
 
-        TIMETASK(POSE_TASK, 10) { // execute block approximately every 10ms (100 Hz)
+        TIMETASK(POSE_TASK, 20) { // execute block approximately every 20ms (50 Hz)
             // Aktualisiere Odometrie
             position_updateExpectedPose();
+            
+            // Berechne Differenz zwischen Odometrie und Kamera-Pose
+            position_calculatePoseDifference();
+            
+            // Wende automatische Korrektur an (gewichtete Sensorfusion)
+            position_applyCorrection();
             
             // Hole aktuelle Pose
             const Pose_t* currentPose = position_getCurrentPose();
@@ -249,7 +321,49 @@ int main(void) {
             pose = *currentPose;
             
             // send pose update to HWPCS
-            communication_writePacket(CH_OUT_POSE, (uint8_t*)&pose, sizeof(pose));
+            // Verwende sizeof(Pose_t) statt sizeof(pose) für Konsistenz
+            // Pose_t sollte 12 Bytes sein (3 * 4 Bytes float)
+            static uint16_t poseSize = sizeof(Pose_t);
+            if (poseSize != 12) {
+                // Warnung nur einmal loggen
+                static uint8_t sizeWarningLogged = 0;
+                if (!sizeWarningLogged) {
+                    communication_log(LEVEL_WARNING, "Pose_t size mismatch: %" PRIu16 " bytes (expected 12)", poseSize);
+                    sizeWarningLogged = 1;
+                }
+            }
+            communication_writePacket(CH_OUT_POSE, (uint8_t*)&pose, poseSize);
+        }
+
+        TIMETASK(GET_POSE_TASK, 500) { // execute block approximately every 500ms (2 Hz)
+            // Fordere Kamera-Pose von HWPCS an
+            // HWPCS antwortet mit Pose_t auf CH_IN_POSE (wird von commPose() verarbeitet)
+            GetPose_t getPose;
+            getPose.aprilTagType = APRIL_TAG_MAIN;
+            communication_writePacket(CH_OUT_GET_POSE, (uint8_t*)&getPose, sizeof(GetPose_t));
+            
+            // Logge nur alle 10 Sekunden (20 Anfragen) um Log-Spam zu vermeiden
+            static uint16_t requestCount = 0;
+            if (++requestCount >= 20) {
+                communication_log(LEVEL_FINE, "Pose-Anfrage gesendet (automatisch, alle 500ms)");
+                requestCount = 0;
+            }
+        }
+
+        TIMETASK(USER_DATA_TASK, 100) { // execute block approximately every 100ms (10 Hz)
+            // Sende Pose-Differenz an HWPCS für grafische Visualisierung im User Data View
+            // float1 = Differenz X (mm), float2 = Differenz Y (mm), float3 = Differenz Theta (rad)
+            const Pose_t* poseDiff = position_getPoseDifference();
+            UserData_t userData;
+            userData.uint16 = 0;
+            userData.uint32 = 0;
+            userData.int16 = 0;
+            userData.int32 = 0;
+            userData.float1 = poseDiff->x;      // X-Differenz in mm
+            userData.float2 = poseDiff->y;      // Y-Differenz in mm
+            userData.float3 = poseDiff->theta;  // Theta-Differenz in rad
+            userData.float4 = 0.0f;             // Reserve
+            communication_writePacket(CH_OUT_USER_DATA, (uint8_t*)&userData, sizeof(userData));
         }
 
         // poll receive buffer (read and parse all available packets from UART buffer)

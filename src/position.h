@@ -16,7 +16,7 @@ void position_init(const Pose_t* initialPose);
  * 
  * Berechnet die neue Position des Roboters mit Differential-Drive-Kinematik.
  * Verwendet Delta-Berechnung (speichert letzte Encoder-Werte intern).
- * Wird regelmäßig aufgerufen (z.B. alle 10ms).
+ * Wird regelmäßig aufgerufen (z.B. alle 20ms).
  */
 void position_updateExpectedPose(void);
 
@@ -78,6 +78,32 @@ void position_calculatePoseDifference(void);
  * @return Zeiger auf die Pose-Differenz (nicht NULL)
  */
 const Pose_t* position_getPoseDifference(void);
+
+/**
+ * @brief Synchronisiert Odometrie-Pose mit Kamera-Pose
+ * 
+ * Setzt expectedPose = truePose, wenn eine gültige Kamera-Pose vorhanden ist.
+ * Kann manuell aufgerufen werden, um beide Posen wieder zusammenzusetzen.
+ * 
+ * @return 1 wenn synchronisiert wurde, 0 wenn keine gültige Kamera-Pose vorhanden
+ */
+uint8_t position_syncPoses(void);
+
+/**
+ * @brief Gibt zurück, ob eine Kamera-Pose jemals empfangen wurde
+ * 
+ * @return 1 wenn jemals empfangen, 0 sonst
+ */
+uint8_t position_wasCameraPoseReceived(void);
+
+/**
+ * @brief Wendet automatische Korrektur auf Odometrie basierend auf Kamera-Pose an
+ * 
+ * Verwendet gewichtete Sensorfusion, um Odometrie mit Kamera-Pose zu kombinieren.
+ * Korrigiert besonders Theta beim Drehen, um das "zu wenig drehen" Problem zu lösen.
+ * Wird nach position_updateExpectedPose() und position_calculatePoseDifference() aufgerufen.
+ */
+void position_applyCorrection(void);
 
 #endif /* POSITION_H */
 

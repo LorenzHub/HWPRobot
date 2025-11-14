@@ -3,5 +3,6 @@ avr8-gnu-toolchain-*/
 
 # Build output
 Build/
+build/
 Debug/
 
