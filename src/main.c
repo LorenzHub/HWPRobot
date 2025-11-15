@@ -24,6 +24,8 @@
 #include "encoder.h"
 #include "position.h"
 
+#include "calcPathCommand.h"
+
 /*
  *******************************************************************************
  * PRIVATE VARIABLES
@@ -242,6 +244,7 @@ static void init(void) {
     LED_init();
     uart_init();
     communication_init();
+    pathFollower_init();
 
     // register communication callback functions which are executed by
     // communication_readPackets() in main loop when a packet is received from
@@ -369,7 +372,21 @@ int main(void) {
         // poll receive buffer (read and parse all available packets from UART buffer)
         // and execute registered callback functions
         communication_readPackets();
+
+
+        Pose_t currentPose = *position_getCurrentPose();
+
+        TIMETASK(FOLLOWER_TASK, 20) {
+        const PathFollowerStatus_t* pathFollower_status = pathFollower_getStatus();
+        if (pathFollower_status->enabled) {
+            if (pathFollower_update(&currentPose))
+                calculateDriveCommand(&currentPose, &pathFollower_status->lookahead);
+            else
+                stopMotors();
+            sendPathFollowerStatus(); // send pathFollower_status on channel CH_OUT_PATH_FOLLOW_STATUS
+        }
     }
 
     return 0;
+}
 }

@@ -19,7 +19,8 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "/usr/lib/avr/include",
-                "${workspaceFolder}/lib"
+                "${workspaceFolder}/lib",
+                "${workspaceFolder}"
             ],
             "defines": [
                 "__AVR_ATmega1280__"

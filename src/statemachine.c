@@ -5,6 +5,7 @@
 #include <tools/timeTask/timeTask.h>
 #include <communication/communication.h>
 #include <inttypes.h>
+#include "calcPathCommand.h"
 
 /* Define the current state here (single-definition) */
 state currentState = IDLE;
@@ -48,6 +49,9 @@ void stateMachine() {
             break;
         case Turn_On_Spot_Degrees:
             turn_On_Spot_degrees(targetAngle_degrees, targetPWM);
+            break;
+        case Drive_Path_Command:
+            drive_Path_Command();
             break;
     }
 }
