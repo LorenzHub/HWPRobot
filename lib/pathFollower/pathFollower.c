@@ -45,7 +45,7 @@ static PathFollowerExtStatus_t pathFollower_extStatus = { .onLastSegment = false
 // Distance in mm between orthogonal projection of current pose onto path and
 // lookahead point. The lookahead point (in pathFollower_status) is always kept
 // ahead of the orthogonal projection by this distance.
-static float pathFollower_lookaheadDistance = 1.0f;
+static float pathFollower_lookaheadDistance = 2.0f;
 
 // Number of segments to look ahead (starting from the current segment) when
 // locating the orthogonal projection of the current position onto the path.
@@ -645,4 +645,8 @@ void pathFollower_setCallback(const PathFollowerCallback_t callback) {
 
 void pathFollower_removeCallback(void) {
     pathFollower_callback = 0;
+}
+
+void sendPathFollowerStatus(PathFollowerStatus_t* pathFollower_status) {
+    communication_writePacket(CH_OUT_PATH_FOLLOW_STATUS, (uint8_t*) pathFollower_status, sizeof(* pathFollower_status));
 }

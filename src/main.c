@@ -62,7 +62,7 @@ static void commDebug(__attribute__((unused)) const uint8_t* packet, __attribute
 }
 
 // callback function for communication channel CH_IN_DRIVE (Control Input / Telemetry View in HWPCS)
-static void commDriveCommand(const uint8_t* packet, __attribute__((unused)) const uint16_t size) {
+static void commDriveCommand(__attribute__((unused)) const uint8_t* packet, __attribute__((unused)) const uint16_t size) {
 }
 
 // callback function for communication channel CH_IN_ROBOT_PARAMS (Scene View in HWPCS)
@@ -135,12 +135,19 @@ static void commUserCommand(const uint8_t* packet, __attribute__((unused)) const
                          encoderR, encoderL);
         break;
         
-    }
+    }/*
     case 6: { // command ID 6: Kalibrierungsfahrt - fährt 1000 Encoder-Ticks
         setState(Calibrate_Distance);
         communication_log(LEVEL_INFO, "Kalibrierung gestartet: Fahre 1000 Ticks...");
         break;
-    }
+    }*/
+   case 6:{
+    statemachine_setTargetDistance(10000); // Fahre 10000 mm (10 m)
+    statemachine_setTargetPWM(8000);       // mit PWM 4000
+    setState(Drive_Forward_Distance);
+    communication_log(LEVEL_INFO, "Fahre 10000 mm (10 m) vorwärts mit PWM 3000...");
+    break;
+   }
     case 7: { // command ID 7: Fahre 50 mm (5 cm) vorwärts
         statemachine_setTargetDistance(50);
         statemachine_setTargetPWM(4000);
@@ -239,7 +246,7 @@ static void commUserCommand(const uint8_t* packet, __attribute__((unused)) const
 }
 
 // callback function for communication channel CH_IN_ADDITIONAL_POSE (Scene View in HWPCS)
-static void commAdditionalPose(const uint8_t* packet, __attribute__((unused)) const uint16_t size) {
+static void commAdditionalPose(__attribute__((unused)) const uint8_t* packet, __attribute__((unused)) const uint16_t size) {
     // handle additional pose update
 }
 
@@ -258,7 +265,6 @@ static void init(void) {
     communication_setCallback(CH_IN_DEBUG, commDebug);
     communication_setCallback(CH_IN_DRIVE, commDriveCommand);
     communication_setCallback(CH_IN_ROBOT_PARAMS, commRobotParameters);
-    pathFollower_init();
     communication_setCallback(CH_IN_POSE, commPose);
     communication_setCallback(CH_IN_USER_COMMAND, commUserCommand);
     communication_setCallback(CH_IN_ADDITIONAL_POSE, commAdditionalPose);
@@ -357,6 +363,7 @@ int main(void) {
                 communication_log(LEVEL_FINE, "Pose-Anfrage gesendet (automatisch, alle 500ms)");
                 requestCount = 0;
             }
+
         }
 
         TIMETASK(USER_DATA_TASK, 100) { // execute block approximately every 100ms (10 Hz)
@@ -379,20 +386,22 @@ int main(void) {
         // and execute registered callback functions
         communication_readPackets();
 
-
-        Pose_t currentPose = *position_getCurrentPose();
-
-        TIMETASK(FOLLOWER_TASK, 20) {
-        const PathFollowerStatus_t* pathFollower_status = pathFollower_getStatus();
-        if (pathFollower_status->enabled) {
-            if (pathFollower_update(&currentPose))
-                calculateDriveCommand(&currentPose, &pathFollower_status->lookahead);
-            else
-                stopMotors();
-            sendPathFollowerStatus(); // send pathFollower_status on channel CH_OUT_PATH_FOLLOW_STATUS
+        TIMETASK(FOLLOWER_TASK, 20) { // execute block approximately every 20ms (50 Hz)
+            const Pose_t* currentPose = position_getCurrentPose();
+            const PathFollowerStatus_t* pathFollower_status = pathFollower_getStatus();
+            if (pathFollower_status->enabled) {
+                if (pathFollower_update(currentPose)){
+                    setState(FollowThePath);
+                    calculateDriveCommand(currentPose, &pathFollower_status->lookahead);
+                }
+                else{
+                Motor_stopAll();  
+                pathFollower_command(FOLLOWER_CMD_RESET);
+                }
+            }
+            sendPathFollowerStatus(pathFollower_status);
         }
     }
 
     return 0;
-}
 }

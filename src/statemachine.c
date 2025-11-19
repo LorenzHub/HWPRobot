@@ -52,11 +52,10 @@ void stateMachine() {
         case Turn_On_Spot_Degrees:
             turn_On_Spot_degrees(targetAngle_degrees, targetPWM);
             break;
-        case Drive_Path_Command:
-            drive_Path_Command();
-            break;
         case ExploreMaze:
             exploreMaze_init();
+            break;
+        case FollowThePath:
             break;
     }
 }
@@ -192,6 +191,8 @@ void drive_Forward_ticks(int16_t targetTicksValue, int16_t pwmRight) {
     
     static uint8_t phase = 0;  // 0 = Soft-Start, 1 = Fahren
     static int16_t currentSoftStartPWM = 0;
+    static timeTask_time_t startOfDrive;
+    static timeTask_time_t endOfDrive;
     static timeTask_time_t softStartTime;
     static timeTask_time_t waitStart;  // Wartezeit für Betriebsdrehzahl
     static timeTask_time_t speedMeasureStart;  // Startzeit für Geschwindigkeitsmessung
@@ -212,6 +213,7 @@ void drive_Forward_ticks(int16_t targetTicksValue, int16_t pwmRight) {
     const int16_t minSpeedTicks = 10;  // Mindest-Ticks für gültige Geschwindigkeitsmessung
     
     if (!initialized) {
+        timeTask_getTimestamp(&startOfDrive);
         // Setze Start-Encoder-Werte BEVOR Motoren starten
         startEncoderR = encoder_getCountR();
         startEncoderL = encoder_getCountL();
@@ -265,6 +267,7 @@ void drive_Forward_ticks(int16_t targetTicksValue, int16_t pwmRight) {
         if (maxDelta >= targetTicksValue) {
             // Ziel bereits erreicht - stoppe sofort
             Motor_stopAll();
+            timeTask_getTimestamp(&endOfDrive);
             
             // Berechne gefahrene Distanz in mm
             int16_t avgDelta = (deltaL + deltaR) / 2;
@@ -291,6 +294,7 @@ void drive_Forward_ticks(int16_t targetTicksValue, int16_t pwmRight) {
             }
             communication_log(LEVEL_INFO, "Gefahrene Distanz: ~%u mm (Durchschnitt)", actualDistance_mm);
             communication_log(LEVEL_INFO, "Finale PWM-Werte: L=%" PRId16 " R=%" PRId16, targetPWMLeft, targetPWMRight);
+            communication_log(LEVEL_INFO, "Gebrauchte Zeit: %" PRId16, timeTask_getDuration(&startOfDrive,&endOfDrive)/1000000);
             
             // Bewertung der Kalibrierung
             if (absEncoderDiff <= 2) {
@@ -550,6 +554,7 @@ void drive_Forward_ticks(int16_t targetTicksValue, int16_t pwmRight) {
         // Prüfe ob Ziel erreicht (mindestens einer der Encoder hat targetTicksValue erreicht)
         if (maxDelta >= targetTicksValue) {
             Motor_stopAll();
+            timeTask_getTimestamp(&endOfDrive);
             
             // Berechne gefahrene Distanz in mm
             int16_t avgDelta = (deltaL + deltaR) / 2;
@@ -576,6 +581,7 @@ void drive_Forward_ticks(int16_t targetTicksValue, int16_t pwmRight) {
             }
             communication_log(LEVEL_INFO, "Gefahrene Distanz: ~%u mm (Durchschnitt)", actualDistance_mm);
             communication_log(LEVEL_INFO, "Finale PWM-Werte: L=%" PRId16 " R=%" PRId16, targetPWMLeft, targetPWMRight);
+            communication_log(LEVEL_INFO, "Gebrauchte Zeit: %" PRId16, timeTask_getDuration(&startOfDrive,&endOfDrive)/1000000);
             
             // Bewertung der Kalibrierung
             if (absEncoderDiff <= 2) {

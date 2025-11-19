@@ -14,8 +14,8 @@ typedef enum {
     Drive_Forward_Distance,
     Drive_Forward_Ticks,
     Turn_On_Spot_Degrees,
-    Drive_Path_Command, 
-    ExploreMaze
+    ExploreMaze,
+    FollowThePath
 } state;
 
 /* currentState is defined in statemachine.c to avoid multiple definitions

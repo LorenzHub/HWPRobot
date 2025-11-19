@@ -1,11 +1,12 @@
 #include "calcPathCommand.h"
 #include <math.h>
 #include <motor/motor.h>
-#include "src/statemachine.h"
+#include "communication/communication.h"
+#include <inttypes.h>
 
 //check axleWidth, kAngular, forwardVelocity and conversion to PWM
 
-#define axleWidth 187.0f 
+#define axleWidth 166.0f 
 
 static float vLeft = 0.0f;
 static float vRight = 0.0f;
@@ -20,22 +21,29 @@ float angleDiff = angleToLookahead - currentPose->theta;
 while (angleDiff > M_PI) angleDiff -= 2.0f * M_PI;
 while (angleDiff < -M_PI) angleDiff += 2.0f * M_PI;
 
-//angular velocity
+// angular velocity
 float kAngular = 1.0f; 
 float angularVelocity = kAngular * angleDiff;
 
 // Constant forward velocity
-float forwardVelocity = 50.0f; 
+float forwardVelocity = 85.0f; 
 
-// Compute left and right wheel velocities
-vLeft = forwardVelocity - (angularVelocity * axleWidth / 2.0f);
-vRight = forwardVelocity + (angularVelocity * axleWidth / 2.0f);
+// If the angle difference is very small, go straight
+if (fabsf(angleDiff) < 0.1f) {
+    vLeft = forwardVelocity;
+    vRight = forwardVelocity;
+} else {
+    vLeft = forwardVelocity - (angularVelocity * (axleWidth / 2.0f)); // vLeft and vRight in mm/s
+    vRight = forwardVelocity + (angularVelocity * (axleWidth / 2.0f));
+    communication_log(LEVEL_INFO, "angularVelocity: %.3f", angularVelocity);
+}
 
-setState(Drive_Path_Command);
+drive_Path_Command();
 }
 
 void drive_Path_Command() {
-int16_t expectedEncoderL = (int16_t)(vLeft / 0.0688f);
-int16_t expectedEncoderR = (int16_t)(vRight / 0.0688f);
-//TODO
+// PWM = 55260.63*v + 938.3438  (v in m/s)
+communication_log(LEVEL_INFO, "vLeft: %.2f mm/s  vRight: %.2f mm/s", vLeft, vRight);
+Motor_setPWM_A((int16_t)(55260.63f * (vLeft * 0.001f) + 938.3438f)); // Motor A drives the left wheel
+Motor_setPWM_B((int16_t)(55260.63f * (vRight * 0.001f) + 938.3438f));
 }
