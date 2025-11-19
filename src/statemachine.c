@@ -8,6 +8,7 @@
 #include "calcPathCommand.h"
 #include "labyrinth.h"
 #include "position.h"
+#include "exploration.h" // Exploration Logic
 
 /* Define the current state here (single-definition) */
 state currentState = IDLE;
@@ -47,13 +48,23 @@ void stateMachine() {
             drive_Forward_distance_mm(targetDistance_mm, targetPWM);
             break;
         case Drive_Forward_Ticks:
-            drive_Forward_ticks(targetTicks, targetPWM);
+            if (drive_Forward_ticks(targetTicks, targetPWM)) {
+                setState(IDLE);
+            }
             break;
         case Turn_On_Spot_Degrees:
-            turn_On_Spot_degrees(targetAngle_degrees, targetPWM);
+            if (turn_On_Spot_degrees(targetAngle_degrees, targetPWM)) {
+                setState(IDLE);
+            }
             break;
         case ExploreMaze:
-            exploreMaze_init();
+            // Non-blocking exploration step
+            exploration_step();
+            // If exploration finishes, it will stop motors itself.
+            // We can check exploration state if we want to switch to IDLE
+            if (exploration_get_state() == EXPLORE_FINISHED) {
+                setState(IDLE);
+            }
             break;
         case FollowThePath:
             break;
@@ -61,11 +72,15 @@ void stateMachine() {
 }
 
 void exploreMaze_init(void) {
-    setLabyrinthPose(*position_getCurrentPose());
-    exploreMaze();
+    // Initialize Exploration
+    // Also sync Labyrinth Pose? Exploration assumes (0,0) North start.
+    exploration_init();
+    // Maybe reset Odometry pose?
 }
 
 void drive_Forward_1000ticks() {
+    // This function seems unused or legacy/test, keeping it but it uses setState(IDLE).
+    // I won't modify it as it's not critical for Exploration
     static uint8_t initialized = 0;
     static uint8_t phase = 0;  // 0 = Soft-Start, 1 = Fahren
     static int16_t startEncoderR = 0;
@@ -182,7 +197,7 @@ void drive_Forward_1000ticks() {
 }
 
 // Fahre eine bestimmte Anzahl von Encoder-Ticks vorwärts mit kontinuierlicher Korrektur
-void drive_Forward_ticks(int16_t targetTicksValue, int16_t pwmRight) {
+bool drive_Forward_ticks(int16_t targetTicksValue, int16_t pwmRight) {
     static uint8_t initialized = 0;
     static int16_t startEncoderR = 0;
     static int16_t startEncoderL = 0;
@@ -308,9 +323,8 @@ void drive_Forward_ticks(int16_t targetTicksValue, int16_t pwmRight) {
             }
             communication_log(LEVEL_INFO, "===========================");
             
-            setState(IDLE);
             initialized = 0;
-            return;
+            return true;
         }
         
         if (timeTask_getDuration(&softStartTime, &now) >= softStartInterval) {
@@ -595,10 +609,11 @@ void drive_Forward_ticks(int16_t targetTicksValue, int16_t pwmRight) {
             }
             communication_log(LEVEL_INFO, "===========================");
             
-            setState(IDLE);
             initialized = 0;
+            return true;
         }
     }
+    return false;
 }
 
 void drive_Forward_5sec() {
@@ -646,7 +661,9 @@ void drive_Forward_distance_mm(uint16_t distance_mm, int16_t pwmRight) {
     int16_t targetTicks = (int16_t)((int32_t)distance_mm * 14535 / 1000);  // distance_mm / 0.0688 mm ≈ targetTicks
     
     // Rufe die tick-basierte Funktion mit dem übergebenen PWM-Wert für rechten Motor auf
-    drive_Forward_ticks(targetTicks, pwmRight);
+    if (drive_Forward_ticks(targetTicks, pwmRight)) {
+        setState(IDLE);
+    }
 }
 
 // Setze Ziel-Winkel für Drehung auf der Stelle
@@ -657,7 +674,7 @@ void statemachine_setTargetAngle(int16_t angle_degrees) {
 // Drehe den Roboter um einen bestimmten Winkel auf der Stelle
 // angle_degrees: Winkel in Grad (positiv = links drehen, negativ = rechts drehen)
 // pwm: PWM-Wert für beide Motoren (absolut)
-void turn_On_Spot_degrees(int16_t angle_degrees, int16_t pwm) {
+bool turn_On_Spot_degrees(int16_t angle_degrees, int16_t pwm) {
     static uint8_t initialized = 0;
     static int16_t startEncoderR = 0;
     static int16_t startEncoderL = 0;
@@ -692,6 +709,7 @@ void turn_On_Spot_degrees(int16_t angle_degrees, int16_t pwm) {
         // Umfang der Drehbewegung = π × Radabstand
         // Distanz pro Rad = (π × Radabstand × Winkel) / 360°
         float distancePerWheel_mm = (pi * wheelbase_mm * (float)angle_degrees) / 360.0f;
+        if (distancePerWheel_mm < 0) distancePerWheel_mm = -distancePerWheel_mm; // Ensure positive ticks
         targetTicksValue = (int16_t)(distancePerWheel_mm / mmPerTick);
         
         // Bestimme Drehrichtung: positiv = links drehen (L vorwärts, R rückwärts)
@@ -721,7 +739,12 @@ void turn_On_Spot_degrees(int16_t angle_degrees, int16_t pwm) {
         
         // Starte mit Soft-Start
         currentSoftStartPWM = softStartMinPWM;
-        Motor_setPWM(pwmLeft, pwmRight);
+        Motor_setPWM(pwmLeft, pwmRight); // Correct: Start with intended direction
+        // Actually soft start logic for turning needs to handle signs correctly
+        // Let's simplify soft start for turning: scale magnitude
+        Motor_setPWM((pwmLeft > 0 ? softStartMinPWM : -softStartMinPWM), 
+                     (pwmRight > 0 ? softStartMinPWM : -softStartMinPWM));
+                     
         timeTask_getTimestamp(&softStartTime);
         timeTask_getTimestamp(&waitStart);
         phase = 0;  // Starte mit Soft-Start
@@ -750,21 +773,20 @@ void turn_On_Spot_degrees(int16_t angle_degrees, int16_t pwm) {
             Motor_stopAll();
             
             communication_log(LEVEL_INFO, "=== Drehung abgeschlossen (während Soft-Start) ===");
-            communication_log(LEVEL_INFO, "Ziel: %" PRId16 "° (%" PRId16 " Ticks pro Rad)", targetAngle_degrees, targetTicksValue);
+            communication_log(LEVEL_INFO, "Ziel: %" PRId16 "° (%" PRId16 " Ticks pro Rad)", angle_degrees, targetTicksValue);
             communication_log(LEVEL_INFO, "Encoder Links:  %" PRId16 " (Delta: %" PRId16 " Ticks)", currentEncoderL, deltaL);
             communication_log(LEVEL_INFO, "Encoder Rechts: %" PRId16 " (Delta: %" PRId16 " Ticks)", currentEncoderR, deltaR);
             communication_log(LEVEL_INFO, "===========================");
             
-            setState(IDLE);
             initialized = 0;
-            return;
+            return true;
         }
         
         if (timeTask_getDuration(&softStartTime, &now) >= softStartInterval) {
             currentSoftStartPWM += softStartStep;
             
-            int16_t absPWM = (pwmLeft > 0) ? pwmLeft : -pwmLeft;
-            if (currentSoftStartPWM >= absPWM) {
+            int16_t absTargetPWM = (pwmLeft > 0) ? pwmLeft : -pwmLeft;
+            if (currentSoftStartPWM >= absTargetPWM) {
                 // Ziel-PWM erreicht - wechsle zu Phase 1 (Drehen)
                 Motor_setPWM(pwmLeft, pwmRight);
                 timeTask_getTimestamp(&waitStart);
@@ -773,11 +795,9 @@ void turn_On_Spot_degrees(int16_t angle_degrees, int16_t pwm) {
                                  pwmLeft, pwmRight);
             } else {
                 // Erhöhe PWM weiter (beide Motoren in entgegengesetzte Richtung)
-                if (pwmLeft > 0) {
-                    Motor_setPWM(currentSoftStartPWM, -currentSoftStartPWM);
-                } else {
-                    Motor_setPWM(-currentSoftStartPWM, currentSoftStartPWM);
-                }
+                // Preserve direction
+                Motor_setPWM((pwmLeft > 0 ? currentSoftStartPWM : -currentSoftStartPWM), 
+                             (pwmRight > 0 ? currentSoftStartPWM : -currentSoftStartPWM));
                 timeTask_getTimestamp(&softStartTime);
             }
         }
@@ -806,15 +826,16 @@ void turn_On_Spot_degrees(int16_t angle_degrees, int16_t pwm) {
                 Motor_stopAll();
                 
                 communication_log(LEVEL_INFO, "=== Drehung abgeschlossen ===");
-                communication_log(LEVEL_INFO, "Ziel: %" PRId16 "° (%" PRId16 " Ticks pro Rad)", targetAngle_degrees, targetTicksValue);
+                communication_log(LEVEL_INFO, "Ziel: %" PRId16 "° (%" PRId16 " Ticks pro Rad)", angle_degrees, targetTicksValue);
                 communication_log(LEVEL_INFO, "Encoder Links:  %" PRId16 " (Delta: %" PRId16 " Ticks)", currentEncoderL, deltaL);
                 communication_log(LEVEL_INFO, "Encoder Rechts: %" PRId16 " (Delta: %" PRId16 " Ticks)", currentEncoderR, deltaR);
                 communication_log(LEVEL_INFO, "Finale PWM-Werte: L=%" PRId16 " R=%" PRId16, pwmLeft, pwmRight);
                 communication_log(LEVEL_INFO, "===========================");
                 
-                setState(IDLE);
                 initialized = 0;
+                return true;
             }
         }
     }
+    return false;
 }

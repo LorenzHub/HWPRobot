@@ -2,6 +2,7 @@
 #define STATEMACHINE_H_
 
 #include <stdint.h>
+#include <stdbool.h>
 
 void stateMachine();
 
@@ -29,10 +30,16 @@ void drive_Forward_1000ticks();
 void drive_Forward_5sec();
 void drive_Forward_distance_mm(uint16_t distance_mm, int16_t pwmRight);
 void statemachine_setTargetDistance(uint16_t distance_mm);
-void drive_Forward_ticks(int16_t targetTicks, int16_t pwmRight);
+
+// Returns true when finished
+bool drive_Forward_ticks(int16_t targetTicks, int16_t pwmRight);
+
 void statemachine_setTargetTicks(int16_t targetTicks);
 void statemachine_setTargetPWM(int16_t pwm);
-void turn_On_Spot_degrees(int16_t angle_degrees, int16_t pwm);
+
+// Returns true when finished
+bool turn_On_Spot_degrees(int16_t angle_degrees, int16_t pwm);
+
 void statemachine_setTargetAngle(int16_t angle_degrees);
 
 #endif /* STATEMACHINE_H_ */

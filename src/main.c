@@ -25,7 +25,10 @@
 #include "position.h"
 
 #include "calcPathCommand.h"
-#include "labyrinth.h"
+#include "labyrinth.h"  // Local labyrinth types (LabyrinthPose_t)
+#include <tools/labyrinth/labyrinth.h>  // Labyrinth library functions
+#include "exploration.h" // Exploration Logic
+#include "ir_sensors.h"  // IR Sensors
 
 /*
  *******************************************************************************
@@ -117,15 +120,22 @@ static void commUserCommand(const uint8_t* packet, __attribute__((unused)) const
     case 3: // command ID 3: drive forwards for 5 seconds, then stop
         setState(Drive_Forward_5sec);
         break;
-    case 4: { //command ID 4: read all infrared sensors
-        uint16_t ir1 = ADC_getFilteredValue(0);  // right front
-        uint16_t ir2 = ADC_getFilteredValue(1);  // right back
-        uint16_t ir3 = ADC_getFilteredValue(2);  // front
-        uint16_t ir4 = ADC_getFilteredValue(3);  // left front
-        uint16_t ir5 = ADC_getFilteredValue(4);  // left back
+    case 4: { //command ID 4: read all infrared sensors (Debug)
+        // Log raw ADC values for debugging calibration
+        uint16_t ir1 = ir_sensor_get_raw(0);
+        uint16_t ir2 = ir_sensor_get_raw(1);
+        uint16_t ir3 = ir_sensor_get_raw(2);
+        uint16_t ir4 = ir_sensor_get_raw(3);
+        uint16_t ir5 = ir_sensor_get_raw(4);
         
-        communication_log(LEVEL_INFO, "IR1(RF): %" PRIu16 " IR2(RB): %" PRIu16 " IR3(F): %" PRIu16 " IR4(LF): %" PRIu16 " IR5(LB): %" PRIu16,
-                         ir1, ir2, ir3, ir4, ir5);
+        uint16_t d1 = ir_sensor_get_distance_mm(0);
+        uint16_t d2 = ir_sensor_get_distance_mm(1);
+        uint16_t d3 = ir_sensor_get_distance_mm(2);
+        uint16_t d4 = ir_sensor_get_distance_mm(3);
+        uint16_t d5 = ir_sensor_get_distance_mm(4);
+        
+        communication_log(LEVEL_INFO, "IR Raw: %d %d %d %d %d", ir1, ir2, ir3, ir4, ir5);
+        communication_log(LEVEL_INFO, "IR mm:  %d %d %d %d %d", d1, d2, d3, d4, d5);
         break;
     }
     case 5: {
@@ -238,6 +248,7 @@ static void commUserCommand(const uint8_t* packet, __attribute__((unused)) const
         break;
     }
     case 16: {
+        exploreMaze_init();  // Re-initialize exploration (reset visit counts, etc.)
         setState(ExploreMaze);
         communication_log(LEVEL_INFO, "Starte Labyrinth-Erkundung");
         break;
@@ -273,6 +284,7 @@ static void init(void) {
     Motor_init();
     timeTask_init();
 	ADC_init(true);
+    ir_sensors_init(); // IR Sensor init (uses ADC)
 
     bumper_init();
     encoder_init();
@@ -282,6 +294,12 @@ static void init(void) {
     
     // Initialisiere Position-Modul mit Start-Pose
     position_init(&pose);
+    
+    // Initialisiere Labyrinth-Library (für Wand-Speicherung)
+    labyrinth_init();
+    
+    // Initialisiere Exploration
+    exploration_init();
 
     // global interrupt enable
     sei();
@@ -309,11 +327,14 @@ int main(void) {
             telemetry.contacts = bumper_getContacts();
             telemetry.encoder1 = encoder_getCountR();
             telemetry.encoder2 = encoder_getCountL();
-            telemetry.infrared1 = ADC_getFilteredValue(0); //right front
-            telemetry.infrared2 = ADC_getFilteredValue(1); //right back
-            telemetry.infrared3 = ADC_getFilteredValue(2); //front
-            telemetry.infrared4 = ADC_getFilteredValue(3); //left front
-            telemetry.infrared5 = ADC_getFilteredValue(4); //left back
+            
+            // Use calibrated values in mm
+            telemetry.infrared1 = ir_sensor_get_distance_mm(0); //right front
+            telemetry.infrared2 = ir_sensor_get_distance_mm(1); //right back
+            telemetry.infrared3 = ir_sensor_get_distance_mm(2); //front
+            telemetry.infrared4 = ir_sensor_get_distance_mm(3); //left front
+            telemetry.infrared5 = ir_sensor_get_distance_mm(4); //left back
+            
             telemetry.user1 = 20;
             telemetry.user2 = 42.42f;
             communication_writePacket(CH_OUT_TELEMETRY, (uint8_t*)&telemetry, sizeof(telemetry));
@@ -400,6 +421,12 @@ int main(void) {
                 }
             }
             sendPathFollowerStatus(pathFollower_status);
+        }
+
+        TIMETASK(WALL_TASK, 200) { // execute block approximately every 200ms (5 Hz)
+            // Send labyrinth walls to HWPCS for visualization
+            const LabyrinthWalls_t* walls = labyrinth_getAllWalls();
+            communication_writePacket(CH_OUT_LABY_WALLS, (uint8_t*)walls, sizeof(LabyrinthWalls_t));
         }
     }
 
