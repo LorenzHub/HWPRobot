@@ -253,6 +253,16 @@ static void commUserCommand(const uint8_t* packet, __attribute__((unused)) const
         communication_log(LEVEL_INFO, "Starte Labyrinth-Erkundung");
         break;
     }
+    case 17: { // command ID 17: Markiere alle Zell-Mitten in HWPCS
+        exploration_markAllCellCenters();
+        communication_log(LEVEL_INFO, "Command 17: Alle Zell-Mitten markiert (info=100)");
+        break;
+    }
+    case 18: { // command ID 18: Lösche alle Zell-Markierungen
+        exploration_clearAllCellMarkers();
+        communication_log(LEVEL_INFO, "Command 18: Alle Zell-Markierungen gelöscht");
+        break;
+    }
     }
 }
 

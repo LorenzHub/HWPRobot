@@ -15,6 +15,9 @@ typedef enum {
     EXPLORE_MOVE,
     EXPLORE_WAIT_MOVE,
     EXPLORE_UPDATE_CELL,
+    EXPLORE_CORRECT_POSITION,
+    EXPLORE_CORRECT_ANGLE,
+    EXPLORE_CORRECT_MOVE,
     EXPLORE_FINISHED
 } ExplorationState_t;
 
@@ -34,6 +37,19 @@ void exploration_step(void);
  * Get current exploration state (for debugging).
  */
 ExplorationState_t exploration_get_state(void);
+
+/**
+ * Mark all cell centers in HWPCS for visualization.
+ * Sends LabyrinthCellInfo_t with info=100 for all 49 cells.
+ * Used for testing if calculated cell centers match camera pose.
+ */
+void exploration_markAllCellCenters(void);
+
+/**
+ * Clear all cell center markers in HWPCS.
+ * Sends LabyrinthCellInfo_t with info=-128 for all cells.
+ */
+void exploration_clearAllCellMarkers(void);
 
 #endif /* EXPLORATION_H_ */
 
