@@ -179,20 +179,20 @@ static void commUserCommand(const uint8_t* packet, __attribute__((unused)) const
         break;
     }
     case 12: { // command ID 12: Drehe 90° links auf der Stelle
-        statemachine_setTargetAngle(82);
+        statemachine_setTargetAngle(90);
         statemachine_setTargetPWM(4000);
         setState(Turn_On_Spot_Degrees);
         communication_log(LEVEL_INFO, "Drehe 90° r auf der Stelle mit PWM 4000...");
         break;
     }
     case 13: { // command ID 13: Drehe 180° auf der Stelle
-        statemachine_setTargetAngle(-82);
+        statemachine_setTargetAngle(-90);
         statemachine_setTargetPWM(4000);
         setState(Turn_On_Spot_Degrees);
         communication_log(LEVEL_INFO, "Drehe 90° l auf der Stelle mit PWM 4000...");
         break;
     }
-    /*case 14: { // command ID 14: Synchronisiere Odometrie mit Kamera-Pose
+    case 16: { // command ID 14: Synchronisiere Odometrie mit Kamera-Pose
         const Pose_t* currentPose = position_getCurrentPose();
         const Pose_t* cameraPose = position_getAprilTagPose();
         uint32_t age_us = position_getLastCameraUpdateTime();
@@ -231,7 +231,7 @@ static void commUserCommand(const uint8_t* packet, __attribute__((unused)) const
             }
         }
         break;
-    }*/
+    }
     /*case 15: { // command ID 15: Sende sofortige Pose-Anfrage an HWPCS
         GetPose_t getPose;
         getPose.aprilTagType = APRIL_TAG_MAIN;
@@ -327,14 +327,12 @@ int main(void) {
         }
 
         TIMETASK(POSE_TASK, 20) { // execute block approximately every 20ms (50 Hz)
-            // Aktualisiere Odometrie
+            // Aktualisiere Odometrie (nur Encoder-basiert, keine Kamera-Korrektur)
             position_updateExpectedPose();
             
-            // Berechne Differenz zwischen Odometrie und Kamera-Pose
-            position_calculatePoseDifference();
-            
-            // Wende automatische Korrektur an (gewichtete Sensorfusion)
-            position_applyCorrection();
+            // Kamera-Korrektur deaktiviert - Roboter fährt nur mit Sensoren
+            // position_calculatePoseDifference();
+            // position_applyCorrection();
             
             // Hole aktuelle Pose
             const Pose_t* currentPose = position_getCurrentPose();

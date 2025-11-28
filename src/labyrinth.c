@@ -8,6 +8,7 @@
 #include "position.h"
 #include "tools/labyrinth/labyrinth.h"
 
+
 //initialize fromDirection with opposite of startCardinalDirection(to ensure that turn around in chooseWayDirection works)
 //also in resetMaze()
 //and also nextDirection
@@ -29,9 +30,11 @@ void exploreMaze() {
     //Initialization
     static uint8_t initialized = 0;
     if(!initialized){
-        srand(time(NULL));  // intialize random generator
+        // Initialisiere Zufallsgenerator mit ADC-Rauschen (time(NULL) funktioniert nicht auf AVR)
+        uint16_t seed = ADC_getFilteredValue(0) ^ ADC_getFilteredValue(1) ^ ADC_getFilteredValue(2);
+        srand(seed);
         resetMaze();
-        statemachine_setTargetDistance(253); //Cell size 256.9mm with wall
+        statemachine_setTargetDistance(253); //Cell size 253.3mm (inkl. Wand)
         statemachine_setTargetPWM(5500);
         initialized=1;
     }
@@ -115,8 +118,21 @@ Direction_t choosePlaceDirection(){
     if (maze[labyrinthPose.x][labyrinthPose.y].dirNorth == 0 && maze[labyrinthPose.x][labyrinthPose.y].dirSouth == 0 &&
         maze[labyrinthPose.x][labyrinthPose.y].dirEast == 0 && maze[labyrinthPose.x][labyrinthPose.y].dirWest == 0){
         //choose random direction, but not backwards
+        // Sicherheitscheck: Max 20 Versuche um Endlosschleife zu vermeiden
+        uint8_t attempts = 0;
         do{
             nextDirection = (Direction_t)(rand() % 4);
+            attempts++;
+            if (attempts >= 20) {
+                // Fallback: Nimm irgendeine Richtung ohne Wand
+                for (uint8_t d = 0; d < 4; d++) {
+                    if (!hasWall((Direction_t)d)) {
+                        nextDirection = (Direction_t)d;
+                        break;
+                    }
+                }
+                break;
+            }
         }while(oppositDirection(fromDirection) == (uint8_t)nextDirection || hasWall(nextDirection));
         communication_log(LEVEL_INFO, "Place (unknown): at (%" PRIu16 ",%" PRIu16 ") choose random dir %d", 
                          labyrinthPose.x, labyrinthPose.y, nextDirection);
@@ -233,24 +249,37 @@ bool hasWall(Direction_t cardinalDirection){
 /* Returns the least visited direction, which is not fromDirection */
 Direction_t leastVisitedDirection(){
         uint8_t min = 3; //max 
+        uint8_t found = 0; // Flag ob mindestens eine Richtung gefunden wurde
+        
         if(fromDirection != (uint8_t)DIRECTION_NORTH && !hasWall(DIRECTION_NORTH)){
             nextDirection = DIRECTION_NORTH;
             min = maze[labyrinthPose.x][labyrinthPose.y].dirNorth;
+            found = 1;
         }
         if(maze[labyrinthPose.x][labyrinthPose.y].dirEast <= min && //smaller equal min because of !=fromDir
             fromDirection !=(uint8_t) DIRECTION_EAST && !hasWall(DIRECTION_EAST)){
             nextDirection = DIRECTION_EAST;
             min = maze[labyrinthPose.x][labyrinthPose.y].dirEast;
+            found = 1;
         }
         if(maze[labyrinthPose.x][labyrinthPose.y].dirSouth <= min &&
                 fromDirection != (uint8_t)DIRECTION_SOUTH && !hasWall(DIRECTION_SOUTH)){
             nextDirection = DIRECTION_SOUTH;
             min = maze[labyrinthPose.x][labyrinthPose.y].dirSouth;
+            found = 1;
         }
         if(maze[labyrinthPose.x][labyrinthPose.y].dirWest <= min &&
             fromDirection != (uint8_t)DIRECTION_WEST && !hasWall(DIRECTION_WEST)){
             nextDirection = DIRECTION_WEST;
+            found = 1;
         }
+        
+        // Fallback: Wenn alle Richtungen blockiert sind, zurück zu fromDirection
+        if(!found) {
+            communication_log(LEVEL_WARNING, "Alle Richtungen blockiert, fahre zurück (fromDirection)");
+            nextDirection = (Direction_t)fromDirection;
+        }
+        
         return nextDirection;
 }
 
@@ -273,25 +302,25 @@ void DriveDirection(Direction_t nextDirection){
             break;
         case 1:
             // turn right 90°
-            statemachine_setTargetAngle(83); //positiv is right turn according to turn_On_Spot_degrees
+            statemachine_setTargetAngle(90); //positiv is right turn according to turn_On_Spot_degrees
             setState(turn_On_Spot_degrees_then_drive);
             break;
         case -1:
             // turn left 90°
-            statemachine_setTargetAngle(-83);
+            statemachine_setTargetAngle(-90);
             setState(turn_On_Spot_degrees_then_drive);
             break;
         case 2:
             // U‑Turn 180°
-            statemachine_setTargetAngle(166);
+            statemachine_setTargetAngle(180);
             setState(turn_On_Spot_degrees_then_drive);
             break;
     }
 }
 
 void setLabyrinthPose(Pose_t pose) {
-    labyrinthPose.x = (uint8_t)(pose.x / 253.3f)+3.0f; //Cell size 253.3mm with wall
-    labyrinthPose.y = (uint8_t)(pose.y / 253.3f)+3.0f;
+    labyrinthPose.x = round((uint8_t)((pose.x / 253.3f) + 3.0f)); //Cell size 253.3mm with wall
+    labyrinthPose.y = round((uint8_t)((pose.y / 253.3f) + 3.0f));
 
     float t = pose.theta + M_PI_4; //range
 	t = fmodf(t, 2.0f * M_PI);

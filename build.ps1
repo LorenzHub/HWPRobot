@@ -41,12 +41,25 @@ $C_SOURCES = @(
     "lib\io\uart\uart.c",
     "lib\motor\motor.c",
     "lib\pathFollower\pathFollower.c",
-    "lib\tools\labyrinth\labyrinth.c",
     "lib\tools\remoteDataProcessing\remoteDataProcessing.c",
     "lib\tools\timeTask\timeTask.c",
     "src\badISR.c",
     "src\main.c"
 )
+
+# Prüfe ob src\labyrinth.c existiert
+if (Test-Path "src\labyrinth.c") {
+    $C_SOURCES += "src\labyrinth.c"
+}
+# lib\tools\labyrinth\labyrinth.c wird immer benötigt (enthält labyrinth_init, labyrinth_getWalls, etc.)
+if (Test-Path "lib\tools\labyrinth\labyrinth.c") {
+    $C_SOURCES += "lib\tools\labyrinth\labyrinth.c"
+}
+
+# Prüfe ob src\calcPathCommand.c existiert
+if (Test-Path "src\calcPathCommand.c") {
+    $C_SOURCES += "src\calcPathCommand.c"
+}
 
 # Prüfe ob statemachine.c existiert und füge es hinzu
 if (Test-Path "src\statemachine.c") {
@@ -116,7 +129,9 @@ $ALL_CFLAGS = $CFLAGS + $INCLUDE_FLAGS
 $OBJECT_FILES = @()
 foreach ($src in $C_SOURCES) {
     if (Test-Path $src) {
-        $obj = "$OBJ_DIR\" + [System.IO.Path]::GetFileNameWithoutExtension($src) + ".o"
+        # Erstelle eindeutigen Objektdateinamen basierend auf vollständigem Pfad
+        $relativePath = $src -replace '\\', '_' -replace '/', '_'
+        $obj = "$OBJ_DIR\" + [System.IO.Path]::GetFileNameWithoutExtension($relativePath) + ".o"
         Write-Host "  Kompiliere: $src" -ForegroundColor Cyan
         & $AVR_GCC $ALL_CFLAGS -c $src -o $obj
         if ($LASTEXITCODE -ne 0) {

@@ -702,7 +702,7 @@ void turn_On_Spot_degrees(int16_t angle_degrees, int16_t pwm) {
     const int16_t minPWMForCalc = 3000; // Referenz-PWM für Berechnung
     
     // Physikalische Konstanten
-    const float wheelbase_mm = 170.0f;  // Radabstand in mm
+    const float wheelbase_mm = 166.2f;  // Kalibrierter Radabstand (90deg Code -> 90deg real)
     const float mmPerTick = 0.0688f;    // mm pro Tick
     const float pi = 3.14159265359f;
     
