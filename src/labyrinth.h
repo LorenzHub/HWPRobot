@@ -8,8 +8,8 @@
 #include "communication/packetTypes.h"
 
 typedef struct{
-    uint8_t  x;
-    uint8_t y;
+    int16_t  x;
+    int16_t y;
     Direction_t cardinalDirection; //0=NORTH,1=EAST,2=SOUTH,3=WEST
 }LabyrinthPose_t;
 

@@ -20,6 +20,7 @@ static uint8_t* dirCountPtr(Cell *c, uint8_t dir);
 
 /*Maze is in 0...6*/
 LabyrinthPose_t labyrinthPose = {3,3,0}; 
+LabyrinthPose_t currentPose = {0,0,0};
 Cell maze[7][7]; 
 static uint8_t fromDirection = 2; //0=NORTH,1=EAST,2=SOUTH,3=WEST,initial=oppositeDirection(startCardinalDirection)
 static Direction_t nextDirection = DIRECTION_NORTH; //initialize nextDirection with startCardinalDirection!
@@ -31,7 +32,7 @@ void exploreMaze() {
     if(!initialized){
         srand(time(NULL));  // intialize random generator
         resetMaze();
-        statemachine_setTargetDistance(253); //Cell size 256.9mm with wall
+        statemachine_setTargetDistance(253); //Cell size 253.3mm with wall
         statemachine_setTargetPWM(5500);
         initialized=1;
     }
@@ -66,6 +67,8 @@ void resetMaze(){
             maze[i][j].dirNorth=0; maze[i][j].dirSouth=0; maze[i][j].dirEast=0; maze[i][j].dirWest=0;
         }
     }
+    currentPose.x = 0;
+currentPose.y = 0;
     labyrinthPose.x = 3;
     labyrinthPose.y = 3;
     labyrinthPose.cardinalDirection = DIRECTION_NORTH;
@@ -273,42 +276,53 @@ void DriveDirection(Direction_t nextDirection){
             break;
         case 1:
             // turn right 90°
-            statemachine_setTargetAngle(83); //positiv is right turn according to turn_On_Spot_degrees
+            labyrinthPose.cardinalDirection = (Direction_t)((labyrinthPose.cardinalDirection + 1) % 4);
+            statemachine_setTargetAngle(90); //positiv is right turn according to turn_On_Spot_degrees
             setState(turn_On_Spot_degrees_then_drive);
             break;
         case -1:
             // turn left 90°
-            statemachine_setTargetAngle(-83);
+            labyrinthPose.cardinalDirection = (Direction_t)((labyrinthPose.cardinalDirection + 3) % 4);
+            statemachine_setTargetAngle(-90);
             setState(turn_On_Spot_degrees_then_drive);
             break;
         case 2:
             // U‑Turn 180°
-            statemachine_setTargetAngle(166);
+            labyrinthPose.cardinalDirection = (Direction_t)((labyrinthPose.cardinalDirection + 2) % 4);
+            statemachine_setTargetAngle(180);
             setState(turn_On_Spot_degrees_then_drive);
             break;
     }
 }
 
-void setLabyrinthPose(Pose_t pose) {
-    labyrinthPose.x = (uint8_t)(pose.x / 253.3f)+3.0f; //Cell size 253.3mm with wall
-    labyrinthPose.y = (uint8_t)(pose.y / 253.3f)+3.0f;
+void setLabyrinthPose(Pose_t poseDelta) {
+    
 
-    float t = pose.theta + M_PI_4; //range
+
+    currentPose.x  = currentPose.x + (int16_t)poseDelta.x;
+    currentPose.y = currentPose.y + (int16_t)poseDelta.y;
+    labyrinthPose.x = (int16_t)floorf(currentPose.x / 253.3f + 3.0f); //Cell size 253.3mm with wall
+    labyrinthPose.y = (int16_t)floorf(currentPose.y / 253.3f + 3.0f);
+
+    /*
+    float t = poseDelta.theta + M_PI_4; //range
 	t = fmodf(t, 2.0f * M_PI);
 	if (t < 0.0f)
 		t += 2.0f * M_PI;
 
 	int idx = (int) floorf(t / (M_PI_2));
 	const Direction_t map[4] = { DIRECTION_EAST,DIRECTION_NORTH, DIRECTION_WEST, DIRECTION_SOUTH };
-	labyrinthPose.cardinalDirection = map[idx & 0x3];
+	labyrinthPose.cardinalDirection = map[idx & 0x3];*/
     
     static uint8_t lastX = 255, lastY = 255;
     //if (labyrinthPose.x != lastX || labyrinthPose.y != lastY) {
         const char* dirNames[] = {"NORTH", "EAST", "SOUTH", "WEST"};
-        communication_log(LEVEL_INFO, "Position updated: cell (%" PRIu16 ",%" PRIu16 "), facing %s", 
+        communication_log(LEVEL_INFO, "Position updated: cell (%" PRId16 ",%" PRId16 "), facing %s", 
                          labyrinthPose.x, labyrinthPose.y, dirNames[labyrinthPose.cardinalDirection]);
-        communication_log(LEVEL_INFO, "pose.x, pose.y (%" PRIu16 ",%" PRIu16 ")", 
-                         (uint8_t)pose.x, (uint8_t)pose.y);                 
+        communication_log(LEVEL_INFO, "pose.x, pose.y (%" PRId16 ",%" PRId16 ")", 
+                         (int16_t)(currentPose.x), (int16_t)(currentPose.y)); 
+        communication_log(LEVEL_INFO, "delta.x, delta.y (%" PRId16 ",%" PRId16 ")", 
+                         (int16_t)(poseDelta.x), (int16_t)(poseDelta.y));                 
         lastX = labyrinthPose.x;
         lastY = labyrinthPose.y;
     //}

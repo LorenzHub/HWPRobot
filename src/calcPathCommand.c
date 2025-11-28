@@ -30,7 +30,7 @@ float kAngular = 2.5f;
 float angularVelocity = kAngular * angleDiff;
 
 // Constant forward velocity
-float forwardVelocity = 50.0f; 
+float forwardVelocity = 40.0f; 
 
 vLeft = forwardVelocity - (angularVelocity * (axleWidth / 2.0f)); // vLeft and vRight in mm/s
 vRight = forwardVelocity + (angularVelocity * (axleWidth / 2.0f));
