@@ -85,6 +85,11 @@ if (Test-Path "src\calcPathCommand.c") {
     $C_SOURCES += "src\calcPathCommand.c"
 }
 
+# Prüfe ob ir_sensors.c existiert und füge es hinzu
+if (Test-Path "src\ir_sensors.c") {
+    $C_SOURCES += "src\ir_sensors.c"
+}
+
 # Alle Assembler-Quelldateien
 $ASM_SOURCES = @(
     "lib\io\adc\adc_isr.S",

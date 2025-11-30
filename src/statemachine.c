@@ -9,8 +9,10 @@
 #include "labyrinth.h"
 #include "position.h"
 #include "io/adc/adc.h"
+#include "ir_sensors.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include "ir_sensors.h"
 
 /* Define the current state here (single-definition) */
 state currentState = IDLE;
@@ -75,22 +77,48 @@ void mazeExplore(void) {
 }
 
 void drive_Forward_distance_mm_then_explore(uint16_t distance_mm, int16_t pwmRight){
-    
-    /*
-    if(ADC_getFilteredValue(2) > 750) { //front
-        Motor_stopAll();
-        communication_log(LEVEL_INFO, "Front Wall to close, stop and explore maze...");
-        updateLabyrinthPosition();
-        setState(ExploreMaze);
-        return;
-    }
-    */
+    // Starte Bewegung
     drive_Forward_distance_mm(distance_mm, pwmRight);
+    //correctRotationMovement();
+
+    // Wenn Bewegung normal abgeschlossen ist (IDLE)
     if(currentState == IDLE) {
-        // Manuelle Positionsaktualisierung nach Vorwärtsbewegung
+        // Manuelle Positionsaktualisierung nach vollständiger Vorwärtsbewegung
+        //TODO Schluss
         updateLabyrinthPosition();
         setState(ExploreMaze);
     }
+    // Wenn State bereits auf ExploreMaze gesetzt wurde (Wand erkannt in drive_Forward_ticks),
+    // dann wurde die Position bereits dort aktualisiert
+}
+
+void correctRotationMovement(void) {
+    communication_log(LEVEL_INFO, "Correcting rotation movement");
+    // TODO: Implement correctRotationMovement
+    if(ADC_getFilteredValue(0) > 400) { //rigth front
+//Correct rotation movement with rigth sensors    
+        if(CalibrateIRSensors(1) - CalibrateIRSensors(0) > 100) { //right back - right front
+            turn_On_Spot_degrees(6,5500);
+            communication_log(LEVEL_INFO, "Correcting rotation movement with right sensors --- 6°");
+        }
+        else if(CalibrateIRSensors(1) - CalibrateIRSensors(0) < -100) { //right front - right back
+            turn_On_Spot_degrees(-6, 5500);
+            communication_log(LEVEL_INFO, "Correcting rotation movement with right sensors --- -6°");
+        }
+    }
+    else if(ADC_getFilteredValue(3) > 400) { //left front
+//Correct rotation movement with left sensors
+        if(CalibrateIRSensors(4) - CalibrateIRSensors(3) > 100) { //left back - left front
+            turn_On_Spot_degrees(6, 5500);
+            communication_log(LEVEL_INFO, "Correcting rotation movement with left sensors --- 6°");
+        }
+        else if(CalibrateIRSensors(4) - CalibrateIRSensors(3) < -100) { //left front - left back
+            turn_On_Spot_degrees(-6, 5500);
+            communication_log(LEVEL_INFO, "Correcting rotation movement with left sensors --- -6°");
+        }
+    }
+    
+
 }
 
 void turn_degrees_then_drive(int16_t angle_degrees, int16_t pwm){
@@ -218,6 +246,7 @@ void drive_Forward_1000ticks() {
 void drive_Forward_ticks(int16_t targetTicksValue, int16_t pwmRight) {
     /* logs for this function suppressed */
     #define communication_log(level, ...) ((void)0)
+    
     static uint8_t initialized = 0;
     static int16_t startEncoderR = 0;
     static int16_t startEncoderL = 0;
@@ -246,6 +275,21 @@ void drive_Forward_ticks(int16_t targetTicksValue, int16_t pwmRight) {
     const int16_t minPWMForCalc = 3000; // Referenz-PWM für Berechnung
     const uint32_t speedMeasureInterval = 200000UL; // 200ms für Geschwindigkeitsmessung
     const int16_t minSpeedTicks = 10;  // Mindest-Ticks für gültige Geschwindigkeitsmessung
+    
+    // Wand-Erkennung: Prüfe kontinuierlich während der Bewegung (nur für Labyrinth-Exploration)
+    if (currentState == drive_Forward_distance_then_explore) {
+        if (ADC_getFilteredValue(2) > 750) { // Front-Wand zu nahe
+            Motor_stopAll();
+            #undef communication_log
+            communication_log(LEVEL_INFO, "Front wall detected - stopping movement");
+            #define communication_log(level, ...) ((void)0)
+            // Position aktualisieren, da Roboter frontal auf Wand zufährt und nächste Zelle erreicht hat
+            updateLabyrinthPosition();
+            setState(ExploreMaze);
+            initialized = 0; // Reset für nächste Bewegung
+            return;
+        }
+    }
     
     if (!initialized) {
         timeTask_getTimestamp(&startOfDrive);
