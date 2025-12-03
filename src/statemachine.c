@@ -29,6 +29,8 @@ static int16_t targetPWM = 3000;  // Default: 3000 PWM
 // Statische Variable für Ziel-Winkel in Grad
 static int16_t targetAngle_degrees = 90;  // Default: 90°
 
+static uint8_t init_drive_forward = 0;
+
 void stateMachine() {
     switch(currentState){
         case IDLE:
@@ -66,30 +68,24 @@ void stateMachine() {
             break;    
         case FollowThePath:
             break;
+        case turn_On_Spot_degrees_then_explore:
+            turn_degrees_then_explore(targetAngle_degrees, targetPWM);
+            break;
     }
 }
 
 void mazeExplore(void) {
-    // KEINE Odometrie mehr verwenden - Position wird nur durch manuelles Zählen aktualisiert
     exploreMaze();
 }
 
 void drive_Forward_distance_mm_then_explore(uint16_t distance_mm, int16_t pwmRight){
-    
-    /*
-    if(ADC_getFilteredValue(2) > 750) { //front
-        Motor_stopAll();
-        communication_log(LEVEL_INFO, "Front Wall to close, stop and explore maze...");
-        updateLabyrinthPosition();
-        setState(ExploreMaze);
-        return;
-    }
-    */
     drive_Forward_distance_mm(distance_mm, pwmRight);
-    if(currentState == IDLE) {
+    if(currentState == IDLE || ADC_getFilteredValue(2) > 690){
+        init_drive_forward = 0;
         // Manuelle Positionsaktualisierung nach Vorwärtsbewegung
         updateLabyrinthPosition();
-        setState(ExploreMaze);
+        correctOrientation();
+        //setState(ExploreMaze); is done over correctOrientation()
     }
 }
 
@@ -97,6 +93,41 @@ void turn_degrees_then_drive(int16_t angle_degrees, int16_t pwm){
     turn_On_Spot_degrees(angle_degrees, pwm);
     if(currentState == IDLE) setState(drive_Forward_distance_then_explore);
 }
+
+void turn_degrees_then_explore(int16_t targetAngle_degrees, int16_t targetPWM){
+    static uint8_t initialized = 0;
+    timeTask_time_t now;
+    
+    if (!initialized) {
+        timeTask_getTimestamp(&start);
+        initialized = 1;
+    }
+    
+    timeTask_getTimestamp(&now);
+    if (timeTask_getDuration(&start, &now) > 5000000UL) {  // 5 seconds in microseconds
+        turn_On_Spot_degrees(targetAngle_degrees, targetPWM);
+        initialized = 0;
+    }
+    if(currentState == IDLE) setState(ExploreMaze);
+}
+
+void drive_Forward_5sec() {
+    static uint8_t initialized = 0;
+    timeTask_time_t now;
+    
+    if (!initialized) {
+        timeTask_getTimestamp(&start);
+        Motor_setPWM(3000, 3000);
+        initialized = 1;
+    }
+    
+    timeTask_getTimestamp(&now);
+    if (timeTask_getDuration(&start, &now) > 5000000UL) {  // 5 seconds in microseconds
+        setState(IDLE);
+        initialized = 0;
+    }
+}
+
 
 void drive_Forward_1000ticks() {
     static uint8_t initialized = 0;
@@ -218,7 +249,7 @@ void drive_Forward_1000ticks() {
 void drive_Forward_ticks(int16_t targetTicksValue, int16_t pwmRight) {
     /* logs for this function suppressed */
     #define communication_log(level, ...) ((void)0)
-    static uint8_t initialized = 0;
+    //static uint8_t init_drive_forward = 0;
     static int16_t startEncoderR = 0;
     static int16_t startEncoderL = 0;
     static int16_t targetPWMLeft = 0;
@@ -247,7 +278,7 @@ void drive_Forward_ticks(int16_t targetTicksValue, int16_t pwmRight) {
     const uint32_t speedMeasureInterval = 200000UL; // 200ms für Geschwindigkeitsmessung
     const int16_t minSpeedTicks = 10;  // Mindest-Ticks für gültige Geschwindigkeitsmessung
     
-    if (!initialized) {
+    if (!init_drive_forward) {
         timeTask_getTimestamp(&startOfDrive);
         // Setze Start-Encoder-Werte BEVOR Motoren starten
         startEncoderR = encoder_getCountR();
@@ -280,7 +311,7 @@ void drive_Forward_ticks(int16_t targetTicksValue, int16_t pwmRight) {
         correctionActive = 0;  // Reset Hysterese
         lastLogTime.time_ms = 0;  // Reset Log-Timer
         lastLogTime.time_us = 0;
-        initialized = 1;
+        init_drive_forward = 1;
         communication_log(LEVEL_INFO, "Fahre %" PRId16 " Ticks mit Soft-Start, Start-PWM L=%" PRId16 " R=%" PRId16 "...", 
                          targetTicksValue, targetPWMLeft, targetPWMRight);
     }
@@ -344,7 +375,7 @@ void drive_Forward_ticks(int16_t targetTicksValue, int16_t pwmRight) {
             communication_log(LEVEL_INFO, "===========================");
             
             setState(IDLE);
-            initialized = 0;
+            init_drive_forward = 0;
             return;
         }
         
@@ -631,27 +662,10 @@ void drive_Forward_ticks(int16_t targetTicksValue, int16_t pwmRight) {
             communication_log(LEVEL_INFO, "===========================");
             
             setState(IDLE);
-            initialized = 0;
+            init_drive_forward = 0;
         }
     }
 #undef communication_log
-}
-
-void drive_Forward_5sec() {
-    static uint8_t initialized = 0;
-    timeTask_time_t now;
-    
-    if (!initialized) {
-        timeTask_getTimestamp(&start);
-        Motor_setPWM(3000, 3000);
-        initialized = 1;
-    }
-    
-    timeTask_getTimestamp(&now);
-    if (timeTask_getDuration(&start, &now) > 5000000UL) {  // 5 seconds in microseconds
-        setState(IDLE);
-        initialized = 0;
-    }
 }
 
 void setState(state newState) {

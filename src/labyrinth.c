@@ -81,24 +81,28 @@ bool hasEscaped(){
 }
 
 void checkWalls(uint8_t* availableDirections) {
-    Walls_t walls = labyrinth_getWalls(labyrinthPose.x, labyrinthPose.y); //(for communication with HWPCS)
+    Walls_t walls = labyrinth_getWalls(6-labyrinthPose.y, labyrinthPose.x); //(for communication with HWPCS)
     *availableDirections = 0;
     if(ADC_getFilteredValue(2) < 200) { //front
         *availableDirections += 1;    
-        walls.walls &= ~(1 << getCardinalDirectionfromLookingDirection(DIRECTION_NORTH)); //set wall to no wall(for communication with HWPCS); standard is wall present
         setNoWall(getCardinalDirectionfromLookingDirection(DIRECTION_NORTH));
     }
+    else
+        walls.walls |= (1 << (uint8_t) getCardinalDirectionfromLookingDirection(DIRECTION_NORTH)); //set wall to wall present(for communication with HWPCS)
     if(ADC_getFilteredValue(0) < 200) { //right front
         *availableDirections += 1;
-        walls.walls &= ~(1 << getCardinalDirectionfromLookingDirection(DIRECTION_EAST)); //set wall to no wall(for communication with HWPCS); standard is wall present
         setNoWall(getCardinalDirectionfromLookingDirection(DIRECTION_EAST));
     }
+    else 
+        walls.walls |= (1 << (uint8_t) getCardinalDirectionfromLookingDirection(DIRECTION_EAST)); //set wall to wall present(for communication with HWPCS)
     if(ADC_getFilteredValue(3) < 200) { //left front
         *availableDirections += 1;
-        walls.walls &= ~(1 << getCardinalDirectionfromLookingDirection(DIRECTION_WEST)); //set wall to no wall(for communication with HWPCS); standard is wall present
         setNoWall(getCardinalDirectionfromLookingDirection(DIRECTION_WEST));
     }
-    labyrinth_setWalls(labyrinthPose.x, labyrinthPose.y, walls);
+    else
+        walls.walls |= (1 << (uint8_t) getCardinalDirectionfromLookingDirection(DIRECTION_WEST)); //set wall to wall present(for communication with HWPCS)
+        
+    labyrinth_setWalls(6-labyrinthPose.y, labyrinthPose.x, walls);
     communication_log(LEVEL_INFO, "Walls checked: %" PRIu16 " directions available (IR: front=%u, right=%u, left=%u)", 
                      *availableDirections, ADC_getFilteredValue(2), ADC_getFilteredValue(0), ADC_getFilteredValue(3));
 }
@@ -265,7 +269,8 @@ void DriveDirection(Direction_t nextDirection){
     const char* move = (diff == -1) ? moveNames[3] : moveNames[diff];
     
     communication_log(LEVEL_INFO, "Drive %s (dir %s, current %s)", move, dirNames[nextDirection], dirNames[labyrinthPose.cardinalDirection]);
-    
+    statemachine_setTargetPWM(5500);
+
     switch (diff) {
         case 0:
             // forwards
@@ -319,14 +324,42 @@ void updateLabyrinthPosition(void) {
     }
 }
 
-// Alte Funktion - nur noch für Debug/Logging, nicht für Navigation
-void setLabyrinthPose(Pose_t pose) {
-    // Nur für Debug-Logging, nicht für Navigation verwendet
-    // Konvertiere Float-Werte zu Integer für Log-Ausgabe (AVR unterstützt kein Float-Format)
-    int16_t x_mm = (int16_t)(pose.x);
-    int16_t y_mm = (int16_t)(pose.y);
-    int16_t theta_mrad = (int16_t)(pose.theta * 1000.0f);  // Theta in Milliradiant
-    int16_t theta_deg = (int16_t)(pose.theta * 180.0f / M_PI);  // Theta in Grad
-    communication_log(LEVEL_INFO, "Odometrie (nur Debug): x=%" PRId16 "mm y=%" PRId16 "mm theta=%" PRId16 "° (%" PRId16 "mrad)", 
-                     x_mm, y_mm, theta_deg, theta_mrad);
+float normalizeAngleRad(float a) {
+    while (a <= -M_PI) a += 2.0f * M_PI;
+    while (a >  M_PI) a -= 2.0f * M_PI;
+    return a;
+}
+
+void correctOrientation()
+{
+    const Pose_t* currentPose = position_getCurrentPose();
+    const float threshold_rad = 0.05f; // ~2.86°
+    float desired = 0.0f;
+
+    switch (labyrinthPose.cardinalDirection) {
+        case DIRECTION_NORTH: desired = M_PI_2; break;
+        case DIRECTION_EAST:  desired = 0.0f;   break;
+        case DIRECTION_SOUTH: desired = -M_PI_2; break; 
+        case DIRECTION_WEST:  desired = M_PI;   break;
+        default: return;
+    }
+
+    float err = normalizeAngleRad(desired - currentPose->theta); // desired - current
+    if (fabsf(err) <= threshold_rad) {
+        setState(ExploreMaze);
+        return;
+    }
+
+    // convert to degrees
+    float target_deg_f = err * (180.0f / M_PI); 
+
+    int16_t targetAngle = (int16_t)roundf(target_deg_f);
+
+    int16_t theta_mrad = (int16_t)(currentPose->theta * 1000.0f);
+    communication_log(LEVEL_INFO, "correctOrientation: cardinal=%" PRIu8 " targetAngle=%" PRId16 " theta_mrad=%" PRId16,
+                      (uint8_t)labyrinthPose.cardinalDirection, -targetAngle, theta_mrad);
+    
+    statemachine_setTargetPWM(5500);
+    statemachine_setTargetAngle(-targetAngle);
+    setState(turn_On_Spot_degrees_then_explore); // oder den passenden State
 }

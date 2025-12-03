@@ -15,6 +15,7 @@ void bumper_init() {
 }
 
 ISR(INT0_vect) {
+    if(!bumper_getBumpers().bitset.bit1 == 1) //if one frontal collision detected, do not count contact twice
     contacts++;
 }
 

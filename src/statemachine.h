@@ -17,7 +17,8 @@ typedef enum {
     ExploreMaze,
     drive_Forward_distance_then_explore,
     turn_On_Spot_degrees_then_drive,
-    FollowThePath
+    FollowThePath,
+    turn_On_Spot_degrees_then_explore
 } state;
 
 /* currentState is defined in statemachine.c to avoid multiple definitions
@@ -38,5 +39,6 @@ void turn_On_Spot_degrees(int16_t angle_degrees, int16_t pwm);
 void statemachine_setTargetAngle(int16_t angle_degrees);
 void drive_Forward_distance_mm_then_explore();
 void turn_degrees_then_drive(int16_t angle_degrees, int16_t pwm);
+void turn_degrees_then_explore(int16_t targetAngle_degrees, int16_t targetPWM);
 
 #endif /* STATEMACHINE_H_ */

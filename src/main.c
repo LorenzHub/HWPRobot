@@ -178,13 +178,14 @@ static void commUserCommand(const uint8_t* packet, __attribute__((unused)) const
         communication_log(LEVEL_INFO, "Fahre eine Zelle (257 mm) mit Wand vorwärts mit PWM 5000...");
         break;
     }
-    case 12: { // command ID 12: Drehe 90° links auf der Stelle
-        statemachine_setTargetAngle(82);
+    case 12: { // command ID 12: Drehe 90° rechts auf der Stelle
+        statemachine_setTargetAngle(90);
         statemachine_setTargetPWM(4000);
         setState(Turn_On_Spot_Degrees);
         communication_log(LEVEL_INFO, "Drehe 90° r auf der Stelle mit PWM 4000...");
         break;
     }
+    /*
     case 13: { // command ID 13: Drehe 180° auf der Stelle
         statemachine_setTargetAngle(-82);
         statemachine_setTargetPWM(4000);
@@ -192,6 +193,8 @@ static void commUserCommand(const uint8_t* packet, __attribute__((unused)) const
         communication_log(LEVEL_INFO, "Drehe 90° l auf der Stelle mit PWM 4000...");
         break;
     }
+    */
+
     /*case 14: { // command ID 14: Synchronisiere Odometrie mit Kamera-Pose
         const Pose_t* currentPose = position_getCurrentPose();
         const Pose_t* cameraPose = position_getAprilTagPose();
@@ -239,11 +242,17 @@ static void commUserCommand(const uint8_t* packet, __attribute__((unused)) const
         communication_log(LEVEL_INFO, "Pose-Anfrage an HWPCS gesendet");
         break;
     }*/
+    case 13: {
+        uint8_t contacts = bumper_getContacts();
+        communication_log(LEVEL_INFO, "Bumperkontakte: %" PRIu8, contacts);
+        break;
+    }
     case 14: {
         resetMaze();
         break;
     }
     case 15: {
+        resetMaze();
         setState(ExploreMaze);
         communication_log(LEVEL_INFO, "Starte Labyrinth-Erkundung");
         break;
@@ -328,7 +337,7 @@ int main(void) {
 
         TIMETASK(POSE_TASK, 20) { // execute block approximately every 20ms (50 Hz)
             // Aktualisiere Odometrie
-            position_updateExpectedPose();
+            position_updateExpectedPose(); //calculates Delta or absolute Pose?
             
             // Berechne Differenz zwischen Odometrie und Kamera-Pose
             position_calculatePoseDifference();
@@ -409,12 +418,11 @@ int main(void) {
             }
         }
 
-        TIMETASK(WALL_TASK, 500) {
-			 const LabyrinthWalls_t* wallData = labyrinth_getAllWalls();
+        TIMETASK(WALL_TASK, 300) {
+             const LabyrinthWalls_t* wallData = labyrinth_getAllWalls();
 			 communication_writePacket(CH_OUT_LABY_WALLS, (uint8_t*)wallData, sizeof(*wallData));
 		 }
 
     }
-
     return 0;
 }

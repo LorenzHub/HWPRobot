@@ -8,8 +8,8 @@
 #include "communication/packetTypes.h"
 
 typedef struct{
-    int16_t  x;
-    int16_t y;
+    int8_t  x;
+    int8_t y;
     Direction_t cardinalDirection; //0=NORTH,1=EAST,2=SOUTH,3=WEST
 }LabyrinthPose_t;
 
@@ -20,8 +20,11 @@ typedef struct {
 
 void exploreMaze();
 
-void setLabyrinthPose(Pose_t pose); // Nur noch für Debug/Logging
 void updateLabyrinthPosition(void); // Manuelle Positionsaktualisierung nach Vorwärtsbewegung
+
+void correctOrientation();
+
+float normalizeAngleRad(float a);
 
 bool hasEscaped();
 
