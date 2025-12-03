@@ -31,7 +31,7 @@ void exploreMaze() {
     if(!initialized){
         srand(time(NULL));  // intialize random generator
         resetMaze();
-        statemachine_setTargetDistance(253); //Cell size 253.3mm with wall
+        statemachine_setTargetDistance(243); //Cell size 253.3mm with wall
         statemachine_setTargetPWM(5500);
         initialized=1;
     }
@@ -77,7 +77,7 @@ void resetMaze(){
 }
 
 bool hasEscaped(){
-    return (labyrinthPose.x > 6 || labyrinthPose.x < 0  || labyrinthPose.y > 6|| labyrinthPose.y < 0 );
+    return (labyrinthPose.x > 7 || labyrinthPose.x < 0  || labyrinthPose.y > 7|| labyrinthPose.y < 0 );
 }
 
 void checkWalls(uint8_t* availableDirections) {

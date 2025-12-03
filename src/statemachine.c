@@ -12,7 +12,9 @@
 #include "ir_sensors.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "ir_sensors.h"
+#include <util/delay.h>
+#include <math.h>
+
 
 /* Define the current state here (single-definition) */
 state currentState = IDLE;
@@ -30,6 +32,9 @@ static int16_t targetPWM = 3000;  // Default: 3000 PWM
 
 // Statische Variable für Ziel-Winkel in Grad
 static int16_t targetAngle_degrees = 90;  // Default: 90°
+
+// Vorwärtsdeklaration
+void correctRotationMovement_Wait(void);
 
 void stateMachine() {
     switch(currentState){
@@ -68,6 +73,12 @@ void stateMachine() {
             break;    
         case FollowThePath:
             break;
+        case CorrectRotationMovement:
+            correctRotationMovement();
+            break;
+        case CorrectRotationMovement_Wait:
+            correctRotationMovement_Wait();
+            break;
     }
 }
 
@@ -80,51 +91,150 @@ void drive_Forward_distance_mm_then_explore(uint16_t distance_mm, int16_t pwmRig
     // Starte Bewegung
     drive_Forward_distance_mm(distance_mm, pwmRight);
     //correctRotationMovement();
-
-    // Wenn Bewegung normal abgeschlossen ist (IDLE)
-    if(currentState == IDLE) {
-        // Manuelle Positionsaktualisierung nach vollständiger Vorwärtsbewegung
-        //TODO Schluss
-        updateLabyrinthPosition();
-        setState(ExploreMaze);
-    }
-    // Wenn State bereits auf ExploreMaze gesetzt wurde (Wand erkannt in drive_Forward_ticks),
-    // dann wurde die Position bereits dort aktualisiert
-}
-
-void correctRotationMovement(void) {
-    communication_log(LEVEL_INFO, "Correcting rotation movement");
-    // TODO: Implement correctRotationMovement
-    if(ADC_getFilteredValue(0) > 400) { //rigth front
-//Correct rotation movement with rigth sensors    
-        if(CalibrateIRSensors(1) - CalibrateIRSensors(0) > 100) { //right back - right front
-            turn_On_Spot_degrees(6,5500);
-            communication_log(LEVEL_INFO, "Correcting rotation movement with right sensors --- 6°");
-        }
-        else if(CalibrateIRSensors(1) - CalibrateIRSensors(0) < -100) { //right front - right back
-            turn_On_Spot_degrees(-6, 5500);
-            communication_log(LEVEL_INFO, "Correcting rotation movement with right sensors --- -6°");
-        }
-    }
-    else if(ADC_getFilteredValue(3) > 400) { //left front
-//Correct rotation movement with left sensors
-        if(CalibrateIRSensors(4) - CalibrateIRSensors(3) > 100) { //left back - left front
-            turn_On_Spot_degrees(6, 5500);
-            communication_log(LEVEL_INFO, "Correcting rotation movement with left sensors --- 6°");
-        }
-        else if(CalibrateIRSensors(4) - CalibrateIRSensors(3) < -100) { //left front - left back
-            turn_On_Spot_degrees(-6, 5500);
-            communication_log(LEVEL_INFO, "Correcting rotation movement with left sensors --- -6°");
-        }
-    }
+// Wenn Bewegung normal abgeschlossen ist (IDLE)
+if(currentState == IDLE) {
+    // Manuelle Positionsaktualisierung nach vollständiger Vorwärtsbewegung
+    //TODO Schluss
+    updateLabyrinthPosition();
+    setState(ExploreMaze);
     
+}
+// Wenn State bereits auf ExploreMaze gesetzt wurde (Wand erkannt in drive_Forward_ticks),
+// dann wurde die Position bereits dort aktualisiert
 
+    
 }
 
 void turn_degrees_then_drive(int16_t angle_degrees, int16_t pwm){
     turn_On_Spot_degrees(angle_degrees, pwm);
-    if(currentState == IDLE) setState(drive_Forward_distance_then_explore);
+
+    if(currentState == IDLE){
+        setState(drive_Forward_distance_then_explore);
+    }
+    
 }
+
+void correctRotationMovement_Wait(void) {
+    static uint8_t initialized = 0;
+    static timeTask_time_t waitStart;
+    
+    if (!initialized) {
+        timeTask_getTimestamp(&waitStart);
+        initialized = 1;
+        communication_log(LEVEL_INFO, "Waiting 2 seconds after correction turn for sensor stabilization...");
+    }
+    
+    timeTask_time_t now;
+    timeTask_getTimestamp(&now);
+    
+    // Warte 2 Sekunden (2000000 Mikrosekunden)
+    const uint32_t waitTime_us = 1000000UL;
+    
+    if (timeTask_getDuration(&waitStart, &now) >= waitTime_us) {
+        communication_log(LEVEL_INFO, "Wait completed, checking correction again...");
+        initialized = 0;
+        setState(CorrectRotationMovement);
+    }
+}
+
+void correctRotationMovement(void) {
+    communication_log(LEVEL_INFO, "TRYING Correcting rotation movement");
+    // TODO: Implement correctRotationMovement
+
+    const int16_t correctionDistance_deg = 4;
+    const int16_t correctionDistance_mm = 5;
+    const int16_t correctionPWM = 4000;
+    
+    if(ADC_getFilteredValue(0) > 400) { //rigth front
+
+        int16_t diff = CalibrateIRSensors(1) - CalibrateIRSensors(0);
+        const float sensorDistance_mm = 9.0f; // Abstand zwischen den Sensoren in mm
+//Correct rotation movement with rigth sensors    
+        if(diff < -correctionDistance_mm) { //right back - right front
+        communication_log(LEVEL_INFO, "difference: %d - correcting right", diff);
+        
+        // Berechne Winkel: atan(diff / sensorDistance) in Grad
+        float angle_rad = atanf((float)diff / sensorDistance_mm);
+        int16_t angle_deg = (int16_t)(angle_rad * 180.0f / 3.14159265359f);
+        communication_log(LEVEL_INFO, "Calculated correction angle: %.2f rad = %d deg", angle_rad, angle_deg);
+        
+        statemachine_setTargetAngle(correctionDistance_deg);
+        statemachine_setTargetPWM(correctionPWM);
+        setState(turn_On_Spot_degrees_then_drive);
+        
+    
+        }
+        else if(diff > correctionDistance_mm) { //right front - right back
+            communication_log(LEVEL_INFO, "difference: %d - correcting left", diff);
+            
+            // Berechne Winkel: atan(diff / sensorDistance) in Grad
+            float angle_rad = atanf((float)diff / sensorDistance_mm);
+            int16_t angle_deg = (int16_t)(angle_rad * 180.0f / 3.14159265359f);
+            communication_log(LEVEL_INFO, "Calculated correction angle: %.2f rad = %d deg (negated to %d deg)", angle_rad, angle_deg, -angle_deg);
+            
+            statemachine_setTargetAngle(-correctionDistance_deg); // Negativ, da nach links korrigiert wird
+            statemachine_setTargetPWM(correctionPWM);
+            setState(turn_On_Spot_degrees_then_drive);
+            
+        }
+        else{
+            
+            communication_log(LEVEL_INFO, "no correction needed - difference: %d", diff);
+            setState(drive_Forward_distance_then_explore);
+        }
+    }
+    else if(ADC_getFilteredValue(3) > 400) { //left front
+        int16_t diff = CalibrateIRSensors(4) - CalibrateIRSensors(3);
+        const float sensorDistance_mm = 9.0f; // Abstand zwischen den Sensoren in mm
+        
+//Correct rotation movement with left sensors
+        if(diff < -correctionDistance_mm) { //left back - left front
+            communication_log(LEVEL_INFO, "difference: %d - correcting left", diff);
+            
+            // Berechne Winkel: atan(diff / sensorDistance) in Grad
+            float angle_rad = atanf((float)diff / sensorDistance_mm);
+            int16_t angle_deg = (int16_t)(angle_rad * 180.0f / 3.14159265359f);
+            communication_log(LEVEL_INFO, "Calculated correction angle: %.2f rad = %d deg (negated to %d deg)", angle_rad, angle_deg, -angle_deg);
+            
+            statemachine_setTargetAngle(-correctionDistance_deg); // Negativ, da nach links korrigiert wird
+            statemachine_setTargetPWM(correctionPWM);
+            setState(turn_On_Spot_degrees_then_drive);
+           
+           
+        }
+        else if(diff > correctionDistance_mm) { //left front - left back
+            communication_log(LEVEL_INFO, "difference: %d - correcting right", diff);
+            
+            // Berechne Winkel: atan(diff / sensorDistance) in Grad
+            float angle_rad = atanf((float)diff / sensorDistance_mm);
+            int16_t angle_deg = (int16_t)(angle_rad * 180.0f / 3.14159265359f);
+            communication_log(LEVEL_INFO, "Calculated correction angle: %.2f rad = %d deg", angle_rad, angle_deg);
+            
+            statemachine_setTargetAngle(correctionDistance_deg); // Positiv, da nach rechts korrigiert wird
+            statemachine_setTargetPWM(correctionPWM);
+            setState(turn_On_Spot_degrees_then_drive);
+            
+            
+        }
+        else{
+            communication_log(LEVEL_INFO, "no correction needed - difference: %d", diff);
+            setState(drive_Forward_distance_then_explore);
+        }
+        
+    }
+    else{
+        communication_log(LEVEL_INFO, "no wall found for correction");
+        setState(drive_Forward_distance_then_explore);
+        
+        }
+    
+
+
+}
+
+
+
+
 
 void drive_Forward_1000ticks() {
     static uint8_t initialized = 0;
@@ -674,7 +784,7 @@ void drive_Forward_ticks(int16_t targetTicksValue, int16_t pwmRight) {
             }
             communication_log(LEVEL_INFO, "===========================");
             
-            setState(IDLE);
+            setState(CorrectRotationMovement_Wait);
             initialized = 0;
         }
     }
@@ -894,8 +1004,10 @@ int16_t absAngle= (angle_degrees > 0) ? angle_degrees : -angle_degrees;
                 communication_log(LEVEL_INFO, "Encoder Rechts: %" PRId16 " (Delta: %" PRId16 " Ticks)", currentEncoderR, deltaR);
                 communication_log(LEVEL_INFO, "Finale PWM-Werte: L=%" PRId16 " R=%" PRId16, pwmLeft, pwmRight);
                 communication_log(LEVEL_INFO, "===========================");
+
                 
-                setState(IDLE);
+               
+                setState(CorrectRotationMovement_Wait);
                 initialized = 0;
             }
         }

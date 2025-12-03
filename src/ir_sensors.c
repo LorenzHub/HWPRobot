@@ -1,5 +1,6 @@
 #include "ir_sensors.h"
 #include "io/adc/adc.h"
+#include <communication/communication.h>
 #include <stddef.h>
 
 // Kalibrierungsparameter für jeden IR-Sensor
@@ -45,7 +46,7 @@ int16_t CalibrateIRSensors(int16_t Index) {
         return 0; // Ungültiger Wert
     }
     
-    float distance_mm = (calib->x / denominator) * 1000.0f;
+    float distance_mm = (calib->x / denominator) * 10.0f;
     
     // Konvertiere zu int16_t (begrenze auf sinnvollen Bereich)
     if (distance_mm > 32767.0f) {
@@ -55,5 +56,6 @@ int16_t CalibrateIRSensors(int16_t Index) {
         return -32768;
     }
     
+    //communication_log(LEVEL_INFO, "Distance: %d mm for sensor %d", (int)distance_mm, Index);
     return (int16_t)distance_mm;
 }
