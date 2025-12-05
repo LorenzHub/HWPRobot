@@ -446,11 +446,11 @@ void drive_Forward_ticks(int16_t targetTicksValue, int16_t pwmRight) {
         startEncoderL = encoder_getCountL();
         communication_log(LEVEL_INFO, "Start-Encoder: R=%" PRId16 " L=%" PRId16, startEncoderR, startEncoderL);
         
-        // Rechter Motor: IMMER konstant mit 4000 PWM
-        targetPWMRight = 4000;
+        // Rechter Motor: Erhält PWM-Wert vom Parameter
+        targetPWMRight = pwmRight;
         
-        // Linker Motor: Startet mit kalibriertem Wert für 4000 PWM (damit beide gleich sind)
-        targetPWMLeft = calibration_getPWMLeft(4000);
+        // Linker Motor: Startet mit kalibriertem Wert für den gewünschten PWM-Wert
+        targetPWMLeft = calibration_getPWMLeft(pwmRight);
         
         // Sicherheitsprüfung: Falls PWM-Werte 0 oder negativ sind, verwende Standard-Werte
         if (targetPWMLeft == 0 || targetPWMLeft < 0) {
@@ -600,16 +600,18 @@ void drive_Forward_ticks(int16_t targetTicksValue, int16_t pwmRight) {
                     int16_t speedDiff = speedR - speedL;
                     int16_t absSpeedDiff = (speedDiff > 0) ? speedDiff : -speedDiff;
                     
-                    // Neue Logik: Wenn ein Encoder hinterherhinkt, erhöhe dessen PWM stärker
-                    // R bleibt konstant bei 4000, wird aber erhöht wenn R hinterherhinkt
-                    // L wird angepasst wenn L hinterherhinkt
-                    // Ziel: Beide Encoder sollen am Ende gleich sein
-                    int16_t adjustmentLeft = 0;
-                    int16_t adjustmentRight = 0;
-                    int16_t positionAdjustmentLeft = 0;
-                    int16_t positionAdjustmentRight = 0;
+                    // Passe linken Motor an (kontinuierliche Korrektur - aggressiv wie beim Kalibrieren)
+                    // speedDiff = speedR - speedL
+                    // Wenn speedDiff > 0: R ist schneller -> erhöhe pwmLeft
+                    // Wenn speedDiff < 0: L ist schneller -> reduziere pwmLeft
                     
-                    // 1. Geschwindigkeitsdifferenz-basierte Korrektur
+                    // Adaptive Anpassung basierend auf Geschwindigkeitsdifferenz UND kumulativer Position-Differenz
+                    // Ziel: Differenz zwischen 0-3 Ticks halten, aber Oszillationen vermeiden
+                    // Zusätzlich: Kumulative Position-Differenz ausgleichen (übersteuern)
+                    int16_t adjustment = 0;
+                    int16_t positionAdjustment = 0;
+                    
+                    // 1. Geschwindigkeitsdifferenz-basierte Korrektur (wie bisher)
                     // Hysterese-Logik: Verhindert schnelles Ein-/Ausschalten der Korrektur
                     if (absSpeedDiff > 6) {
                         // Differenz zu groß - aktiviere Korrektur
@@ -620,94 +622,106 @@ void drive_Forward_ticks(int16_t targetTicksValue, int16_t pwmRight) {
                     }
                     // Bei 3 < Diff <= 6: Behalte aktuellen Zustand (correctionActive bleibt unverändert)
                     
-                    // Berechne Geschwindigkeits-Anpassung nur wenn Korrektur aktiv ist
-                    // NEUE LOGIK: Wenn ein Encoder hinterherhinkt, erhöhe dessen PWM stärker
+                    // Berechne Geschwindigkeits-Anpassung nur wenn Korrektur aktiv ist (konservativer)
+                    // WICHTIG: adjustment wird mit Vorzeichen berechnet (positiv/negativ)
                     if (correctionActive) {
                         int16_t adjustmentMagnitude = 0;
                         if (absSpeedDiff > 30) {
-                            adjustmentMagnitude = absSpeedDiff / 2; // Sehr große Differenz - stärker
-                            if (adjustmentMagnitude > 20) adjustmentMagnitude = 20; // Max. 20 PWM
-                        } else if (absSpeedDiff > 15) {
-                            adjustmentMagnitude = absSpeedDiff / 3; // Große Differenz - stärker
+                            adjustmentMagnitude = absSpeedDiff / 3; // Sehr große Differenz - konservativer
                             if (adjustmentMagnitude > 15) adjustmentMagnitude = 15; // Max. 15 PWM
+                        } else if (absSpeedDiff > 15) {
+                            adjustmentMagnitude = absSpeedDiff / 4; // Große Differenz - konservativer
+                            if (adjustmentMagnitude > 10) adjustmentMagnitude = 10; // Max. 10 PWM
                         } else if (absSpeedDiff > 6) {
-                            adjustmentMagnitude = absSpeedDiff / 2; // Mittlere Differenz - stärker
-                            if (adjustmentMagnitude > 8) adjustmentMagnitude = 8; // Max. 8 PWM
+                            adjustmentMagnitude = absSpeedDiff / 3; // Mittlere Differenz - konservativer
+                            if (adjustmentMagnitude > 5) adjustmentMagnitude = 5; // Max. 5 PWM
                         } else {
-                            // Diff zwischen 3-6: Kleine Korrektur
-                            adjustmentMagnitude = 2; // 2 PWM pro Schritt
+                            // Diff zwischen 3-6: Sehr kleine, gedämpfte Korrektur
+                            adjustmentMagnitude = 1; // Nur 1 PWM pro Schritt
                         }
                         
                         // Richtung: speedDiff = speedR - speedL
-                        // Wenn speedDiff > 0: R ist schneller -> L hinterher -> erhöhe pwmLeft
-                        // Wenn speedDiff < 0: L ist schneller -> R hinterher -> erhöhe pwmRight
+                        // Wenn speedDiff > 0: R ist schneller -> erhöhe pwmLeft (L schneller machen)
+                        // Wenn speedDiff < 0: L ist schneller -> reduziere pwmLeft (L langsamer machen)
                         if (speedDiff > 0) {
-                            adjustmentLeft = adjustmentMagnitude; // L hinterher -> erhöhe pwmLeft
+                            adjustment = adjustmentMagnitude; // R schneller -> erhöhe pwmLeft
                         } else {
-                            adjustmentRight = adjustmentMagnitude; // R hinterher -> erhöhe pwmRight
+                            adjustment = -adjustmentMagnitude; // L schneller -> reduziere pwmLeft
                         }
                     }
                     
                     // 2. Kumulative Position-Differenz-basierte Korrektur (übersteuern)
                     // Wenn eine Position-Differenz aufgelaufen ist, korrigiere diese zusätzlich
-                    // NEUE LOGIK: Wenn ein Encoder hinterherhinkt, erhöhe dessen PWM stärker
+                    // ABER: Sehr konservativ, um Überkorrektur zu vermeiden
                     int16_t absPositionDiff = (positionDiff > 0) ? positionDiff : -positionDiff;
-                    if (absPositionDiff > 10) {  // Schwellwert für Position-Korrektur
-                        // Signifikante Position-Differenz - korrigiere diese
+                    if (absPositionDiff > 20) {  // Erhöht von 5 auf 20 - nur bei größeren Differenzen
+                        // Signifikante Position-Differenz - korrigiere diese sehr konservativ
                         // Position-Diff wird in Geschwindigkeits-Anpassung umgerechnet
-                        // Je größer die Position-Diff, desto stärker die Korrektur
-                        int16_t posAdjMagnitude = 0;
+                        // Je größer die Position-Diff, desto stärker die Korrektur (aber gedämpft)
                         if (absPositionDiff > 100) {
-                            posAdjMagnitude = absPositionDiff / 15; // Sehr große Position-Diff
-                            if (posAdjMagnitude > 10) posAdjMagnitude = 10; // Max. 10 PWM
+                            positionAdjustment = absPositionDiff / 20; // Sehr große Position-Diff - sehr konservativ
+                            if (positionAdjustment > 5) positionAdjustment = 5; // Max. 5 PWM
                         } else if (absPositionDiff > 50) {
-                            posAdjMagnitude = absPositionDiff / 12; // Große Position-Diff
-                            if (posAdjMagnitude > 8) posAdjMagnitude = 8; // Max. 8 PWM
+                            positionAdjustment = absPositionDiff / 15; // Große Position-Diff - konservativ
+                            if (positionAdjustment > 4) positionAdjustment = 4; // Max. 4 PWM
                         } else {
-                            posAdjMagnitude = absPositionDiff / 10; // Mittlere Position-Diff
-                            if (posAdjMagnitude > 5) posAdjMagnitude = 5; // Max. 5 PWM
+                            positionAdjustment = absPositionDiff / 12; // Mittlere Position-Diff - konservativ
+                            if (positionAdjustment > 3) positionAdjustment = 3; // Max. 3 PWM
                         }
                         
                         // Richtung: positionDiff = deltaR - deltaL
-                        // Wenn positionDiff > 0: R ist weiter -> L hinterher -> erhöhe pwmLeft
-                        // Wenn positionDiff < 0: L ist weiter -> R hinterher -> erhöhe pwmRight
-                        if (positionDiff > 0) {
-                            positionAdjustmentLeft = posAdjMagnitude; // L hinterher -> erhöhe pwmLeft
+                        // Wenn positionDiff > 0: R ist weiter -> erhöhe pwmLeft (L schneller machen)
+                        // Wenn positionDiff < 0: L ist weiter -> reduziere pwmLeft (L langsamer machen)
+                        if (positionDiff < 0) {
+                            // L ist weiter (negativ) -> reduziere pwmLeft (langsamer machen)
+                            positionAdjustment = -positionAdjustment;
+                        }
+                        // Wenn positionDiff > 0: R ist weiter -> positionAdjustment bleibt positiv (pwmLeft erhöhen)
+                    }
+                    
+                    // Kombiniere beide Anpassungen (sehr konservativ)
+                    int16_t totalAdjustment = adjustment;
+                    if (positionAdjustment != 0) {
+                        // Position-Korrektur wird nur als kleine Zusatzkorrektur verwendet
+                        // Geschwindigkeits-Korrektur hat Vorrang
+                        if (absPositionDiff > 50 && absPositionDiff > absSpeedDiff * 2) {
+                            // Nur wenn Position-Diff sehr groß ist UND deutlich größer als Speed-Diff
+                            // Dann verwende hauptsächlich Position-Korrektur (aber gedämpft)
+                            totalAdjustment = positionAdjustment;
+                            // Füge kleine Geschwindigkeits-Korrektur hinzu (wenn aktiv)
+                            if (adjustment != 0) {
+                                totalAdjustment += adjustment / 3; // Sehr gedämpft
+                            }
                         } else {
-                            positionAdjustmentRight = posAdjMagnitude; // R hinterher -> erhöhe pwmRight
+                            // Normalerweise: Geschwindigkeits-Korrektur hat Vorrang
+                            totalAdjustment = adjustment;
+                            // Füge kleine Position-Korrektur hinzu (sehr gedämpft)
+                            totalAdjustment += positionAdjustment / 3; // Sehr gedämpft (1/3 statt 1/2)
                         }
                     }
                     
-                    // Kombiniere beide Anpassungen für jeden Motor separat
-                    int16_t totalAdjustmentLeft = adjustmentLeft + positionAdjustmentLeft;
-                    int16_t totalAdjustmentRight = adjustmentRight + positionAdjustmentRight;
-                    
                     // Maximum-Anpassung begrenzen (nicht zu große Sprünge)
-                    int16_t absTotalAdjLeft = (totalAdjustmentLeft > 0) ? totalAdjustmentLeft : -totalAdjustmentLeft;
-                    int16_t absTotalAdjRight = (totalAdjustmentRight > 0) ? totalAdjustmentRight : -totalAdjustmentRight;
-                    if (absTotalAdjLeft > 20) {
-                        totalAdjustmentLeft = (totalAdjustmentLeft > 0) ? 20 : -20;
-                    }
-                    if (absTotalAdjRight > 20) {
-                        totalAdjustmentRight = (totalAdjustmentRight > 0) ? 20 : -20;
+                    int16_t absTotalAdjustment = (totalAdjustment > 0) ? totalAdjustment : -totalAdjustment;
+                    if (absTotalAdjustment > 15) {
+                        totalAdjustment = (totalAdjustment > 0) ? 15 : -15;
                     }
                     
-                    // Anpassung der PWM-Werte
-                    // L: Wird angepasst wenn L hinterherhinkt
-                    if (totalAdjustmentLeft != 0) {
-                        targetPWMLeft += totalAdjustmentLeft;
+                    adjustment = totalAdjustment;
+                    
+                    // Flüssige Anpassung nur des linken Motors
+                    if (adjustment != 0) {
+                        // adjustment kann jetzt auch negativ sein (durch Position-Korrektur)
+                        targetPWMLeft += adjustment;
                     }
                     
-                    // R: Wird angepasst wenn R hinterherhinkt (startet bei 4000)
-                    if (totalAdjustmentRight != 0) {
-                        targetPWMRight += totalAdjustmentRight;
-                    }
+                    // Begrenze linken PWM-Wert (nicht zu weit vom Basis-Wert entfernen)
+                    int16_t maxDeviation = targetPWMRight / 2; // Max. 50% Abweichung
+                    if (targetPWMLeft < targetPWMRight - maxDeviation) targetPWMLeft = targetPWMRight - maxDeviation;
+                    if (targetPWMLeft > targetPWMRight + maxDeviation) targetPWMLeft = targetPWMRight + maxDeviation;
                     
                     // Absolute Grenzen: PWM muss zwischen 1000 und 8191 sein
                     if (targetPWMLeft < 1000) targetPWMLeft = 1000;
                     if (targetPWMLeft > 8191) targetPWMLeft = 8191;
-                    if (targetPWMRight < 1000) targetPWMRight = 1000;
-                    if (targetPWMRight > 8191) targetPWMRight = 8191;
                     
                     // Setze neue PWM-Werte direkt (Motoren laufen weiter)
                     Motor_setPWM(targetPWMLeft, targetPWMRight);
@@ -721,9 +735,9 @@ void drive_Forward_ticks(int16_t targetTicksValue, int16_t pwmRight) {
                     }
                     
                     // Logge immer: Bei jeder Messung (alle 200ms) ODER wenn Korrektur stattfindet
-                    if (totalAdjustmentLeft != 0 || totalAdjustmentRight != 0 || timeSinceLastLog >= 200000UL || (lastLogTime.time_ms == 0 && lastLogTime.time_us == 0)) {
-                        communication_log(LEVEL_INFO, "Korrektur: Speed L=%" PRId16 " R=%" PRId16 " SpeedDiff=%" PRId16 " PosDiff=%" PRId16 " -> PWM L=%" PRId16 " R=%" PRId16 " (AdjL=%" PRId16 " AdjR=%" PRId16 ")", 
-                                         speedL, speedR, speedDiff, positionDiff, targetPWMLeft, targetPWMRight, totalAdjustmentLeft, totalAdjustmentRight);
+                    if (adjustment != 0 || timeSinceLastLog >= 200000UL || (lastLogTime.time_ms == 0 && lastLogTime.time_us == 0)) {
+                        communication_log(LEVEL_INFO, "Korrektur: Speed L=%" PRId16 " R=%" PRId16 " SpeedDiff=%" PRId16 " PosDiff=%" PRId16 " -> PWM L=%" PRId16 " R=%" PRId16 " (Adj=%" PRId16 ")", 
+                                         speedL, speedR, speedDiff, positionDiff, targetPWMLeft, targetPWMRight, adjustment);
                         timeTask_getTimestamp(&lastLogTime);
                     }
                     
