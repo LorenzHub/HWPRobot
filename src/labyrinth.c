@@ -359,38 +359,66 @@ float normalizeAngleRad(float a) {
 
 
 void correctOrientation() {
-
-
-    const Pose_t* currentPose = position_getCurrentPose();
-    const float threshold_rad = 0.05f; // ~2.86°
-    float desired = 0.0f;
-
-    switch (labyrinthPose.cardinalDirection) {
-        case DIRECTION_NORTH: desired = M_PI_2; break;
-        case DIRECTION_EAST:  desired = 0.0f;   break;
-        case DIRECTION_SOUTH: desired = -M_PI_2; break; 
-        case DIRECTION_WEST:  desired = M_PI;   break;
-        default: return;
+    // Versuche zuerst die Kamera-Pose zu verwenden (zuverlässiger), sonst Odometrie
+    const Pose_t* currentPose;
+    uint8_t usingCamera = 0;
+    
+    if (position_hasValidCameraPose()) {
+        currentPose = position_getAprilTagPose();
+        usingCamera = 1;
+    } else {
+        currentPose = position_getCurrentPose();
+        usingCamera = 0;
     }
     
-    float err = normalizeAngleRad(desired - currentPose->theta); // desired - current
+    const float threshold_rad = 0.05f; // ~2.86° - kleine Abweichungen ignorieren
+    float desired = 0.0f;
 
+    // Bestimme Soll-Winkel basierend auf Labyrinth-Kardinalrichtung
+    switch (labyrinthPose.cardinalDirection) {
+        case DIRECTION_NORTH: desired = M_PI_2; break;    // 90° = π/2
+        case DIRECTION_EAST:  desired = 0.0f;   break;    // 0°
+        case DIRECTION_SOUTH: desired = -M_PI_2; break;   // -90° = -π/2
+        case DIRECTION_WEST:  desired = M_PI;   break;    // 180° = π
+        default: 
+            communication_log(LEVEL_WARNING, "correctOrientation: unknown direction %" PRIu8, 
+                             (uint8_t)labyrinthPose.cardinalDirection);
+            setState(ExploreMaze);
+            return;
+    }
+    
+    // Berechne Fehler (normalisiert auf [-π, π])
+    float err = normalizeAngleRad(desired - currentPose->theta);
 
+    // Debug-Ausgabe
+    int16_t desired_mrad = (int16_t)(desired * 1000.0f);
+    int16_t theta_mrad = (int16_t)(currentPose->theta * 1000.0f);
+    int16_t err_mrad = (int16_t)(err * 1000.0f);
+    
+    communication_log(LEVEL_INFO, "correctOrientation: dir=%" PRIu8 " desired=%d mrad, theta=%d mrad, err=%d mrad (%s)",
+                     (uint8_t)labyrinthPose.cardinalDirection, desired_mrad, theta_mrad, err_mrad,
+                     usingCamera ? "CAM" : "ODO");
+
+    // Wenn Fehler klein genug, keine Korrektur nötig
     if (fabsf(err) <= threshold_rad) {
-    setState(ExploreMaze);
-    return;
+        communication_log(LEVEL_INFO, "correctOrientation: OK (err=%" PRId16 " mrad < threshold)", err_mrad);
+        setState(ExploreMaze);
+        return;
     }
 
-    // convert to degrees
+    // Konvertiere Fehler zu Grad
+    // err > 0 bedeutet: muss nach LINKS drehen (positive Drehrichtung)
+    // err < 0 bedeutet: muss nach RECHTS drehen (negative Drehrichtung)
     float target_deg_f = err * (180.0f / M_PI); 
     int16_t targetAngle = (int16_t)roundf(target_deg_f);
-    int16_t theta_mrad = (int16_t)(currentPose->theta * 1000.0f);
+    
+    // Begrenze auf sinnvolle Werte
+    if (targetAngle > 180) targetAngle = 180;
+    if (targetAngle < -180) targetAngle = -180;
 
-    communication_log(LEVEL_INFO, "correctOrientation: cardinal=%" PRIu8 " targetAngle=%" PRId16 " theta_mrad=%" PRId16,
-    (uint8_t)labyrinthPose.cardinalDirection, -targetAngle, theta_mrad);
+    communication_log(LEVEL_INFO, "correctOrientation: turning %" PRId16 " deg", targetAngle);
 
     statemachine_setTargetPWM(5500);
-    statemachine_setTargetAngle(-targetAngle);
+    statemachine_setTargetAngle(targetAngle);  // KORRIGIERT: Kein negatives Vorzeichen mehr!
     setState(Turn_On_Spot_degrees_then_explore); 
-
 }

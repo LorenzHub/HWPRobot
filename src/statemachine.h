@@ -48,6 +48,7 @@ void statemachine_setWallCorrectionThreshold(int16_t threshold_mm);
 void statemachine_setWallDistanceGain(int16_t gain);
 void statemachine_setWallParallelGain(int16_t gain);
 void statemachine_setCenterTargetDistance(int16_t distance_mm);
+void turn_degrees_then_explore(int16_t angle_degrees, int16_t pwm);
 
 // Wandkorrektur Ein/Aus
 void statemachine_setWallCorrectionEnabled(uint8_t enabled);

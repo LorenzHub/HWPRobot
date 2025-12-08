@@ -103,19 +103,14 @@ void drive_Forward_distance_mm_then_explore(uint16_t distance_mm, int16_t pwmRig
     
     // Starte Bewegung
     drive_Forward_distance_mm(distance_mm, pwmRight);
-    //correctRotationMovement();
-// Wenn Bewegung normal abgeschlossen ist (IDLE)
-if(currentState == IDLE) {
-    // Manuelle Positionsaktualisierung nach vollständiger Vorwärtsbewegung
-    //TODO Schluss
-    updateLabyrinthPosition();
-    setState(ExploreMaze);
     
-}
-// Wenn State bereits auf ExploreMaze gesetzt wurde (Wand erkannt in drive_Forward_ticks),
-// dann wurde die Position bereits dort aktualisiert
-
-    
+    // Wenn Bewegung normal abgeschlossen ist (IDLE)
+    if(currentState == IDLE) {
+        // Nach Geradeaus-Fahrt: Parallelitäts-Korrektur durchführen
+        setState(CorrectRotationMovement);
+    }
+    // Wenn State bereits auf ExploreMaze gesetzt wurde (Wand erkannt in drive_Forward_ticks),
+    // dann wurde die Position bereits dort aktualisiert
 }
 
 void turn_degrees_then_explore(int16_t angle_degrees, int16_t pwm){
@@ -185,25 +180,6 @@ static int16_t calculateCorrectionAngle(int16_t diff, float sensorDistance_mm) {
 void correctRotationMovement(void) {
     communication_log(LEVEL_INFO, "TRYING Correcting rotation movement");
 
-    // Prüfe ob Wandkorrektur aktiviert ist
-    if (!wall_correction_enabled) {
-        communication_log(LEVEL_INFO, "Wall correction DISABLED - skipping");
-        // Direkt zum nächsten State ohne Korrektur
-        if(initialized_drive == 1){
-            updateLabyrinthPosition();
-            setState(ExploreMaze);
-            initialized_drive = 0;
-        }
-        else if(initialized_drive == 2){
-            setState(drive_Forward_distance_then_explore);
-            initialized_drive = 0;
-        }
-        else{
-            initialized_drive = 0;
-        }
-        return;
-    }
-
     const int16_t correctionDistance_mm = 3;
     const int16_t correctionPWM = 4000;
     const float sensorDistance_mm = 90.0f; // Abstand zwischen den Sensoren in mm
@@ -213,29 +189,37 @@ void correctRotationMovement(void) {
     uint16_t rightFrontADC = ADC_getFilteredValue(0);  // IR1 - Right Front
     uint16_t leftFrontADC = ADC_getFilteredValue(3);   // IR4 - Left Front
     
-    // ==================== ZU NAH AN WAND ERKENNUNG ====================
+    // ==================== ZU NAH AN WAND ERKENNUNG (NUR WENN AKTIVIERT) ====================
     // Wenn Sensorwert zwischen 400-700: ZU NAH an der Wand (Werte fallen wieder ab)
     // -> Muss von dieser Wand WEG korrigieren
+    // Diese Korrektur kann mit wall_correction_enabled deaktiviert werden
     
-    // Zu nah an RECHTER Wand? -> Nach LINKS wegdrehen
-    if(rightFrontADC >= 400 && rightFrontADC <= 700) {
-        communication_log(LEVEL_WARNING, "ZU NAH AN RECHTER WAND! ADC=%u (400-700) - drehe nach LINKS weg", rightFrontADC);
-        statemachine_setTargetAngle(escapeAngle_deg);  // Positiv = nach links
-        statemachine_setTargetPWM(correctionPWM);
-        setState(turn_On_Spot_degrees_then_drive);
-        return;
+    if (wall_correction_enabled) {
+        // Zu nah an RECHTER Wand? -> Nach LINKS wegdrehen
+        if(rightFrontADC >= 400 && rightFrontADC <= 700) {
+            communication_log(LEVEL_WARNING, "ZU NAH AN RECHTER WAND! ADC=%u (400-700) - drehe nach LINKS weg", rightFrontADC);
+            statemachine_setTargetAngle(escapeAngle_deg);  // Positiv = nach links
+            statemachine_setTargetPWM(correctionPWM);
+            setState(turn_On_Spot_degrees_then_drive);
+            return;
+        }
+        
+        // Zu nah an LINKER Wand? -> Nach RECHTS wegdrehen
+        if(leftFrontADC >= 400 && leftFrontADC <= 700) {
+            communication_log(LEVEL_WARNING, "ZU NAH AN LINKER WAND! ADC=%u (400-700) - drehe nach RECHTS weg", leftFrontADC);
+            statemachine_setTargetAngle(-escapeAngle_deg);  // Negativ = nach rechts
+            statemachine_setTargetPWM(correctionPWM);
+            setState(turn_On_Spot_degrees_then_drive);
+            return;
+        }
+    } else {
+        // Nur loggen wenn deaktiviert und Werte im kritischen Bereich
+        if((rightFrontADC >= 400 && rightFrontADC <= 700) || (leftFrontADC >= 400 && leftFrontADC <= 700)) {
+            communication_log(LEVEL_INFO, "================================= Wall escape correction DISABLED (R=%u, L=%u) ================", rightFrontADC, leftFrontADC);
+        }
     }
     
-    // Zu nah an LINKER Wand? -> Nach RECHTS wegdrehen
-    if(leftFrontADC >= 400 && leftFrontADC <= 700) {
-        communication_log(LEVEL_WARNING, "ZU NAH AN LINKER WAND! ADC=%u (400-700) - drehe nach RECHTS weg", leftFrontADC);
-        statemachine_setTargetAngle(-escapeAngle_deg);  // Negativ = nach rechts
-        statemachine_setTargetPWM(correctionPWM);
-        setState(turn_On_Spot_degrees_then_drive);
-        return;
-    }
-    
-    // ==================== NORMALE PARALLELITÄTS-KORREKTUR ====================
+    // ==================== NORMALE PARALLELITÄTS-KORREKTUR (IMMER AKTIV) ====================
     // Sensorwert > 700: Wand in gutem Abstand erkannt -> normale Korrektur
     
     if(rightFrontADC > 700) { // Rechte Wand in gutem Abstand
@@ -308,22 +292,23 @@ void correctRotationMovement(void) {
         // Keine Wand erkannt (beide < 400)
         communication_log(LEVEL_INFO, "no wall found for correction (R=%u, L=%u)", rightFrontADC, leftFrontADC);
         if(initialized_drive == 1){
-            updateLabyrinthPosition();
-            initialized_drive = 0;
-            communication_log(LEVEL_INFO, "correctOrientation called after drive forward");
-            correctOrientation();;
+            //updateLabyrinthPosition();
+            //initialized_drive = 0;
+            //communication_log(LEVEL_INFO, "correctOrientation called after drive forward");
+            //correctOrientation();
 
-            /*updateLabyrinthPosition();
-            communication_log(LEVEL_INFO, "correctOrientation called after drive forward");
+            updateLabyrinthPosition();
             setState(ExploreMaze);
-            initialized_drive = 0;*/
+            initialized_drive = 0;
         }
         else if(initialized_drive == 2){ //called after turn degrees is done
-            //setState(drive_Forward_distance_then_explore);
+            setState(drive_Forward_distance_then_explore);
             initialized_drive = 0;
-            communication_log(LEVEL_INFO, "correctOrientation called after turn degrees");
-            correctOrientation();
+
+            //communication_log(LEVEL_INFO, "correctOrientation called after turn degrees");
             //initialized_drive = 0;
+            //correctOrientation();
+            
         }
         else{
             initialized_drive = 0;
@@ -504,7 +489,7 @@ void drive_Forward_ticks(int32_t targetTicksValue, int16_t pwmRight) {
         }
         communication_log(LEVEL_INFO, "===========================");
         
-        setState(IDLE);
+        setState(CorrectRotationMovement);
         initialized = 0;
         return;
     }
@@ -661,6 +646,8 @@ void drive_Forward_ticks(int32_t targetTicksValue, int16_t pwmRight) {
     lastEncoderR = currentEncoderR;
     lastEncoderL = currentEncoderL;
     timeTask_getTimestamp(&controlLoopTime);
+   
+  
 }
 
 // Fahre eine bestimmte Anzahl von Encoder-Ticks vorwärts mit Wandverfolgung und Parallelitäts-Kontrolle
