@@ -76,6 +76,9 @@ void stateMachine() {
         case turn_On_Spot_degrees_then_drive:
             turn_degrees_then_drive(targetAngle_degrees, targetPWM);
             break;    
+        case Turn_On_Spot_degrees_then_explore:
+            turn_degrees_then_explore(targetAngle_degrees, targetPWM);
+            break;    
         case FollowThePath:
             break;
         case CorrectRotationMovement:
@@ -112,6 +115,15 @@ if(currentState == IDLE) {
 // Wenn State bereits auf ExploreMaze gesetzt wurde (Wand erkannt in drive_Forward_ticks),
 // dann wurde die Position bereits dort aktualisiert
 
+    
+}
+
+void turn_degrees_then_explore(int16_t angle_degrees, int16_t pwm){
+    turn_On_Spot_degrees(angle_degrees, pwm);
+
+    if(currentState == IDLE){
+        setState(ExploreMaze);
+    }
     
 }
 
@@ -297,12 +309,21 @@ void correctRotationMovement(void) {
         communication_log(LEVEL_INFO, "no wall found for correction (R=%u, L=%u)", rightFrontADC, leftFrontADC);
         if(initialized_drive == 1){
             updateLabyrinthPosition();
+            initialized_drive = 0;
+            communication_log(LEVEL_INFO, "correctOrientation called after drive forward");
+            correctOrientation();;
+
+            /*updateLabyrinthPosition();
+            communication_log(LEVEL_INFO, "correctOrientation called after drive forward");
             setState(ExploreMaze);
-            initialized_drive = 0;
+            initialized_drive = 0;*/
         }
-        else if(initialized_drive == 2){
-            setState(drive_Forward_distance_then_explore);
+        else if(initialized_drive == 2){ //called after turn degrees is done
+            //setState(drive_Forward_distance_then_explore);
             initialized_drive = 0;
+            communication_log(LEVEL_INFO, "correctOrientation called after turn degrees");
+            correctOrientation();
+            //initialized_drive = 0;
         }
         else{
             initialized_drive = 0;
@@ -1122,7 +1143,7 @@ void statemachine_setTargetAngle(int16_t angle_degrees) {
   pwm: PWM-Wert für beide Motoren (absolut)*/
 void turn_On_Spot_degrees(int16_t angle_degrees, int16_t pwm) {
     /* logs for this function suppressed */
-    //#define communication_log(level, ...) ((void)0)
+    #define communication_log(level, ...) ((void)0)
     static uint8_t initialized = 0;
     static int16_t startEncoderR = 0;
     static int16_t startEncoderL = 0;

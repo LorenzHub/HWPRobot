@@ -7,4 +7,6 @@ void calculateDriveCommand (Pose_t *currentPose, FPoint_t* lookahead);
 
 void drive_Path_Command();
 
+void clampVelocities();
+
 #endif /* CalcPathCommand_H */

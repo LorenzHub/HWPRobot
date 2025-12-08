@@ -348,14 +348,49 @@ void updateLabyrinthPosition(void) {
     }
 }
 
-// Alte Funktion - nur noch für Debug/Logging, nicht für Navigation
-void setLabyrinthPose(Pose_t pose) {
-    // Nur für Debug-Logging, nicht für Navigation verwendet
-    // Konvertiere Float-Werte zu Integer für Log-Ausgabe (AVR unterstützt kein Float-Format)
-    int16_t x_mm = (int16_t)(pose.x);
-    int16_t y_mm = (int16_t)(pose.y);
-    int16_t theta_mrad = (int16_t)(pose.theta * 1000.0f);  // Theta in Milliradiant
-    int16_t theta_deg = (int16_t)(pose.theta * 180.0f / M_PI);  // Theta in Grad
-    communication_log(LEVEL_INFO, "Odometrie (nur Debug): x=%" PRId16 "mm y=%" PRId16 "mm theta=%" PRId16 "° (%" PRId16 "mrad)", 
-                     x_mm, y_mm, theta_deg, theta_mrad);
+float normalizeAngleRad(float a) {
+    while (a <= -M_PI) a += 2.0f * M_PI;
+    while (a >  M_PI) a -= 2.0f * M_PI;
+    return a;
+}
+
+
+
+
+
+void correctOrientation() {
+
+
+    const Pose_t* currentPose = position_getCurrentPose();
+    const float threshold_rad = 0.05f; // ~2.86°
+    float desired = 0.0f;
+
+    switch (labyrinthPose.cardinalDirection) {
+        case DIRECTION_NORTH: desired = M_PI_2; break;
+        case DIRECTION_EAST:  desired = 0.0f;   break;
+        case DIRECTION_SOUTH: desired = -M_PI_2; break; 
+        case DIRECTION_WEST:  desired = M_PI;   break;
+        default: return;
+    }
+    
+    float err = normalizeAngleRad(desired - currentPose->theta); // desired - current
+
+
+    if (fabsf(err) <= threshold_rad) {
+    setState(ExploreMaze);
+    return;
+    }
+
+    // convert to degrees
+    float target_deg_f = err * (180.0f / M_PI); 
+    int16_t targetAngle = (int16_t)roundf(target_deg_f);
+    int16_t theta_mrad = (int16_t)(currentPose->theta * 1000.0f);
+
+    communication_log(LEVEL_INFO, "correctOrientation: cardinal=%" PRIu8 " targetAngle=%" PRId16 " theta_mrad=%" PRId16,
+    (uint8_t)labyrinthPose.cardinalDirection, -targetAngle, theta_mrad);
+
+    statemachine_setTargetPWM(5500);
+    statemachine_setTargetAngle(-targetAngle);
+    setState(Turn_On_Spot_degrees_then_explore); 
+
 }
