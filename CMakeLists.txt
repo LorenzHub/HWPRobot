@@ -151,6 +151,8 @@ add_avr_executable(HWPRobot
 		src/calcPathCommand.c
 		src/labyrinth.h
 		src/labyrinth.c
+		src/ir_sensors.h
+		src/ir_sensors.c
 	)
 
 ##########################################################################

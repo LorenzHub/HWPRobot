@@ -35,12 +35,25 @@ float forwardVelocity = 40.0f;
 vLeft = forwardVelocity - (angularVelocity * (axleWidth / 2.0f)); // vLeft and vRight in mm/s
 vRight = forwardVelocity + (angularVelocity * (axleWidth / 2.0f));
 
+clampVelocities();
+
+
 // Use dtostrf() for float logging (avr-libc doesn't support %f in printf by default)
 char angVelBuf[10];
 dtostrf(angularVelocity, 6, 3, angVelBuf);
 communication_log(LEVEL_INFO, "angularVelocity: %s", angVelBuf);
 
 drive_Path_Command();
+}
+
+void clampVelocities() {
+    const float maxVelocity = 100.0f; // Max velocity in mm/s
+    float maxVel = fmaxf(fabsf(vLeft), fabsf(vRight));
+    if (maxVel > maxVelocity) {
+        float scale = maxVelocity / maxVel;
+        vLeft *= scale;
+        vRight *= scale;
+    }
 }
 
 void drive_Path_Command() {

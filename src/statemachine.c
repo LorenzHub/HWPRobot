@@ -73,6 +73,9 @@ void stateMachine() {
         case turn_On_Spot_degrees_then_drive:
             turn_degrees_then_drive(targetAngle_degrees, targetPWM);
             break;    
+        case Turn_On_Spot_degrees_then_explore:
+            turn_degrees_then_explore(targetAngle_degrees, targetPWM);
+            break;    
         case FollowThePath:
             break;
         case CorrectRotationMovement:
@@ -106,6 +109,15 @@ if(currentState == IDLE) {
 // Wenn State bereits auf ExploreMaze gesetzt wurde (Wand erkannt in drive_Forward_ticks),
 // dann wurde die Position bereits dort aktualisiert
 
+    
+}
+
+void turn_degrees_then_explore(int16_t angle_degrees, int16_t pwm){
+    turn_On_Spot_degrees(angle_degrees, pwm);
+
+    if(currentState == IDLE){
+        setState(ExploreMaze);
+    }
     
 }
 
@@ -255,14 +267,23 @@ void correctRotationMovement(void) {
     }
     else{
         communication_log(LEVEL_INFO, "no wall found for correction");
-        if(initialized_drive == 1){
+        if(initialized_drive == 1){ //called after drive forward ticks is done
             updateLabyrinthPosition();
+            initialized_drive = 0;
+            communication_log(LEVEL_INFO, "correctOrientation called after drive forward");
+            correctOrientation();;
+
+            /*updateLabyrinthPosition();
+            communication_log(LEVEL_INFO, "correctOrientation called after drive forward");
             setState(ExploreMaze);
-            initialized_drive = 0;
+            initialized_drive = 0;*/
         }
-        else if(initialized_drive == 2){
-            setState(drive_Forward_distance_then_explore);
+        else if(initialized_drive == 2){ //called after turn degrees is done
+            //setState(drive_Forward_distance_then_explore);
             initialized_drive = 0;
+            communication_log(LEVEL_INFO, "correctOrientation called after turn degrees");
+            correctOrientation();
+            //initialized_drive = 0;
         }
         else{
             initialized_drive = 0;
@@ -393,7 +414,7 @@ void drive_Forward_1000ticks() {
 // Fahre eine bestimmte Anzahl von Encoder-Ticks vorwärts mit kontinuierlicher Korrektur
 void drive_Forward_ticks(int16_t targetTicksValue, int16_t pwmRight) {
     /* logs for this function suppressed */
-    //#define communication_log(level, ...) ((void)0)
+    #define communication_log(level, ...) ((void)0)
     
     static uint8_t initialized = 0;
     static int16_t startEncoderR = 0;
@@ -500,7 +521,7 @@ void drive_Forward_ticks(int16_t targetTicksValue, int16_t pwmRight) {
             int16_t avgDelta = (deltaL + deltaR) / 2;
             uint16_t actualDistance_mm = (uint16_t)((int32_t)avgDelta * 688 / 10000);  // avgDelta * 0.0688 mm (2048 Ticks = 1 Rad-Umdrehung)
             
-            // Berechne Differenz zwischen den Encodern
+            // Berechne Differenz zwischen den Encodern/home/lorenz/Desktop/HWP/HWPRobot/build/HWPRobot.hex
             int16_t encoderDiff = deltaR - deltaL;
             int16_t absEncoderDiff = (encoderDiff > 0) ? encoderDiff : -encoderDiff;
             
@@ -696,6 +717,7 @@ void drive_Forward_ticks(int16_t targetTicksValue, int16_t pwmRight) {
                     // L: Wird angepasst wenn L hinterherhinkt
                     if (totalAdjustmentLeft != 0) {
                         targetPWMLeft += totalAdjustmentLeft;
+                        targetPWMLeft = (int16_t)((float)targetPWMLeft * 1.01f); // Optional: Skaliere leicht
                     }
                     
                     // R: Wird angepasst wenn R hinterherhinkt (startet bei 4000)
@@ -812,7 +834,7 @@ void drive_Forward_ticks(int16_t targetTicksValue, int16_t pwmRight) {
             initialized = 0;
         }
     }
-//#undef communication_log
+#undef communication_log
 }
 
 void drive_Forward_5sec() {
@@ -873,7 +895,7 @@ void statemachine_setTargetAngle(int16_t angle_degrees) {
   pwm: PWM-Wert für beide Motoren (absolut)*/
 void turn_On_Spot_degrees(int16_t angle_degrees, int16_t pwm) {
     /* logs for this function suppressed */
-    //#define communication_log(level, ...) ((void)0)
+    #define communication_log(level, ...) ((void)0)
     static uint8_t initialized = 0;
     static int16_t startEncoderR = 0;
     static int16_t startEncoderL = 0;

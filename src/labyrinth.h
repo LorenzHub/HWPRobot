@@ -25,6 +25,10 @@ void updateLabyrinthPosition(void); // Manuelle Positionsaktualisierung nach Vor
 
 bool hasEscaped();
 
+void correctOrientation();
+
+float normalizeAngleRad(float a);
+
 void checkWalls(uint8_t* availableDirections);
 
 bool isPlace();

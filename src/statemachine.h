@@ -16,6 +16,7 @@ typedef enum {
     Turn_On_Spot_Degrees,
     ExploreMaze,
     drive_Forward_distance_then_explore,
+    Turn_On_Spot_degrees_then_explore,
     turn_On_Spot_degrees_then_drive,
     FollowThePath,
     CorrectRotationMovement,
